@@ -112,6 +112,6 @@ def main():
 
 if __name__ == "__main__":
     start_time = time.time()
-    main()
+    main()    
     elapsed_time = time.time() - start_time
     print(f"\nTotal execution time: {elapsed_time:.2f} seconds ({elapsed_time/60:.2f} minutes)")

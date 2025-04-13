@@ -30,9 +30,14 @@ total_files = len(selected_links)
 for link in selected_links:
     print(link)
     
-    # Extract the filename from the link
-    imagename = link.split('.')
-    filename = f"./HDF5Up/{imagename[7][:10]}.HDF5"
+    # Extract the date pattern using regex
+    date_pattern = re.search(r'A\d{8}', link)
+    if date_pattern:
+        date_str = date_pattern.group(0)
+        filename = f"./HDF5Up/{date_str}.HDF5"
+    else:
+        print(f"Could not extract date from link: {link}")
+        continue
     
     # Check if the file already exists
     if os.path.exists(filename):

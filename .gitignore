@@ -1,8 +1,10 @@
 # Ignore visualization output directory
 visualization_output/
+visualization_outputUp/
 
 #Igore les hdf5 files
 HDF5/
+HDF5Up/
 
 # Python bytecode
 __pycache__/

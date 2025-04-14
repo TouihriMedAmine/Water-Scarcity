@@ -1,10 +1,12 @@
 # Ignore visualization output directory
 visualization_output/
 visualization_outputUp/
+visualization_outputUp_2020_2024/
 
 #Igore les hdf5 files
 HDF5/
 HDF5Up/
+HDF5Up2020-2024/
 
 # Python bytecode
 __pycache__/
@@ -30,7 +32,7 @@ ENV/
 # OS specific files
 .DS_Store
 Thumbs.db
-
+logs/
 # Jupyter Notebook
 .ipynb_checkpoints
 

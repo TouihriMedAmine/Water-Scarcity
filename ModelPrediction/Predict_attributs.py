@@ -8,6 +8,7 @@ from tensorflow.keras import layers, models
 from sklearn.model_selection import train_test_split
 from PIL import Image
 import re
+import gc  # Garbage collector
 
 # Ces variables seront déterminées automatiquement
 IMAGE_HEIGHT = None
@@ -15,6 +16,7 @@ IMAGE_WIDTH = None
 EPOCHS = 10
 BATCH_SIZE = 8
 SEQUENCE_LENGTH = 6  # Nombre d'images historiques à considérer
+RESIZE_FACTOR = 4  # Facteur de réduction de la taille des images (4 = 1/4 de la taille originale)
 
 # 1. Détection automatique de la taille d'image et chargement des données
 def detect_image_size_and_load_dataset(base_dir, attribute_name):
@@ -39,28 +41,48 @@ def detect_image_size_and_load_dataset(base_dir, attribute_name):
     # Détecter la taille d'image à partir du premier fichier
     first_image_path = os.path.join(attribute_dir, all_files[0])
     with Image.open(first_image_path) as img:
-        IMAGE_WIDTH, IMAGE_HEIGHT = img.size
-        print(f"Taille d'image détectée: {IMAGE_WIDTH}x{IMAGE_HEIGHT}")
+        orig_width, orig_height = img.size
+        # Réduire la taille des images pour économiser la mémoire
+        IMAGE_WIDTH = orig_width // RESIZE_FACTOR
+        IMAGE_HEIGHT = orig_height // RESIZE_FACTOR
+        print(f"Taille d'image originale: {orig_width}x{orig_height}")
+        print(f"Taille d'image redimensionnée: {IMAGE_WIDTH}x{IMAGE_HEIGHT}")
     
-    # Maintenant charger toutes les images
-    for filename in all_files:
-        # Extraction de la date avec regex (format A20000101.png)
-        date_match = re.match(r'A(\d{4})(\d{2})(\d{2})\.png', filename)
+    # Charger les images par lots pour économiser la mémoire
+    batch_size = 100  # Traiter les images par lots de 100
+    for i in range(0, len(all_files), batch_size):
+        batch_files = all_files[i:i+batch_size]
+        batch_images = []
+        batch_dates = []
         
-        if date_match:
-            year = int(date_match.group(1))
-            month = int(date_match.group(2))
-            day = int(date_match.group(3))
+        for filename in batch_files:
+            # Extraction de la date avec regex (format A20000101.png)
+            date_match = re.match(r'A(\d{4})(\d{2})(\d{2})\.png', filename)
             
-            # Chargement de l'image PNG
-            image_path = os.path.join(attribute_dir, filename)
-            image = load_image(image_path)
-            
-            # Normalisation de l'image
-            image = normalize_image(image)
-            
-            images.append(image)
-            dates.append(datetime(year, month, day))
+            if date_match:
+                year = int(date_match.group(1))
+                month = int(date_match.group(2))
+                day = int(date_match.group(3))
+                
+                # Chargement de l'image PNG
+                image_path = os.path.join(attribute_dir, filename)
+                image = load_image(image_path)
+                
+                # Normalisation de l'image
+                image = normalize_image(image)
+                
+                batch_images.append(image)
+                batch_dates.append(datetime(year, month, day))
+        
+        # Ajouter le lot à la liste principale
+        images.extend(batch_images)
+        dates.extend(batch_dates)
+        
+        # Afficher la progression
+        print(f"  Chargées {min(i+batch_size, len(all_files))}/{len(all_files)} images...")
+        
+        # Forcer la collecte des déchets pour libérer la mémoire
+        gc.collect()
     
     # Tri des images par date
     sorted_data = sorted(zip(dates, images), key=lambda x: x[0])
@@ -73,7 +95,7 @@ def detect_image_size_and_load_dataset(base_dir, attribute_name):
 
 def load_image(filepath):
     """
-    Charge une image PNG et la convertit en array numpy
+    Charge une image PNG, la redimensionne et la convertit en array numpy
     """
     try:
         with Image.open(filepath) as img:
@@ -81,7 +103,9 @@ def load_image(filepath):
             if img.mode != 'L':
                 img = img.convert('L')
             
-            # Pas de redimensionnement - utilisation de la taille native
+            # Redimensionnement pour économiser la mémoire
+            img = img.resize((IMAGE_WIDTH, IMAGE_HEIGHT), Image.LANCZOS)
+            
             image_array = np.array(img).astype(np.float32)
             return image_array
     except Exception as e:
@@ -97,53 +121,78 @@ def normalize_image(image):
         return (image - min_val) / (max_val - min_val)
     return image
 
-# 2. Création des séquences pour l'apprentissage temporel
+# 2. Création des séquences pour l'apprentissage temporel - version optimisée pour la mémoire
 def create_temporal_sequences(images, dates):
     """
     Crée des séquences d'images pour l'apprentissage temporel.
-    Input: séquence de N images consécutives
-    Target: image suivante
+    Utilise un générateur pour économiser la mémoire.
     """
-    sequences = []
-    targets = []
-    sequence_dates = []  # Pour garder une trace des dates de séquence
+    print(f"Préparation des séquences temporelles pour {len(images)} images...")
+    
+    # Calculer combien de séquences nous aurons
+    num_sequences = len(images) - SEQUENCE_LENGTH
+    print(f"Nombre de séquences à générer: {num_sequences}")
+    
+    # Créer des arrays vides pour stocker les métadonnées de séquence
+    sequence_dates = []
     target_dates = []
     
-    for i in range(len(images) - SEQUENCE_LENGTH):
-        # Séquence d'entrée: N images consécutives
-        sequence = images[i:i+SEQUENCE_LENGTH]
+    for i in range(num_sequences):
         sequence_date = dates[i:i+SEQUENCE_LENGTH]
-        # Cible: l'image suivante
-        target = images[i+SEQUENCE_LENGTH]
         target_date = dates[i+SEQUENCE_LENGTH]
         
-        sequences.append(sequence)
         sequence_dates.append(sequence_date)
-        targets.append(target)
         target_dates.append(target_date)
     
-    return np.array(sequences), np.array(targets), np.array(sequence_dates), np.array(target_dates)
+    # Définir un générateur pour créer les séquences à la demande pendant l'entraînement
+    def sequence_generator():
+        for i in range(num_sequences):
+            # Séquence d'entrée: N images consécutives
+            sequence = images[i:i+SEQUENCE_LENGTH]
+            # Cible: l'image suivante
+            target = images[i+SEQUENCE_LENGTH]
+            
+            # Ajouter dimension de canal pour le modèle
+            sequence = np.expand_dims(sequence, axis=-1)
+            target = np.expand_dims(target, axis=-1)
+            
+            yield sequence, target
+    
+    # Créer un dataset TensorFlow à partir du générateur
+    output_signature = (
+        tf.TensorSpec(shape=(SEQUENCE_LENGTH, IMAGE_HEIGHT, IMAGE_WIDTH, 1), dtype=tf.float32),
+        tf.TensorSpec(shape=(IMAGE_HEIGHT, IMAGE_WIDTH, 1), dtype=tf.float32)
+    )
+    
+    dataset = tf.data.Dataset.from_generator(
+        sequence_generator,
+        output_signature=output_signature
+    )
+    
+    return dataset, num_sequences, np.array(sequence_dates), np.array(target_dates)
 
 # 3. Création du modèle de deep learning
 def create_attribute_model():
     """
     Crée un modèle ConvLSTM pour la prédiction des cartes d'attributs
+    Version optimisée pour fonctionner avec des images plus petites
     """
     # Entrée: séquence d'images
     input_shape = (SEQUENCE_LENGTH, IMAGE_HEIGHT, IMAGE_WIDTH, 1)
     inputs = layers.Input(input_shape)
     
     # Encodeur: extraction de caractéristiques spatiales et temporelles
-    x = layers.ConvLSTM2D(32, (3, 3), padding='same', return_sequences=True)(inputs)
+    # Utilisation de filtres plus petits pour économiser la mémoire
+    x = layers.ConvLSTM2D(16, (3, 3), padding='same', return_sequences=True)(inputs)
     x = layers.BatchNormalization()(x)
-    x = layers.ConvLSTM2D(64, (3, 3), padding='same', return_sequences=True)(x)
+    x = layers.ConvLSTM2D(32, (3, 3), padding='same', return_sequences=True)(x)
     x = layers.BatchNormalization()(x)
-    x = layers.ConvLSTM2D(64, (3, 3), padding='same', return_sequences=False)(x)
+    x = layers.ConvLSTM2D(32, (3, 3), padding='same', return_sequences=False)(x)
     x = layers.BatchNormalization()(x)
     
     # Décodeur: reconstruction de l'image de prédiction
-    x = layers.Conv2D(64, (3, 3), activation='relu', padding='same')(x)
     x = layers.Conv2D(32, (3, 3), activation='relu', padding='same')(x)
+    x = layers.Conv2D(16, (3, 3), activation='relu', padding='same')(x)
     
     # Couche de sortie: prédiction de l'image
     outputs = layers.Conv2D(1, (3, 3), activation='sigmoid', padding='same')(x)
@@ -158,16 +207,22 @@ class CoordinateConverter:
     """
     Convertit entre coordonnées géographiques (lat/lon) et indices d'image
     """
-    def __init__(self, lon_min, lon_max, lat_min, lat_max, width, height):
+    def __init__(self, lon_min, lon_max, lat_min, lat_max, width, height, original_width, original_height):
         self.lon_min = lon_min
         self.lon_max = lon_max
         self.lat_min = lat_min
         self.lat_max = lat_max
         self.width = width
         self.height = height
+        self.original_width = original_width
+        self.original_height = original_height
+        
+        # Facteurs de mise à l'échelle
+        self.width_scale = width / original_width
+        self.height_scale = height / original_height
     
     def coord_to_pixel(self, lat, lon):
-        """Convertit lat/lon en indices de pixel dans l'image"""
+        """Convertit lat/lon en indices de pixel dans l'image redimensionnée"""
         # Vérification des limites
         if lon < self.lon_min or lon > self.lon_max or lat < self.lat_min or lat > self.lat_max:
             raise ValueError(f"Coordonnées hors limites: lat={lat}, lon={lon}")
@@ -177,7 +232,7 @@ class CoordinateConverter:
         # Note: inversion pour la latitude (nord en haut)
         y_norm = 1.0 - (lat - self.lat_min) / (self.lat_max - self.lat_min)
         
-        # Conversion en indices
+        # Conversion en indices pour l'image redimensionnée
         x_idx = int(x_norm * (self.width - 1))
         y_idx = int(y_norm * (self.height - 1))
         
@@ -246,42 +301,43 @@ def main():
     usa_lat_max = 49.0
     
     # Chemin vers le dossier racine contenant les sous-dossiers d'attributs
-    base_dir = "visualization_output"
-    attribute_name = "PotEvap_tavg"  # Choisir parmi les attributs disponibles
+    base_dir = "visualization_outputUp"
+    attribute_name = "AvgSurfT"  # Choisir parmi les attributs disponibles
     
     # Chargement des données avec détection automatique de la taille d'image
     print(f"Chargement des données pour l'attribut {attribute_name}...")
     images, dates = detect_image_size_and_load_dataset(base_dir, attribute_name)
     
+    # Sauvegarde de la taille originale avant redimensionnement
+    original_width = IMAGE_WIDTH * RESIZE_FACTOR
+    original_height = IMAGE_HEIGHT * RESIZE_FACTOR
+    
     # Initialisation du convertisseur de coordonnées (après détection de la taille)
     converter = CoordinateConverter(
         usa_lon_min, usa_lon_max, usa_lat_min, usa_lat_max, 
-        IMAGE_WIDTH, IMAGE_HEIGHT
+        IMAGE_WIDTH, IMAGE_HEIGHT, original_width, original_height
     )
     
-    # Création des séquences temporelles
+    # Création des séquences temporelles avec la méthode optimisée
     print("Création des séquences temporelles...")
-    sequences, targets, sequence_dates, target_dates = create_temporal_sequences(images, dates)
-    print(f"Nombre de séquences: {len(sequences)}")
+    dataset, num_sequences, sequence_dates, target_dates = create_temporal_sequences(images, dates)
+    print(f"Nombre de séquences: {num_sequences}")
     
     # Affichage des informations sur les données
     print(f"Période couverte: {dates[0]} à {dates[-1]}")
     print(f"Nombre total d'images: {len(images)}")
     
-    # Division train/validation
-    print("Division train/validation...")
-    X_train, X_val, y_train, y_val = train_test_split(
-        sequences, targets, test_size=0.2, random_state=42, shuffle=False
-    )
+    # Préparation des données pour l'entraînement
+    # Utilisation de tf.data pour un traitement par lots efficace
+    train_size = int(0.8 * num_sequences)
+    val_size = num_sequences - train_size
     
-    # Ajout de la dimension de canal pour le traitement par ConvLSTM2D
-    X_train = np.expand_dims(X_train, axis=-1)
-    X_val = np.expand_dims(X_val, axis=-1)
-    y_train = np.expand_dims(y_train, axis=-1)
-    y_val = np.expand_dims(y_val, axis=-1)
+    # Création des ensembles d'entraînement et de validation
+    train_dataset = dataset.take(train_size).batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
+    val_dataset = dataset.skip(train_size).batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
     
-    print(f"Forme des données d'entraînement: {X_train.shape}")
-    print(f"Forme des données de validation: {X_val.shape}")
+    print(f"Taille de l'ensemble d'entraînement: {train_size} séquences")
+    print(f"Taille de l'ensemble de validation: {val_size} séquences")
     
     # Création et entraînement du modèle
     print("Création du modèle...")
@@ -325,10 +381,9 @@ def main():
     print("Démarrage de l'entraînement...")
     try:
         history = model.fit(
-            X_train, y_train,
+            train_dataset,
             epochs=EPOCHS,
-            batch_size=BATCH_SIZE,
-            validation_data=(X_val, y_val),
+            validation_data=val_dataset,
             callbacks=callbacks,
             verbose=1
         )

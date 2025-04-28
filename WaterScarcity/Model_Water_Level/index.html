@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Level Estimation</title>
+</head>
+<body>
+    <h2>Upload an Image for Water Level Estimation</h2>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Prediction Results:</h3>
+    <p id="prediction-result"></p>
+    
+</body>
+</html>

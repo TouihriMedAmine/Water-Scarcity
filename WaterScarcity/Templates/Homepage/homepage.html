@@ -264,21 +264,21 @@ https://www.tooplate.com/view/2121-wave-cafe
           <!-- end Special Items Page -->
 
           <!-- Contact Page -->
-          <div id="contact" class="tm-page-content">
+<div id="contact" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
               <h2 class="tm-text-primary">Percipitation Prediction</h2>
-              <p>Wave Cafe Template has a video background. You can use this layout for your websites. Please contact Tooplate's Facebook page. Tell your friends about our website.</p>
+              <p>Upload an image (satellite/radar) to get precipitation forecasts and heavy rain probabilities.</p>
             </div>
             <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form">
+              <form action="" method="POST" id="contact-form-precipitation" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="tm-form-group">
-                    <label for="photo">Upload Image</label>
-                  <input type="file" name="photo" class="tm-form-control" placeholder="image" required="" />
-                </div>        
+                  <label for="photo_precipitation">Upload Image</label>
+                  <input type="file" name="photo_precipitation" id="photo_precipitation" class="tm-form-control" accept="image/*" required="" />
+                </div>
                 <div>
                   <button type="submit" class="tm-btn-primary tm-align-right">
-                    Submit
+                    Predict
                   </button>
                 </div>
               </form>
@@ -287,20 +287,26 @@ https://www.tooplate.com/view/2121-wave-cafe
           <div id="contact2" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
               <h2 class="tm-text-primary">Irrigation Management</h2>
-              <p>Wave Cafe Template has a video background. You can use this layout for your websites. Please contact Tooplate's Facebook page. Tell your friends about our website.</p>
+              <p>Enter location (latitude, longitude) and a future date for personalized irrigation recommendations based on predicted weather conditions.</p>
             </div>
             <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form">
+              <form action="" method="POST" id="contact-form-irrigation">
                 {% csrf_token %}
-               
                 <div class="tm-form-group">
-                    <label for="photo">Upload Image</label>
-                  <input type="file" name="photo" class="tm-form-control" placeholder="image" required="" />
-                </div>        
-                       
+                  <label for="latitude">Latitude</label>
+                  <input type="number" step="any" name="latitude" id="latitude" class="tm-form-control" placeholder="Ex: 36.8065" required="" />
+                </div>
+                 <div class="tm-form-group">
+                   <label for="longitude">Longitude</label>
+                  <input type="number" step="any" name="longitude" id="longitude" class="tm-form-control" placeholder="Ex: 10.1815" required="" />
+                </div>
+                 <div class="tm-form-group">
+                   <label for="date_irrigation">Future Date</label>
+                  <input type="date" name="date_irrigation" id="date_irrigation" class="tm-form-control" required="" />
+                </div>
                 <div>
                   <button type="submit" class="tm-btn-primary tm-align-right">
-                    Submit
+                    Get Recommendations
                   </button>
                 </div>
               </form>
@@ -309,38 +315,41 @@ https://www.tooplate.com/view/2121-wave-cafe
           <div id="contact3" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
               <h2 class="tm-text-primary">Water Level Estimation</h2>
-              <p>Wave Cafe Template has a video background. You can use this layout for your websites. Please contact Tooplate's Facebook page. Tell your friends about our website.</p>
+              <p>Upload an image of a lake, river, or harbor to estimate the water level (low, medium, high).</p>
             </div>
             <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form">
-                {% csrf_token %}
-                <div class="tm-form-group">
-                    <label for="photo">Upload Image</label>
-                  <input type="file" name="photo" class="tm-form-control" placeholder="image" required="" />
-                </div>        
-                <div>
-                  <button type="submit" class="tm-btn-primary tm-align-right">
-                    Submit
-                  </button>
-                </div>
+              <!-- Le formulaire pour l'upload -->
+              <form id="waterLevelForm" method="post" enctype="multipart/form-data">
+                  {% csrf_token %} {# Important pour la sécurité Django #}
+                  <div class="tm-form-group">
+                      <label for="waterImageInput">Upload Image (Lake, River, Harbor)</label>
+                      <input type="file" id="waterImageInput" name="image" class="tm-form-control" accept="image/*" required>
+                  </div>
+                  <div>
+                      <button type="submit" class="tm-btn-primary tm-align-right">Estimer le niveau</button>
+                  </div>
               </form>
+              <!-- Zone pour afficher les résultats -->
+              <div id="waterLevelResult" style="margin-top: 15px; color: white; text-align: left;">
+                  {# Les résultats apparaîtront ici #}
+              </div>
             </div>
           </div>
           <div id="contact4" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
-              <h2 class="tm-text-primary">Drought Zones</h2>
-              <p>Wave Cafe Template has a video background. You can use this layout for your websites. Please contact Tooplate's Facebook page. Tell your friends about our website.</p>
+              <h2 class="tm-text-primary">Drought Zones Prediction</h2>
+              <p>Upload an image to generate drought risk maps for the area.</p>
             </div>
             <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form">
+              <form action="" method="POST" id="contact-form-drought" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="tm-form-group">
-                    <label for="photo">Upload Image</label>
-                  <input type="file" name="photo" class="tm-form-control" placeholder="image" required="" />
-                </div>           
+                    <label for="photo_drought">Upload Image</label>
+                  <input type="file" name="photo_drought" id="photo_drought" class="tm-form-control" accept="image/*" required="" />
+                </div>
                 <div>
                   <button type="submit" class="tm-btn-primary tm-align-right">
-                    Submit
+                    Predict Zones
                   </button>
                 </div>
               </form>
@@ -348,39 +357,39 @@ https://www.tooplate.com/view/2121-wave-cafe
           </div>
           <div id="contact5" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
-              <h2 class="tm-text-primary">Water Runoff</h2>
-              <p>Wave Cafe Template has a video background. You can use this layout for your websites. Please contact Tooplate's Facebook page. Tell your friends about our website.</p>
+              <h2 class="tm-text-primary">Water Runoff Prediction</h2>
+              <p>Upload a 6-day data file (Rainfall, Surface/Subsurface Runoff, Soil Moisture) to predict surface runoff for the next day.</p>
             </div>
             <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form">
+              <form action="" method="POST" id="contact-form-runoff" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="tm-form-group">
-                    <label for="photo">Upload Image</label>
-                  <input type="file" name="photo" class="tm-form-control" placeholder="image" required="" />
-                </div>         
+                    <label for="data_runoff">Upload 6-day Data File</label>
+                  <input type="file" name="data_runoff" id="data_runoff" class="tm-form-control" required="" /> <!-- Accept different file types if needed -->
+                </div>
                 <div>
                   <button type="submit" class="tm-btn-primary tm-align-right">
-                    Submit
+                    Predict Runoff
                   </button>
                 </div>
               </form>
             </div>
           </div>
-          <div id="contact6" class="tm-page-content">
+           <div id="contact6" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
               <h2 class="tm-text-primary">Watershed Management</h2>
-              <p>Wave Cafe Template has a video background. You can use this layout for your websites. Please contact Tooplate's Facebook page. Tell your friends about our website.</p>
+              <p>Upload an image of the watershed to identify restoration areas and monitor its evolution.</p>
             </div>
             <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form">
+              <form action="" method="POST" id="contact-form-watershed" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="tm-form-group">
-                    <label for="photo">Upload Image</label>
-                  <input type="file" name="photo" class="tm-form-control" placeholder="image" required="" />
-                </div>    
+                    <label for="photo_watershed">Upload Watershed Image</label>
+                  <input type="file" name="photo_watershed" id="photo_watershed" class="tm-form-control" accept="image/*" required="" />
+                </div>
                 <div>
                   <button type="submit" class="tm-btn-primary tm-align-right">
-                    Submit
+                    Analyze Watershed
                   </button>
                 </div>
               </form>
@@ -505,7 +514,46 @@ https://www.tooplate.com/view/2121-wave-cafe
         }
       });
     });
-      
+    document.getElementById('waterLevelForm').addEventListener('submit', async function(event) {
+                          event.preventDefault(); // Empêche la soumission standard du formulaire
+
+                          const fileInput = document.getElementById('waterImageInput');
+                          const resultDiv = document.getElementById('waterLevelResult');
+                          resultDiv.innerHTML = 'Prédiction en cours...'; // Message d'attente
+
+                          if (fileInput.files.length === 0) {
+                              resultDiv.innerHTML = 'Veuillez sélectionner une image.';
+                              return;
+                          }
+
+                          const formData = new FormData();
+                          formData.append('image', fileInput.files[0]);
+
+                          try {
+                              // Remplacez '/predict_water_level' par l'URL de votre endpoint backend si nécessaire
+                              const response = await fetch('/predict_water_level', {
+                                  method: 'POST',
+                                  body: formData
+                              });
+
+                              if (!response.ok) {
+                                  throw new Error(`Erreur HTTP: ${response.status}`);
+                              }
+
+                              const result = await response.json();
+
+                              // Afficher les résultats
+                              resultDiv.innerHTML = `
+                                  <p><b>Classe prédite:</b> ${result.predicted_class || 'N/A'}</p>
+                                  <p><b>Profondeur prédite:</b> ${result.predicted_depth || 'N/A'}</p>
+                                  <p><b>Intensité bleue:</b> ${result.blue_intensity !== undefined ? result.blue_intensity : 'N/A'}</p>
+                              `;
+
+                          } catch (error) {
+                              console.error('Erreur lors de la prédiction:', error);
+                              resultDiv.innerHTML = `Erreur lors de la prédiction: ${error.message}`;
+                          }
+                      });
   </script>
 </body>
 </html>

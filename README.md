@@ -85,13 +85,6 @@ RESISC45 dataset for image data.
   - `langchain_ollama`
   - `langdetect`
 
-## 🚀 Setup Instructions
-
-1. **Start Ollama**  
-   Make sure `ollama` is installed and running:
-   ```bash
-   ollama serve
-
 
 
 

@@ -51,6 +51,47 @@ U-Net, FCN, and ResNet for water level estimation in rivers and harbors.
 RESISC45 dataset for image data.
 
 
+# 💧 Droplets — Climate & Water Resource Chatbot
+
+**Droplets** is a specialized AI chatbot focused on **climate change**, **water usage**, and **technological innovation in water management**. It is powered by insights extracted from the official [ONAGRI 2023 report](http://www.onagri.nat.tn/uploads/secteur-eau/eau-2023.pdf), processed using natural language tools and embedded for retrieval-based answers.
+
+## 🌍 Core Topics
+
+- Effects of climate change on water resources
+- Agricultural, domestic, and industrial water usage in Tunisia
+- New technologies for water management (IoT, desalination, AI, sensors, etc.)
+- Water policy and sustainability strategies
+
+## 🧠 Chatbot Behavior
+
+- Responds with clear, friendly, and concise answers (max 60 words)
+- Stays strictly within the water/climate/technology domain
+- Refuses unrelated questions politely and guides the user back to relevant topics
+- Uses source documents when answering, and never invents facts
+- Indicates uncertainty if information is not found
+
+## 📘 Primary Data Source
+
+- **ONAGRI 2023 Report**: Overview of climate impact, resource usage, and sector evolution  
+  [📄 Download PDF](http://www.onagri.nat.tn/uploads/secteur-eau/eau-2023.pdf)
+
+## ⚙️ Tech Stack
+
+- **LangChain** for orchestration
+- **FAISS** for semantic document retrieval
+- **Ollama** for running the local **`mystral`** model
+- **Python 3.10+**
+  - `langchain_community`
+  - `langchain_ollama`
+  - `langdetect`
+
+## 🚀 Setup Instructions
+
+1. **Start Ollama**  
+   Make sure `ollama` is installed and running:
+   ```bash
+   ollama serve
+
 
 
 

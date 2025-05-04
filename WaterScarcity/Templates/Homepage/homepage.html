@@ -321,15 +321,16 @@ https://www.tooplate.com/view/2121-wave-cafe
             </div>
             <div class="tm-black-bg tm-contact-form-container tm-align-right">
               <!-- Le formulaire pour l'upload -->
-              <form id="waterLevelForm" method="post" enctype="multipart/form-data">
-                  {% csrf_token %} {# Important pour la sécurité Django #}
-                  <div class="tm-form-group">
-                      <label for="waterImageInput">Upload Image (Lake, River, Harbor)</label>
-                      <input type="file" id="waterImageInput" name="image" class="tm-form-control" accept="image/*" required>
-                  </div>
-                  <div>
-                      <button type="submit" class="tm-btn-primary tm-align-right">Estimer le niveau</button>
-                  </div>
+              <form id="waterLevelForm" enctype="multipart/form-data">
+                {% csrf_token %} {# Important pour la sécurité Django, même avec JS #}
+                <div class="tm-form-group">
+                    <label for="waterImageInput">Upload Image (Lake, River, Harbor)</label>
+                    <input type="file" id="waterImageInput" name="image" class="tm-form-control" accept="image/*" required>
+                </div>
+                <div>
+                    <!-- Changement: type="button" pour éviter la soumission classique -->
+                    <button type="button" id="estimateButton" class="tm-btn-primary tm-align-right">Estimer le niveau</button>
+                </div>
               </form>
               <!-- Zone pour afficher les résultats -->
               <div id="waterLevelResult" style="margin-top: 15px; color: white; text-align: left;">
@@ -427,7 +428,7 @@ https://www.tooplate.com/view/2121-wave-cafe
       <div class="message bot-message">
         <i class="fas fa-light fa-robot"></i>
         <!-- prettier-ignore -->
-        <div class="message-text"> Hey there  <br /> How can I help you today? </div>
+        <div class="message-text"> Hey there  <br /> How can I help you today about water scarcity? </div>
       </div>
     </div>
 
@@ -454,7 +455,7 @@ https://www.tooplate.com/view/2121-wave-cafe
 
   <!-- Linking custom script -->
   <script src="{% static 'js/script.js' %}"></script> 
-    
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <!-- Background video -->
   <div class="tm-video-wrapper">
       <i id="tm-video-control-button" class="fas fa-pause" style="position: relative; left:50px; top:230px"></i>
@@ -565,46 +566,69 @@ https://www.tooplate.com/view/2121-wave-cafe
         }
       });
     });
-    document.getElementById('waterLevelForm').addEventListener('submit', async function(event) {
-                          event.preventDefault(); // Empêche la soumission standard du formulaire
+    
 
-                          const fileInput = document.getElementById('waterImageInput');
-                          const resultDiv = document.getElementById('waterLevelResult');
-                          resultDiv.innerHTML = 'Prédiction en cours...'; // Message d'attente
+    
+    document.getElementById('estimateButton').addEventListener('click', function() {
+    const form = document.getElementById('waterLevelForm');
+    const imageInput = document.getElementById('waterImageInput');
+    const resultDiv = document.getElementById('waterLevelResult');
+    const csrfToken = form.querySelector('[name=csrfmiddlewaretoken]').value; // Récupérer le token CSRF
 
-                          if (fileInput.files.length === 0) {
-                              resultDiv.innerHTML = 'Veuillez sélectionner une image.';
-                              return;
-                          }
+    if (imageInput.files.length === 0) {
+      resultDiv.innerHTML = '<p style="color: red;">Veuillez sélectionner une image.</p>';
+      return;
+    }
 
-                          const formData = new FormData();
-                          formData.append('image', fileInput.files[0]);
+    const formData = new FormData();
+    formData.append('image', imageInput.files[0]);
 
-                          try {
-                              // Remplacez '/predict_water_level' par l'URL de votre endpoint backend si nécessaire
-                              const response = await fetch('/predict_water_level', {
-                                  method: 'POST',
-                                  body: formData
-                              });
+    // Afficher un message de chargement
+    resultDiv.innerHTML = '<p>Estimation en cours...</p>';
 
-                              if (!response.ok) {
-                                  throw new Error(`Erreur HTTP: ${response.status}`);
-                              }
+    // Utiliser l'URL définie dans Waterlevel/urls.py via la balise
+    const url = "{% url 'waterlevel:estimate_water_level' %}"; // Assurez-vous que le namespace et le nom sont corrects
 
-                              const result = await response.json();
-
-                              // Afficher les résultats
-                              resultDiv.innerHTML = `
-                                  <p><b>Classe prédite:</b> ${result.predicted_class || 'N/A'}</p>
-                                  <p><b>Profondeur prédite:</b> ${result.predicted_depth || 'N/A'}</p>
-                                  <p><b>Intensité bleue:</b> ${result.blue_intensity !== undefined ? result.blue_intensity : 'N/A'}</p>
-                              `;
-
-                          } catch (error) {
-                              console.error('Erreur lors de la prédiction:', error);
-                              resultDiv.innerHTML = `Erreur lors de la prédiction: ${error.message}`;
-                          }
-                      });
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        // Important: Inclure le token CSRF dans l'en-tête pour la sécurité
+        'X-CSRFToken': csrfToken,
+        // Pas besoin de 'Content-Type' pour FormData, le navigateur le définit
+      },
+      body: formData
+    })
+    .then(response => {
+      if (!response.ok) {
+        // Si le statut HTTP n'est pas OK (ex: 500, 400)
+        return response.json().then(err => {
+          throw new Error(err.error || `Erreur serveur: ${response.statusText}`);
+        });
+      }
+      return response.json(); // Convertir la réponse en JSON
+    })
+    .then(data => {
+      if (data.success) {
+        // Afficher les résultats si la requête a réussi
+        resultDiv.innerHTML = `
+          <p><strong>Classe predicted:</strong> ${data.class}</p>
+          <p><strong>Estimated water level:</strong> ${data.predicted_depth}</p>
+          <p><strong>Blue intensity (indicative):</strong> ${data.blue_intensity}</p>
+        `;
+      } else {
+        // Afficher l'erreur renvoyée par le backend
+        resultDiv.innerHTML = `<p style="color: red;">Erreur: ${data.error || 'Une erreur inconnue est survenue.'}</p>`;
+      }
+    })
+    .catch(error => {
+      // Gérer les erreurs réseau ou les erreurs lancées manuellement
+      console.error('Erreur lors de la requête fetch:', error);
+      resultDiv.innerHTML = `<p style="color: red;">Erreur lors de l'estimation: ${error.message}</p>`;
+    });
+  });
+  
   </script>
+
+  
 </body>
 </html>

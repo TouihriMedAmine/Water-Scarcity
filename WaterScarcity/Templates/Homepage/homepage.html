@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
     <link rel="stylesheet" href="{% static 'css/tooplate-wave-cafe.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <!--
 Tooplate 2121 Wave Cafe
 https://www.tooplate.com/view/2121-wave-cafe
@@ -21,7 +23,7 @@ https://www.tooplate.com/view/2121-wave-cafe
       <div class="tm-left">
         <div class="tm-left-inner">
           <div class="tm-site-header" style="width: 700px;">
-            <i class="fas fa-solid fa-droplet tm-site-logo fa-3x"" style="width=200px"></i>
+            <i class="fas fa-solid fa-droplet tm-site-logo fa-3x" style="width=200px"></i>
             
             <h1 class="tm-site-name">Water Scarcity</h1>
           </div>
@@ -403,10 +405,59 @@ https://www.tooplate.com/view/2121-wave-cafe
      
     </footer>
   </div>
+  <!-- Chatbot Toggler -->
+  <button id="chatbot-toggler">
+    <span class="material-symbols-rounded">mode_comment</span>
+    <span class="material-symbols-rounded">close</span>
+  </button>
+
+  <div class="chatbot-popup">
+    <!-- Chatbot Header -->
+    <div class="chat-header">
+      <div class="header-info">
+        <img class="chatbot-logo" src="{% static '/img/robotic.png' %}" alt="Chatbot Logo" width="50" height="50">
+        </img>
+        <h2 class="logo-text">Chatbot</h2>
+      </div>
+      <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+    </div>
+
+    <!-- Chatbot Body -->
+    <div class="chat-body">
+      <div class="message bot-message">
+        <i class="fas fa-light fa-robot"></i>
+        <!-- prettier-ignore -->
+        <div class="message-text"> Hey there  <br /> How can I help you today? </div>
+      </div>
+    </div>
+
+    <!-- Chatbot Footer -->
+    <div class="chat-footer">
+      <form action="#" class="chat-form">
+        <textarea placeholder="Message..." class="message-input" required></textarea>
+        <div class="chat-controls">
+          <button type="button" id="emoji-picker" class="material-symbols-outlined">sentiment_satisfied</button>
+          <div class="file-upload-wrapper">
+            <input type="file" accept="image/*" id="file-input" hidden />
+            <img src="#" />
+            <button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+            <button type="button" id="file-cancel" class="material-symbols-rounded">close</button>
+          </div>
+          <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Linking Emoji Mart script for emoji picker -->
+  <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+
+  <!-- Linking custom script -->
+  <script src="{% static 'js/script.js' %}"></script> 
     
   <!-- Background video -->
   <div class="tm-video-wrapper">
-      <i id="tm-video-control-button" class="fas fa-pause"></i>
+      <i id="tm-video-control-button" class="fas fa-pause" style="position: relative; left:50px; top:230px"></i>
       <video autoplay muted loop id="tm-video">
           <source src="{% static 'video/wave-cafe-video-bg.mp4' %}" type="video/mp4">
       </video>

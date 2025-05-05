@@ -1,55 +1,105 @@
-Prédiction du Ruissellement avec ConvLSTM
+Prédiction du ruissellement de surface (QS) avec ConvLSTM
 
-1. Description
+Objectif
 
-Ce projet utilise un modèle ConvLSTM pour prédire le ruissellement (débit de surface) sur la région CONUS des États-Unis. Le modèle apprend à partir de séquences temporelles de données hydrométéorologiques et produit une carte de débit à un horizon de 6 jours.
+Ce projet a pour objectif de prédire la carte de ruissellement de surface (QS) à l'échelle spatiale pour un jour futur, en s'appuyant sur une séquence de cartes historiques.
 
-2. Jeu de données
+Qu'est-ce qu'on prédit ?
 
-Les données, fournies par la NASA (datanasa), sont stockées sous forme d’images PNG en niveaux de gris dans quatre dossiers :
+Le modèle ConvLSTM génère une estimation de la distribution spatiale du ruissellement de surface (QS) au jour suivant (ou à T+6 jours selon la configuration choisie).
 
-Rainf : précipitations quotidiennes
+Entrées (Input)
 
-SoilM_0_10cm : humidité du sol (0–10 cm)
+Séquences de N images QS (par défaut 6 jours consécutifs) au format TIFF/PNG, stockées dans data/input/.
 
-Qs : débit de surface total
+Chaque échantillon a la forme : (batch_size, sequence_length, channels, height, width) où channels=1 pour QS.
 
-Qsb : débit de base
+Sorties (Output)
 
-Chaque image est nommée YYYYMMDD.png et normalisée entre 0 et 1.
+Carte QS prédite pour le jour suivant, sauvegardée dans outputs/predictions/.
 
-3. Entrées / Sorties
+Courbes d'entraînement et de validation (loss) générées dans outputs/plots/.
 
-Entrées : séquence de T = 6 pas de temps, chaque pas représenté par 4 canaux (précip., sol, Qs, Qsb).Format : (batch_size, T, 4, H, W)
+Structure du dépôt
 
-Sortie : carte de débit de surface à t + Δ (Δ = 6), format (batch_size, 1, H, W).
+data_loader.py : Chargement, normalisation et création de batches temporels de données QS.
 
-4. Architecture et fonctionnement
+model.py : Définition de la ConvLSTMCell et du modèle ConvLSTMForecaster.
 
-Le modèle est un encoder–decoder ConvLSTM :
+train.py : Boucle d'entraînement, calcul de la loss (MSE), sauvegarde des checkpoints.
 
-L’encodeur traite les 6 pas historiques pour extraire des caractéristiques spatio-temporelles.
+infer.py : Script pour lancer l'inférence sur des données de test et générer les visualisations.
 
-Le décodeur génère la prédiction du débit de surface à l’horizon.
+utils.py : Fonctions utilitaires (affichage des images, calcul de métriques, gestion des chemins).
+
+requirements.txt / environment.yml : Liste des dépendances Python.
+
+Installation
+
+Cloner le dépôt :
+
+git clone <url_du_repository>
+cd <nom_du_repository>
+
+Créer un environnement virtuel et installer les dépendances :
+
+pip install -r requirements.txt
+# ou avec conda :
+# conda env create -f environment.yml && conda activate runoff
+
+Utilisation
+
+Entraînement
+
+Lancer l'entraînement du modèle :
+
+python train.py \
+  --data_dir data/input \
+  --epochs 50 \
+  --batch_size 8 \
+  --hidden_channels 16 \
+  --kernel_size 3
+
+Inférence
+
+Générer des prédictions sur un jeu de test :
+
+python infer.py \
+  --weights_path checkpoints/model_epoch50.pth \
+  --input_dir data/test \
+  --output_dir outputs/predictions
+
+Explication du fonctionnement
+
+Chargement des données :
+
+Les images QS sont lues, normalisées et regroupées en séquences temporelles.
+
+Modèle ConvLSTM :
+
+La ConvLSTMCell combine une convolution 2D et les mécanismes LSTM pour capturer les dynamiques spatio-temporelles.
+
+Le ConvLSTMForecaster enchaîne plusieurs cellules pour traiter la séquence complète et produire la prédiction finale.
 
 Entraînement :
 
-Critère : MSE (Mean Squared Error)
+Optimisation de la Mean Squared Error (MSE) entre la carte prédite et la carte réelle.
 
-Optimiseur : Adam (lr=1e-4)
+Possibilité d'utiliser un scheduler de taux d'apprentissage et un early stopping pour éviter le surapprentissage.
 
-Scheduler : ReduceLROnPlateau
+Inférence :
 
-Précision mixte (torch.cuda.amp)
+Chargement du checkpoint du modèle.
 
-Early stopping (patience = 8)
+Propagation avant pour générer la carte QS prédite.
 
-5. Interprétation des courbes d’apprentissage
+Sauvegarde des résultats et visualisation comparative (prédiction vs vérité terrain).
 
+Résultats et évaluation
 
+Visualisation des courbes d'entraînement et de validation pour suivre la convergence.
 
-Baisse rapide des pertes en début d’entraînement.
+Affichage côte-à-côte des cartes QS réelles et prédites pour évaluer qualitativement la performance.
 
-Plateau autour de 0.001 après ~10 époques.
+Ce README offre une vue d'ensemble pour comprendre, exécuter et étendre le code de prédiction du ruissellement de surface à l'aide d'un modèle ConvLSTM.
 
-Courbes train/val proches → bon compromis biais/variance.

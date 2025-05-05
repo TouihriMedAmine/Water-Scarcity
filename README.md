@@ -48,7 +48,9 @@ This deep learning pipeline uses **ConvLSTM networks** to predict drought zones 
 
 The model predicts drought probabilities using a **2-layer ConvLSTM** followed by a **Conv2D** output layer. It includes **multi-GPU support**, **ROC-AUC evaluation**, and **overlay visualizations** of drought predictions on real soil moisture maps.
 
-### 4. Droplets — Domain-Specific Chatbot
+---
+
+### 5. Droplets — Domain-Specific Chatbot
 A climate/water-focused AI chatbot powered by a fine-tuned local LLM. It answers questions about:
 
 Climate change impact
@@ -61,7 +63,10 @@ Sustainability and policy strategies
 
 Its knowledge is based on the ONAGRI 2023 report.
 
-### 5. Unified Web Interface
+---
+
+### 6. Unified Web Interface
+
 A user-friendly web page allows:
 
 Input of future date and location
@@ -71,6 +76,8 @@ Access to environmental predictions and generated report
 Visualization of predictive maps
 
 Interaction with the chatbot
+
+---
 
 ## ⚙️ Tech Stack
 Deep Learning: PyTorch, TensorFlow, Keras

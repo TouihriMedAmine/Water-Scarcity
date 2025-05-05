@@ -5,6 +5,7 @@ from tensorflow.keras.models import load_model
 from datetime import datetime
 import os
 import matplotlib.pyplot as plt
+from datetime import datetime, timedelta
 
 # Paramètres de la grille et normalisation
 IMG_HEIGHT = 128

@@ -1,63 +1,60 @@
-## 🌍 Project Overview
-We built an integrated intelligent platform for climate forecasting, water level estimation, climate awareness, and interactive data visualization. The system empowers users to anticipate environmental changes, explore satellite-based predictions, and interact with a chatbot expert in water and climate issues.
+# 💧 Intelligent Climate and Water Forecasting Platform
+
+## 🌍 Project Overview  
+We built an integrated intelligent platform for climate forecasting, water level estimation, drought prediction, environmental awareness, and interactive data visualization. The system empowers users to anticipate environmental changes, explore satellite-based predictions, and interact with a chatbot expert in water and climate issues.
+
+---
 
 ## 🧠 Core Modules
 
-## 1. Environmental Prediction (based on location and future date)
-Three deep learning models predict:
+### 1. Environmental Forecasting by Location & Date  
+We developed three deep learning models to predict key environmental variables:  
 
-🌡 Average surface temperature (AvgSurfT)
+- 🌡 **Average surface temperature** (`AvgSurfT`)  
+- 🌧 **Rainfall** (`Rainf`)  
+- 💨 **Potential evapotranspiration** (`PotEvap`)  
 
-🌧 Rainfall (Rainf)
+Users input geographic coordinates and a future date. The system then generates predictions and passes them to a **Large Language Model (LLM)**, which produces a personalized climate report for the user.
 
-💨 Potential evapotranspiration (PotEvap)
+---
 
-Using coordinates and a future date as input, predictions are passed to a text generation model (LLM) that outputs a personalized environmental report.
+### 2. Surface Runoff Prediction via ConvLSTM  
+A **ConvLSTM encoder–decoder architecture** forecasts **surface runoff** up to 6 days ahead. It ingests time-series grayscale satellite image data of:  
 
-## 2. Surface Runoff Prediction (ConvLSTM)
-A ConvLSTM encoder–decoder model forecasts surface runoff 6 days ahead using time-series of hydrometeorological grayscale image data (rainfall, soil moisture, base flow, and surface flow).
+- **Rainfall**  
+- **Soil moisture**  
+- **Surface and base flow**  
 
-## 3. Water Level Estimation from Satellite Images
-Using the RESISC45 dataset:
+This module enables advanced hydrological prediction and supports early warning systems for flood risks.
 
-Classify images into lakes, rivers, and harbors
+---
 
-Estimate water levels (low, medium, high) using CNNs, U-Net, FCN, or ResNet
+### 3. Satellite-Based Water Level Estimation  
+Using the **RESISC45** remote sensing dataset, this module classifies satellite images and estimates water levels:  
 
-## 4. Droplets — Domain-Specific Chatbot
-A climate/water-focused AI chatbot powered by a fine-tuned local LLM. It answers questions about:
+- 🌊 **Classify water bodies**: lakes, rivers, and harbors  
+- 📊 **Predict water levels**: low, medium, or high  
 
-Climate change impact
+We use a combination of **CNNs**, **U-Net**, **FCN**, and **ResNet** architectures to deliver robust classification and estimation from aerial imagery.
 
-Water use in agriculture, industry, and households
+---
 
-Smart technologies (AI, IoT, desalination)
+### 4. Drought Forecasting with ConvLSTM (Water-Scarcity)  
+This deep learning pipeline uses **ConvLSTM networks** to predict drought zones from **NASA NLDAS** satellite variables. It analyzes sequences of grayscale image maps to assess future drought risk based on:  
 
-Sustainability and policy strategies
+- 🌿 **Evapotranspiration** (`Evap`)  
+- 🌧 **Rainfall** (`Rainf`)  
+- 🌱 **Root Zone Moisture** (`RootMoist`)  
+- 🌍 **Surface Soil Moisture** (`SoilM_0_10cm`)  
+- 🌾 **Vegetation Transpiration** (`TVeg`)  
 
-Its knowledge is based on the ONAGRI 2023 report.
+The model predicts drought probabilities using a **2-layer ConvLSTM** followed by a **Conv2D** output layer. It includes **multi-GPU support**, **ROC-AUC evaluation**, and **overlay visualizations** of drought predictions on real soil moisture maps.
 
-## 5. Unified Web Interface
-A user-friendly web page allows:
-
-Input of future date and location
-
-Access to environmental predictions and generated report
-
-Visualization of predictive maps
-
-Interaction with the chatbot
-
-## ⚙️ Tech Stack
-Deep Learning: PyTorch, TensorFlow, Keras
-
-Models: ConvLSTM, U-Net, ResNet, LSTM, LLM
-
-Frontend: HTML/CSS/JS, Vue.js or React
-
-Backend: Flask / FastAPI
-
-Chatbot: LangChain, FAISS, Ollama (local LLM)
-
-Data Sources: NASA, RESISC45, ONAGRI Report
-
+**📁 Dataset**: NASA NLDAS  
+**Input**: Grayscale `.png` images (88x130 pixels) per variable  
+**Architecture**: `ConvLSTM2D → Dropout → BatchNorm (×2) → Conv2D (sigmoid)`  
+**Loss**: Binary Crossentropy, **Optimizer**: Adam  
+**Evaluation**: Accuracy, Classification Report, ROC AUC  
+**Example**:  
+```python
+drought_overlay, raw_pred, mask = generate_drought_overlay(model, sample_input, base)

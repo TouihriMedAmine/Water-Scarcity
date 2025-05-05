@@ -93,8 +93,7 @@ Adjust SEQUENCE_LENGTH, EPOCHS, and BATCH_SIZE for different forecasting granula
 
 Multi-GPU support is enabled via tf.distribute.MirroredStrategy().
 
-✍️ Author
-Developed by: [Your Name]
+
 
 For: Drought monitoring and early warning systems using satellite data + deep learning
 

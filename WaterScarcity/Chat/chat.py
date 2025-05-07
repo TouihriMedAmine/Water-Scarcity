@@ -19,19 +19,28 @@ llm = Ollama(
 
 
 def get_response(user_query):
+    print("--- Début de la fonction get_response ---")
+    print(f"Requête utilisateur reçue : '{user_query}'")
+
     if not user_query.strip():
+        print("La requête utilisateur est vide ou ne contient que des espaces.")
+        print("--- Fin de la fonction get_response (requête vide) ---")
         return "Please enter a valid question."
 
+    print("Détection de la langue...")
     try:
         language = detect(user_query)
+        print(f"Langue détectée : {language}")
     except LangDetectException:
         language = "en"  # default to English if detection fails
+        print("Échec de la détection de la langue, utilisation de l'anglais par défaut.")
 
-    # Retrieve relevant documents
+    print("Récupération des documents pertinents (contexte)...")
     context = retriever.invoke(user_query)
     context_text = "\n".join([doc.page_content for doc in context])
+    print(f"Contexte récupéré : \n---\n{context_text}\n---")
 
-    # Create language-specific instructions
+    print("Création des instructions pour le persona...")
     if language == "fr":
         persona_instructions = """
 You are "Droplets", an AI expert in water scarcity. You speak clearly, concisely, and kindly—like a friendly environmental scientist. Stay focused only on water-related topics: water access, droughts, agriculture, climate impacts, clean water, sanitation, and resource management.
@@ -52,6 +61,7 @@ Never make up facts. If unsure, say so clearly.
 
 Maximum response: 60 words.
 """
+        print("Instructions du persona en français sélectionnées.")
     else:
         persona_instructions = """
 YYou are "Droplets", an AI expert in water scarcity. You speak clearly, concisely, and kindly—like a friendly environmental scientist. Stay focused only on water-related topics: water access, droughts, agriculture, climate impacts, clean water, sanitation, and resource management.
@@ -72,7 +82,9 @@ Never make up facts. If unsure, say so clearly.
 
 Maximum response: 60 words.
 """
+        print("Instructions du persona en anglais sélectionnées.")
 
+    print("Construction du prompt final...")
     prompt = f"""
 {persona_instructions}
 
@@ -87,8 +99,16 @@ Use the following context to answer the user's question:
 ---
 Your Response:
 """
+    print(f"Prompt final construit : \n---\n{prompt}\n---")
 
-    return llm.invoke(prompt).strip()
+    print("Invocation du modèle LLM...")
+    # Note : Vous appelez llm.invoke deux fois. Pour l'efficacité et la cohérence,
+    # il est préférable de l'appeler une seule fois et de stocker le résultat.
+    response_text = llm.invoke(prompt).strip()
+    print(f"Réponse brute du LLM : '{response_text}'")
+    
+    print("--- Fin de la fonction get_response ---")
+    return response_text
 
 # Basic CLI
 def chat():

@@ -7,9 +7,23 @@ const fileCancelButton = fileUploadWrapper.querySelector("#file-cancel");
 const chatbotToggler = document.querySelector("#chatbot-toggler");
 const closeChatbot = document.querySelector("#close-chatbot");
 
-// API setup
-const API_KEY = "AIzaSyCQXdM8mF1o7j7KlC2ue75X37ZIU_cDTVk";
-const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent?key=${API_KEY}`;
+const DJANGO_API_URL = "/chat_api/get_response/";
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+          }
+      }
+  }
+  return cookieValue;
+}
+const csrftoken = getCookie('csrftoken');
+
 
 // Initialize user message and file data
 const userData = {
@@ -21,7 +35,6 @@ const userData = {
 };
 
 // Store chat history
-const chatHistory = [];
 const initialInputHeight = messageInput.scrollHeight;
 
 // Create message element with dynamic classes and return it
@@ -35,45 +48,35 @@ const createMessageElement = (content, ...classes) => {
 // Generate bot response using API
 const generateBotResponse = async (incomingMessageDiv) => {
   const messageElement = incomingMessageDiv.querySelector(".message-text");
+  const userMessageText = userData.message; // Le message de l'utilisateur
 
-  // Add user message to chat history
-  chatHistory.push({
-    role: "user",
-    parts: [{ text: userData.message }, ...(userData.file.data ? [{ inline_data: userData.file }] : [])],
-  });
-
-  // API request options
+  // API request options pour Django
   const requestOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      contents: chatHistory,
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded", // Django attend cela pour request.POST
+      "X-CSRFToken": csrftoken,
+    },
+    body: new URLSearchParams({
+      message: userMessageText, // Le backend attend un champ 'message'
     }),
   };
 
   try {
-    // Fetch bot response from API
-    const response = await fetch(API_URL, requestOptions);
+    const response = await fetch(DJANGO_API_URL, requestOptions);
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.response || `Request failed with status ${response.status}`);
+    }
     const data = await response.json();
-    if (!response.ok) throw new Error(data.error.message);
+    messageElement.innerText = data.response; // L'API Django retourne { "response": "..." }
 
-    // Extract and display bot's response text
-    const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
-    messageElement.innerText = apiResponseText;
-
-    // Add bot response to chat history
-    chatHistory.push({
-      role: "model",
-      parts: [{ text: apiResponseText }],
-    });
   } catch (error) {
-    // Handle error in API response
-    console.log(error);
-    messageElement.innerText = error.message;
+    console.error("Error:", error);
+    messageElement.innerText = error.message || "Oops! Something went wrong.";
     messageElement.style.color = "#ff0000";
   } finally {
-    // Reset user's file data, removing thinking indicator and scroll chat to bottom
-    userData.file = {};
+    userData.file = {}; // Réinitialiser si vous gérez des fichiers, sinon peut être omis
     incomingMessageDiv.classList.remove("thinking");
     chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
   }

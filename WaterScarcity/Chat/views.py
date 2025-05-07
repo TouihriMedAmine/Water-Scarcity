@@ -1,26 +1,30 @@
-from django.shortcuts import render
 from django.http import JsonResponse
-from .chat import get_response  
 from django.views.decorators.csrf import csrf_exempt
-
-
-def index(request):
-    return render(request, 'index.html')
-
-
-def chatbot_page(request):
-    return render(request, 'chatbot.html')  # ➔ Your chatbot page
+import json
+import os
+import logging
+from .chat import get_response as get_bot_response_from_logic
 
 @csrf_exempt
-def get_bot_response(request):
+def get_chat_api_response(request):
     if request.method == 'POST':
-        user_message = request.POST.get('message', '')
-        if user_message:
-            bot_reply = get_response(user_message)
-            return JsonResponse({'response': bot_reply})
-        else:
-            return JsonResponse({'response': "❌ Please enter a valid message."})
-    else:
-        return JsonResponse({'response': "❌ Invalid request method."})
-def chatbot(request):
-    return render(request, 'chatbot.html')
+        try:
+            user_message = request.POST.get('message')
+            if not user_message:
+                data = json.loads(request.body)
+                user_message = data.get('message')
+
+            if user_message:
+                # Appeler votre logique de chatbot
+                # Notez qu'on ne passe plus VECTORSTORE_PATH ici
+                bot_response_text = get_bot_response_from_logic(user_message)
+                return JsonResponse({'response': bot_response_text})
+            else:
+                return JsonResponse({'error': 'No message provided'}, status=400)
+        except json.JSONDecodeError:
+            return JsonResponse({'error': 'Invalid JSON in request body or no message in form data'}, status=400)
+        except Exception as e:
+            # Il est bon de logger l'erreur ici pour le débogage
+            logging.error(f"Chatbot error: {e}", exc_info=True) # Décommentez et modifiez cette ligne
+            return JsonResponse({'error': f'An internal error occurred: {str(e)}'}, status=500)
+    return JsonResponse({'error': 'Only POST method is allowed'}, status=405)

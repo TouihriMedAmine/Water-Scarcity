@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'Waterlevel',
     'Watershed',
     'myapp',
+    'chat',
 ]
 
 MIDDLEWARE = [

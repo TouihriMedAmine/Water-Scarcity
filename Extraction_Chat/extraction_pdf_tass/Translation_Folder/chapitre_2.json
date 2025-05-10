@@ -1,0 +1,193 @@
+{
+  "chapter_title": "Chapter 2 - Use of the Resource",
+  "summary": "This chapter of the Tunisian Water Sector National Report 2023 focuses on the uses of water resources in Tunisia, particularly in the agricultural sector. It addresses the impact of water scarcity and climate change on key agricultural productions, including cereals, olive oil, date palm, and vegetable crops. It also analyses the concept of virtual water trade related to exports and imports.",
+  "key_points": [
+    "Persistence drrought is exercising increasing stress on available water resources.",
+    "Restrictions have been imposed on the use of drinking water, and SONEDE has implemented a water rationing program.",
+    "Irrigation quotas from dams have been drastically reduced.",
+    "Transfer systems have been fully mobilized to compensate water scarcity.",
+    "Pressure on groundwater resources has increased, leading to illegal exploitation and negative socio-economic and environmental consequences.",
+    "Water quality is an increasing concern due to urbanization, economic activities, and years of drought.",
+    "The agricultural sector uses the most water, with irrigated agriculture accounting for approximately 75% of total water use.",
+    "The chapter analytics the impact of climate change (CC) on water use and the water footprint of different agricultural products.",
+    "The chapter talks the vulnerability of key crops (reals, olives, dates) to drought.",
+    "The chapter explains the concept of virtual water and its implications for Tunisia's trade balance."
+  ],
+  "programs": [],
+  "statistics": [
+    {
+      "indicator": "Non-conformity rate of treated wastewater (DBO5)",
+      "value": "37",
+      "unit": "%",
+      "source_page": "43"
+    },
+    {
+      "indicator": "Non-conformity rate of treated wastewater (DCO)",
+      "value": "35",
+      "unit": "%",
+      "source_page": "43"
+    },
+    {
+      "indicator": "Non-conformity rate of treated wastewater (MES)",
+      "value": "23",
+      "unit": "%",
+      "source_page": "43"
+    },
+    {
+      "indicator": "Increase in water transfer from Sidi El Barrak",
+      "value": "168",
+      "unit": "millions of m3",
+      "source_page": "45"
+    },
+    {
+      "indicator": "Increase in water transfer from Taref pumping station",
+      "value": "284",
+      "unit": "millions of m3",
+      "source_page": "45"
+    },
+    {
+      "indicator": "Reduction of water billed by SECADENORD to SONEDE and CRDA",
+      "value": "13",
+      "unit": "%",
+      "source_page": "45"
+    },
+    {
+      "indicator": "Reduction in SONEDE's water production from surface water",
+      "value": "8.4",
+      "unit": "%",
+      "source_page": "45"
+    },
+    {
+      "indicator": "SECADENORD volume billed to CRDA in 2021",
+      "value": "70",
+      "unit": "Mm3",
+      "source_page": "46"
+    },
+    {
+      "indicator": "SECADENORD volume billed to CRDA in 2022",
+      "value": "50",
+      "unit": "Mm3",
+      "source_page": "46"
+    },
+    {
+      "indicator": "SECADENORD volume billed to CRDA in 2023",
+      "value": "23",
+      "unit": "Mm3",
+      "source_page": "46"
+    },
+    {
+      "indicator": "Area of rainfed agriculture",
+      "value": "92-94",
+      "unit": "% of SAU",
+      "source_page": "51"
+    },
+    {
+      "indicator": "Contribution of rainfed agriculture to agricultural production",
+      "value": "65",
+      "unit": "%",
+      "source_page": "51"
+    },
+    {
+      "indicator": "Surface area of irrigated land",
+      "value": "442,500",
+      "unit": "ha",
+      "source_page": "51"
+    },
+    {
+      "indicator": "Total production of cereals in 2023",
+      "value": "5.4",
+      "unit": "million quintals",
+      "source_page": "52"
+    },
+    {
+      "indicator": "Percentage of irrigated cereal production to total cereal production",
+      "value": "37",
+      "unit": "%",
+      "source_page": "53"
+    },
+    {
+      "indicator": "Olive growing areas",
+      "value": "2",
+      "unit": "millions of ha",
+      "source_page": "54"
+    },
+    {
+      "indicator": "Percentage of rainfed olive growing",
+      "value": "93",
+      "unit": "%",
+      "source_page": "54"
+    },
+    {
+      "indicator": "Olive oil production 2022/2023",
+      "value": "217",
+      "unit": "thousands of tonnes",
+      "source_page": "55"
+    },
+    {
+      "indicator": "Contribution of irrigated sector to olive oil production",
+      "value": "50",
+      "unit": "%",
+      "source_page": "55"
+    },
+    {
+      "indicator": "Surface of arboriculture in 2022/2023",
+      "value": "407.5",
+      "unit": "thousands of ha",
+      "source_page": "56"
+    },
+    {
+      "indicator": "Percentage of irrigated surface arboriculture",
+      "value": "44",
+      "unit": "%",
+      "source_page": "56"
+    },
+    {
+      "indicator": "Contribution of irrigated arboriculture to total production",
+      "value": "95",
+      "unit": "%",
+      "source_page": "56"
+    },
+    {
+      "indicator": "Date of production 2022/2023",
+      "value": "340.46",
+      "unit": "thousands of tonnes",
+      "source_page": "57"
+    },
+    {
+      "indicator": "Percentage of illegal extensions to total date palm area (Kebili)",
+      "value": "72",
+      "unit": "%",
+      "source_page": "57"
+    },
+    {
+      "indicator": "Area of market gardening in 2022/2023",
+      "value": "122",
+      "unit": "thousands of ha",
+      "source_page": "57"
+    }
+  ],
+  "recommendations": [
+    "Supplies of water should develop water safety plans to anticipate risks of water quality disruption."
+  ],
+  "source": "eau-2023.pdf",
+  "pages": [
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ]
+}

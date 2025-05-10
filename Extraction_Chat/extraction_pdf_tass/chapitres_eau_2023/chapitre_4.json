@@ -1,0 +1,179 @@
+{
+  "chapter_title": "Chapitre 4 - La gouvernance du secteur de l’eau",
+  "summary": "This chapter provides an overview of water sector governance in Tunisia, including the policy and strategic framework, legal and regulatory environment, institutional organization, control mechanisms, management instruments, and water pricing. It highlights the challenges and opportunities for sustainable water resource management in the country.",
+  "key_points": [
+    "Multiple sectorial strategies, thematic and multisectorial strategies focus on water resources due to its transversal characteristics (climate change, social, economic and environmental usages)",
+    "The draft of the environmental code is a compilation of environmental laws.",
+    "The draft of the water code follows an iterative process and aims to reorganize structural modes of governance, to give more space to regional decision-making and reinforcing coordination for an integrated and durable management",
+    "GDAs are key actors in water management at local level",
+    "The control of public hydraulic domain by MARHP face several difficulties",
+    "Management tools at local and national levels include agricultural mapping and groundwater management plans.",
+    "A project on management of corruption risks in the water sector is underway.",
+    "Water pricing considers cost recovery, efficient use of resources, solidarity, and equity. Tariffs remain insufficient to cover operational costs.",
+    "The tariff of water irrigation vary from one governorate to another"
+  ],
+  "programs": [
+    {
+      "name": "Eau 2050",
+      "objective": "Long-term water strategy to balance supply and demand by 2050.",
+      "measures": "Securing drinking water, controlling agricultural water consumption, developing non-conventional water resources (REUSE), integrating water-energy-food security-environment nexus.",
+      "stakeholders": [
+        "Decision-makers",
+        "Cadres",
+        "Citizens"
+      ]
+    },
+    {
+      "name": "Fonds de Bonne Gestion (FBG)",
+      "objective": "Improve the sustainability of drinking water and irrigation systems.",
+      "measures": "Improving management of groundwater for 110 GDAs in five governorates, involving the private sector in technical interventions, strengthening DGGREE and CRDAs in planning-monitoring-control.",
+      "stakeholders": [
+        "DGGREE",
+        "CRDA",
+        "PTF",
+        "GDAs"
+      ]
+    },
+    {
+      "name": "Projet A Reset",
+      "objective": "Support reforms in the water sector for sustainable management of groundwater resources.",
+      "measures": "Action plan for managing groundwater infractions, online platform for DPH authorization requests, procedures manual on DPH infractions, hydrogeological modeling of aquifer systems, remote monitoring of groundwater, development of groundwater management plans.",
+      "stakeholders": [
+        "GIZ",
+        "MARHP",
+        "CRDA",
+        "BIRH",
+        "IRESA"
+      ]
+    },
+    {
+      "name": "Programme Régional de Lutte contre la Corruption et Renforcement de l'Intégrité dans les Pays Arabes (PNUD)",
+      "objective": "Identify and manage corruption risks in the water sector to improve service quality.",
+      "measures": "Study on corruption risk management, risk identification and assessment, control measures, strategic action plan.",
+      "stakeholders": [
+        "MARHP",
+        "PNUD"
+      ]
+    }
+  ],
+  "statistics": [
+    {
+      "indicator": "Investments allocated to water compared to the MARHP budget in 2023",
+      "value": "67%",
+      "unit": "%",
+      "source_page": "81"
+    },
+    {
+      "indicator": "Total GDAs",
+      "value": "2750",
+      "unit": "GDAs",
+      "source_page": "91"
+    },
+    {
+      "indicator": "GDAs managing drinking water",
+      "value": "1382",
+      "unit": "GDAs",
+      "source_page": "91"
+    },
+    {
+      "indicator": "GDAs managing irrigation",
+      "value": "1253",
+      "unit": "GDAs",
+      "source_page": "91"
+    },
+    {
+      "indicator": "GDAs with elected council",
+      "value": "31% (AEP), 29% (PPI)",
+      "unit": "%",
+      "source_page": "91"
+    },
+    {
+      "indicator": "GDAs with a technical director",
+      "value": "17% (AEP), 25% (PPI)",
+      "unit": "%",
+      "source_page": "91"
+    },
+    {
+      "indicator": "GDA having a rapport financier controlé",
+      "value": "36 % (AEP), 29 % (PPI)",
+      "unit": "%",
+      "source_page": "91"
+    },
+    {
+      "indicator": "ONAS cost coverage by the tariff",
+      "value": "69.4",
+      "unit": "%",
+      "source_page": "99"
+    },
+    {
+      "indicator": "SONEDE cost coverage by the tariff",
+      "value": "70",
+      "unit": "%",
+      "source_page": "99"
+    },
+    {
+      "indicator": "SECADENORD cost coverage by the tariff",
+      "value": "40",
+      "unit": "%",
+      "source_page": "100"
+    },
+    {
+      "indicator": "SECADENORD: Créances CRDA",
+      "value": "13.1",
+      "unit": "MD",
+      "source_page": "100"
+    },
+    {
+      "indicator": "SECADENORD: Créances SONEDE",
+      "value": "21.5",
+      "unit": "MD",
+      "source_page": "101"
+    },
+    {
+      "indicator": "Water invoice unpaids",
+      "value": "100",
+      "unit": "MD",
+      "source_page": "110"
+    }
+  ],
+  "recommendations": [
+    "Prioritize securing drinking water through rehabilitation of AEP networks and expansion of desalination plants, coupled with energy transition projects.",
+    "Accelerate REUSE projects across all stages (treatment, transfer, valorization).",
+    "Combat DPH infractions (illegal boreholes, illegal pumping).",
+    "Implement \"soft\" measures (institutional communication, capacity building) and systemic approaches (WEFE nexus).",
+    "Adopt a new agricultural policy focused on resilience and water valorization/protection.",
+    "Develop a renovated strategy for rainwater management, especially in urban areas.",
+    "Prioritize programatic planning to optimize project choices based on evolving contexts.",
+    "Mobilize diverse financial resources (private sector, green banking).",
+    "Maintain a participatory approach for project implementation.",
+    "Revise project management to improve efficiency and develop human resource capacity.",
+    "Prioritize urgent actions with short-term impact, like renovating AEP networks for desalination plants.",
+    "Improve administrative procedures for treating infractions.",
+    "Adopt criteria for regularization or closure of illegal boreholes."
+  ],
+  "source": "eau-2023.pdf",
+  "pages": [
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "chapter_title": "Chapitre 3 - Les réalisations des plans",
+  "summary": "This chapter reviews the implementation of strategies and action plans related to water resources in Tunisia, including 'Eau 2050', the National Strategy for Ecological Transition, the Development Plan 2023-2025, and the Nationally Determined Contribution (NDC). It assesses progress in governance, water resource management, sanitation, and energy efficiency in the water sector, identifying gaps and challenges.",
+  "key_points": [
+    "The chapter provides an overview of the axes and priorities of water-related strategies in Tunisia.",
+    "It assesses the achievements made under the Development Plan 2023-2025 in relation to the targets set in 'Eau 2050' and the NDC.",
+    "The assessment covers various aspects, including governance, integrated water resources management (IWRM), food security, water quality, sanitation, and energy efficiency.",
+    "The chapter identifies gaps and challenges in the implementation of these plans and strategies.",
+    "It highlights the importance of accelerating the implementation of ongoing projects, securing funding for priority projects, and addressing persistent difficulties such as land issues and bureaucratic hurdles."
+  ],
+  "programs": [
+    {
+      "name": "Vision et Stratégie du Secteur de l’Eau à l’Horizon 2050 (Eau 2050)",
+      "objective": "To establish a vision and strategy for the water sector in Tunisia to ensure sustainable water resource management.",
+      "measures": "Governance improvements, expansion of potable water access, integrated water resources management, water quality protection, and territorial development.",
+      "stakeholders": []
+    },
+    {
+      "name": "Contribution Déterminée au niveau National (CDN)",
+      "objective": "To define national contributions toward climate change resilience and adaptation.",
+      "measures": "Improving water resource management, increasing the use of non-conventional water resources, and strengthening technical and institutional capacities.",
+      "stakeholders": []
+    },
+    {
+      "name": "Stratégie Nationale de Transition Ecologique (SNTE)",
+      "objective": "To ensure the sustainability of natural capital and improve resource efficiency in development activities.",
+      "measures": "Sustainable management of natural resources, preservation and restoration of ecosystems (terrestrial and marine).",
+      "stakeholders": []
+    },
+    {
+      "name": "Plan de Développement Economique et Social PDES 2023-2025",
+      "objective": "Serve as the 'launch phase' for the 'Eau 2050' strategy",
+      "measures": "Sustainable use of natural resources, climate change adaptation, and water and soil conservation.",
+      "stakeholders": []
+    }
+  ],
+  "statistics": [
+    {
+      "indicator": "Volume produit (Total)",
+      "value": "773.3",
+      "unit": "Mm3",
+      "source_page": "61"
+    },
+    {
+      "indicator": "Volume produit (Eaux de surface)",
+      "value": "423.0",
+      "unit": "Mm3",
+      "source_page": "61"
+    },
+    {
+      "indicator": "Volume produit (Eaux souterraines)",
+      "value": "295.3",
+      "unit": "Mm3",
+      "source_page": "61"
+    },
+    {
+      "indicator": "Volume produit (Eaux saumâtres dessalées)",
+      "value": "30.6",
+      "unit": "Mm3",
+      "source_page": "61"
+    },
+    {
+      "indicator": "Volume produit (Eaux de mer dessalées)",
+      "value": "15.2",
+      "unit": "Mm3",
+      "source_page": "61"
+    },
+    {
+      "indicator": "Volume produit (Eaux déferrisées)",
+      "value": "9.2",
+      "unit": "Mm3",
+      "source_page": "61"
+    },
+    {
+      "indicator": "Volume consommé",
+      "value": "516",
+      "unit": "Mm3",
+      "source_page": "61"
+    },
+    {
+      "indicator": "Consommation spécifique tout usage",
+      "value": "122.3",
+      "unit": "l/hab/j",
+      "source_page": "61"
+    },
+    {
+      "indicator": "Nombre total d’abonnés",
+      "value": "3.257",
+      "unit": "Million",
+      "source_page": "61"
+    },
+    {
+      "indicator": "Rendement du réseau d'adduction",
+      "value": "86.8",
+      "unit": "%",
+      "source_page": "62"
+    },
+    {
+      "indicator": "Rendement du réseau de distribution",
+      "value": "77.7",
+      "unit": "%",
+      "source_page": "62"
+    },
+    {
+      "indicator": "Taux global de rendement",
+      "value": "67.4",
+      "unit": "%",
+      "source_page": "62"
+    },
+    {
+      "indicator": "Pertes sur le réseau de distribution",
+      "value": "149",
+      "unit": "Mm3",
+      "source_page": "62"
+    },
+    {
+      "indicator": "Taux de desserte en eau potable en milieu rural",
+      "value": "95.30",
+      "unit": "%",
+      "source_page": "62"
+    },
+    {
+      "indicator": "Exploitation de l’eau par les unités de conditionnement",
+      "value": "2.933",
+      "unit": "million de m3",
+      "source_page": "62"
+    },
+    {
+      "indicator": "Réduction moyenne de la consommation d’eau par kg de produit (denim)",
+      "value": "15",
+      "unit": "%",
+      "source_page": "64"
+    },
+    {
+      "indicator": "Superficie équipée en équipements d’économie d’eau à la parcelle",
+      "value": "424700",
+      "unit": "ha",
+      "source_page": "61"
+    }
+  ],
+  "recommendations": [
+    "The government should accelerate the adoption of the Water Code to facilitate legal and institutional reforms.",
+    "Water tariffs for drinking water, irrigation, and sanitation should be increased to cover costs.",
+    "The management of public irrigated perimeters (PPIs) should be improved through better governance and institutional reforms.",
+    "Efforts to combat over-exploitation and illegal drilling of groundwater should be strengthened.",
+    "The reuse of treated wastewater (REUT) should be promoted, and the quality of treated wastewater should be improved.",
+    "The SONEDE should be strengthened to ensure its financial stability and improve the quality of water supply services.",
+    "The implementation of projects to improve sanitation and reduce pollution should be accelerated.",
+    "Public-private partnerships should be pursued to support the financing and management of water infrastructure.",
+    "The conservation of ecosystems and wetlands should be prioritized, and integrated management models should be implemented.",
+    "The implementation of energy efficiency and renewable energy projects in the water sector should be accelerated."
+  ],
+  "source": "eau-2023.pdf",
+  "pages": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88
+  ]
+}

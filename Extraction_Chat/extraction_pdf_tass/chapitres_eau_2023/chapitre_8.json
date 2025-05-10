@@ -1,0 +1,230 @@
+{
+  "chapter_title": "CHAPITRE 8 \n\nEAU ET RECHERCHE AGRICOLE",
+  "summary": "This chapter discusses the role of agricultural research, specifically through the IRESA network, in addressing water management challenges in Tunisia and implementing the Eau 2050 strategy. It outlines various research projects focused on integrated water resource management (GIRE), water quality and ecosystem preservation, and the water-food-energy nexus. The chapter details the objectives, innovations, and impacts of these projects, highlighting their contributions to sustainable water use, climate change adaptation, and improved agricultural practices.",
+  "key_points": [
+    "Tunisia faces persistent drought and water scarcity, making water conservation crucial for economic activities, especially agriculture.",
+    "The IRESA network plays a vital role in supporting the Eau 2050 strategy through interdisciplinary research projects.",
+    "IRESA collaborates internationally, aligning with scientific and technological advancements and transferring knowledge to professionals and farmers.",
+    "Research projects focus on GIRE, water quality, and the water-food-energy nexus, addressing issues like soil rehabilitation, irrigation efficiency, and climate change impacts.",
+    "Participatory approaches in research are increasing, ensuring the research is adapted to user needs.",
+    "Projects aim to improve irrigation efficiency through precision techniques, wastewater treatment, and participatory water management.",
+    "Several projects focus on non-conventional water resources like treated wastewater, runoff harvesting, and desalination.",
+    "Projects are using innovative technologies like IoT and AI for smart irrigation management.",
+    "Some projects address the challenges of water management in oases and explore artificial aquifer recharge.",
+    "Participatory water management is being promoted through dialogue platforms and living labs."
+  ],
+  "programs": [
+    {
+      "name": "Eau 2050",
+      "objective": "Establish a holistic approach to address water management in Tunisia",
+      "measures": "Supported by the IRESA network, implementing actions through interdisciplinary research.",
+      "stakeholders": [
+        "IRESA",
+        "Researchers",
+        "Decision-makers",
+        "Professionals",
+        "Farmers"
+      ]
+    },
+    {
+      "name": "TRUST (PRIMA SECTION 1)",
+      "objective": "Promote the reuse of industrial treated wastewater in various sectors to mitigate water scarcity.",
+      "measures": "Developing strategies for optimal water reuse, integrating circular economy approaches, and involving local and regional stakeholders.",
+      "stakeholders": [
+        "INAT",
+        "Local and regional actors",
+        "Water distribution services",
+        "Local authorities",
+        "Decision-makers"
+      ]
+    },
+    {
+      "name": "TRESOR",
+      "objective": "Promote the reuse of wastewater through natural treatment by planted filters for agricultural use.",
+      "measures": "Implementing pilot installations in Tunisia and Italy to treat domestic effluents and improve water quality for irrigation.",
+      "stakeholders": [
+        "INGREF",
+        "Local actors",
+        "Decision-makers",
+        "Farmers"
+      ]
+    },
+    {
+      "name": "EVITAR",
+      "objective": "Evaluate the viability of using saline treated wastewater and residual sludge for citrus irrigation.",
+      "measures": "Developing irrigation and fertigation scenarios adapted to EUT and orchard age, and analyzing tree responses and fruit quality.",
+      "stakeholders": [
+        "INGREF",
+        "CTA",
+        "CRDA",
+        "CTV",
+        "Farmers"
+      ]
+    },
+    {
+      "name": "MEDISS",
+      "objective": "Test innovative solutions for using treated wastewater.",
+      "measures": "Studying the impact of EUT irrigation on soil quality and implementing wastewater treatment by infiltration-percolation.",
+      "stakeholders": [
+        "IRA Médenine",
+        "End users"
+      ]
+    },
+    {
+      "name": "AG-WAMED",
+      "objective": "Advance participatory governance for sustainable water allocation by integrating non-conventional water sources.",
+      "measures": "Developing decision support tools and providing training to local actors.",
+      "stakeholders": [
+        "IRA Médenine",
+        "Local actors"
+      ]
+    },
+    {
+      "name": "FLUXMED",
+      "objective": "Improve water use efficiency in Mediterranean agrosylvopastoral systems.",
+      "measures": "Developing environmental and hydrological monitoring sites and using eco-hydrological models to predict climate change impacts.",
+      "stakeholders": [
+        "INGREF",
+        "Farmers",
+        "Local authorities"
+      ]
+    },
+    {
+      "name": "ICT4irrigation",
+      "objective": "Improve irrigation efficiency and water use by integrating ICT.",
+      "measures": "Implementing the MABIA approach for smart irrigation planning and establishing technology hubs.",
+      "stakeholders": [
+        "INAT",
+        "Farmers"
+      ]
+    },
+    {
+      "name": "SUPROMED",
+      "objective": "Improve the sustainability of Mediterranean agricultural systems by optimizing water, energy, and fertilizer use.",
+      "measures": "Developing a digital platform for farmers to manage irrigation more effectively.",
+      "stakeholders": [
+        "Farmers",
+        "AVFA"
+      ]
+    },
+    {
+      "name": "SMARTIES",
+      "objective": "Improve water use efficiency and farm profitability by developing a real-time Web-GIS platform for irrigation management.",
+      "measures": "Characterizing local sites and applying the SMARTIES approach.",
+      "stakeholders": [
+        "ESIM",
+        "INGREF",
+        "ISA-CM",
+        "Farmers"
+      ]
+    },
+    {
+      "name": "OSIRRIS",
+      "objective": "Optimize the use of limited water resources by introducing low-cost, self-calibrating, and autonomous smart tensiometers.",
+      "measures": "Developing smart tensiometers and an intelligent platform for piloting irrigation.",
+      "stakeholders": []
+    },
+    {
+      "name": "MAGO",
+      "objective": "Present innovative solutions for improving integrated water resource management for sustainable agriculture.",
+      "measures": "Modeling and optimizing irrigation at the plot scale and demonstrating web applications based on remote sensing.",
+      "stakeholders": []
+    },
+    {
+      "name": "Water needs of Orchards",
+      "objective": "Develop an approach to estimate the irrigation water needs of orchards for optimal water management based on the use of low cost sensors.",
+      "measures": "Estimating irrigation water needs of orchards.",
+      "stakeholders": []
+    },
+    {
+      "name": "MASSIRE",
+      "objective": "Develop a multi-actor approach to address the illicit development of palm grove extensions and the overexploitation of groundwater resources in oases.",
+      "measures": "Mapping oases and palm grove extensions, evaluating the impact of irrigation practices, and identifying obstacles and levers for solar energy development.",
+      "stakeholders": [
+        "INGREF",
+        "INAT"
+      ]
+    },
+    {
+      "name": "SALAM-MED",
+      "objective": "Identify, test, and validate nature-based solutions to improve the resilience of socio-ecological systems in Mediterranean drylands.",
+      "measures": "Implementing a Living Lab to test artificial aquifer recharge systems.",
+      "stakeholders": [
+        "IRA Medenine"
+      ]
+    },
+    {
+      "name": "TALANOA WATER",
+      "objective": "Create an innovation ecosystem to solve water scarcity problems related to climate change.",
+      "measures": "Combining an inclusive dialogue approach with a socio-hydrological modeling framework.",
+      "stakeholders": [
+        "INAT"
+      ]
+    },
+    {
+      "name": "ACQUAOUNT",
+      "objective": "Improve Integrated Water Resources Management and sustainable irrigation by deploying innovative tools and smart services.",
+      "measures": "Using a Web of Things platform to integrate data from sensors and other sources.",
+      "stakeholders": [
+        "IRA Médenine"
+      ]
+    },
+    {
+      "name": "ACCWA",
+      "objective": "Develop management and monitoring tools, mainly based on remote sensing, to improve water management, food security, and agricultural risks in climate change-sensitive areas.",
+      "measures": "Developing monitoring tools and drought indices using remote sensing.",
+      "stakeholders": [
+        "INAT"
+      ]
+    }
+  ],
+  "statistics": [
+    {
+      "indicator": "Number of IRESA projects between 2018 and 2026",
+      "value": "49",
+      "unit": "projects",
+      "source_page": "155"
+    },
+    {
+      "indicator": "Percentage of project funding from MESRS",
+      "value": "25",
+      "unit": "%",
+      "source_page": "155"
+    },
+    {
+      "indicator": "Percentage of project funding from European research programs",
+      "value": "25",
+      "unit": "%",
+      "source_page": "155"
+    },
+    {
+      "indicator": "Reduction of irrigation volume with MOPECO model (SUPROMED)",
+      "value": "35",
+      "unit": "%",
+      "source_page": "162"
+    },
+    {
+      "indicator": "Adoption of ICT4Irrigation technology by farmers",
+      "value": "30",
+      "unit": "%",
+      "source_page": "161"
+    }
+  ],
+  "recommendations": [],
+  "source": "eau-2023.pdf",
+  "pages": [
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "chapter_title": "Chapitre 7 - Communication et formation agricole",
+  "summary": "This chapter discusses the communication, awareness, outreach, and agricultural training related to water management in Tunisia. It highlights the adoption of new technologies like smart irrigation, drones, and floating solar panels, along with the role of agritech startups. The chapter also identifies challenges and suggests measures to promote the wider adoption and scaling up of these technologies.",
+  "key_points": [
+    "Smart irrigation technologies are being introduced in agricultural training and outreach with support from cooperation projects.",
+    "A remote irrigation management system (Seabex35) has demonstrated significant water savings and yield increases in potato farming.",
+    "Drones are being used for crop monitoring, optimizing fertilization and irrigation needs, leading to productivity gains and water savings.",
+    "Floating solar panels on water reservoirs offer several advantages, including land conservation, improved panel efficiency, and reduced evaporation.",
+    "Agritech startups are playing a crucial role in developing and deploying innovative water management solutions.",
+    "There is a need to address regulatory hurdles, system complexity, skills gaps, and the adaptation of technologies to local contexts to promote the wider adoption of new technologies.",
+    "The chapter highlights the need to finalize the e-agriculture strategy as a framework for integrating ICTs in agricultural policy"
+  ],
+  "programs": [
+    {
+      "name": "Introduction of Smart Irrigation Technologies",
+      "objective": "Introduce smart irrigation technologies into agricultural training and outreach.",
+      "measures": "Installation of smart irrigation systems (complete or partial) in agricultural training centers, development of educational modules on smart water agriculture.",
+      "stakeholders": [
+        "Agricultural Training Centers (Barouta, Manouba, Bouchrik, Sidi Bouzid)",
+        "Agritech tunisiennes"
+      ]
+    },
+    {
+      "name": "Seabex35 Irrigation System",
+      "objective": "Improve water management on potato farms.",
+      "measures": "Implementation of a remote irrigation management system based on data (no field sensors).",
+      "stakeholders": [
+        "GIZ",
+        "APIA",
+        "INAT",
+        "I.T. Grapes",
+        "CTPTA",
+        "Potato farmers"
+      ]
+    },
+    {
+      "name": "PRESTo",
+      "objective": "Promote resilience to climate change and sustainable management of natural resources.",
+      "measures": "Capacity building for personnel of institutions related to the Ministry of Agriculture through innovative solutions and demonstration practices.",
+      "stakeholders": [
+        "Ministry of Agriculture",
+        "CEFA-Tunisie",
+        "Agence Italienne de Coopération au Développement (AICS)",
+        "INGC"
+      ]
+    },
+    {
+      "name": "Experimental Program of Agricultural Drones",
+      "objective": "Evaluate the use of drones in agriculture",
+      "measures": "Drone use for crop monitoring, fertilization optimization, and irrigation management.",
+      "stakeholders": [
+        "Banque Africaine de Développement",
+        "KOAFEC",
+        "Tunisian drone operators"
+      ]
+    },
+    {
+      "name": "Floating Solar Plant Project",
+      "objective": "Produce renewable energy.",
+      "measures": "Installation and operation of a floating solar power plant.",
+      "stakeholders": [
+        "STEG",
+        "Qair"
+      ]
+    },
+    {
+      "name": "Eausiris",
+      "objective": "Promote sustainable water management.",
+      "measures": "Installation of a floating photovoltaic station to power a pumping system for irrigation, coupled with measurement instruments for water quality and quantity monitoring.",
+      "stakeholders": [
+        "DGACTA"
+      ]
+    }
+  ],
+  "statistics": [
+    {
+      "indicator": "Water savings with Seabex35",
+      "value": "46",
+      "unit": "%",
+      "source_page": "140"
+    },
+    {
+      "indicator": "Yield increase with Seabex35",
+      "value": "15",
+      "unit": "%",
+      "source_page": "140"
+    },
+    {
+      "indicator": "Water productivity gain with Seabex35",
+      "value": "40",
+      "unit": "%",
+      "source_page": "140"
+    },
+    {
+      "indicator": "Productivity gain with drone use",
+      "value": "80",
+      "unit": "%",
+      "source_page": "140"
+    },
+    {
+      "indicator": "Fertilization productivity gain with drone use",
+      "value": "10",
+      "unit": "%",
+      "source_page": "140"
+    },
+    {
+      "indicator": "Water saving with drone use",
+      "value": "10-15",
+      "unit": "%",
+      "source_page": "140"
+    },
+    {
+      "indicator": "Floating solar power plant capacity",
+      "value": "200",
+      "unit": "kWc",
+      "source_page": "141"
+    },
+    {
+      "indicator": "Households powered by floating solar plant",
+      "value": "130",
+      "unit": "households",
+      "source_page": "141"
+    },
+    {
+      "indicator": "Area covered by floating solar panels",
+      "value": "2500",
+      "unit": "m²",
+      "source_page": "141"
+    },
+    {
+      "indicator": "Floating Photovoltaic Station power",
+      "value": "36",
+      "unit": "kWc",
+      "source_page": "141"
+    }
+  ],
+  "recommendations": [
+    "Finalize and validate the e-agriculture strategy.",
+    "Strengthen partnerships between development, research, and the private sector.",
+    "Identify skills needs and ensure quality training to meet the demand for new technologies.",
+    "Dedicate a specific program for the outreach of these technologies within the national outreach system.",
+    "Promote existing platforms and networks for knowledge sharing among farmers.",
+    "Study the possibilities of subsidies for these types of technologies for farmers."
+  ],
+  "source": "eau-2023.pdf",
+  "pages": [
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ]
+}

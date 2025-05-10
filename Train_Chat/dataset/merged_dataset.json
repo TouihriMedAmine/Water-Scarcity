@@ -1,0 +1,471 @@
+[
+  {
+    "chapter_title": "Chapter 1 - Climate Change and the State of the Resource",
+    "summary": "This chapter analyses the impact of climate change on water resources in Tunisia, focusing on the year 2023. It examines temperature increases, rainfall deficiencies, evapotranspiration, and their effects on surface and groundwater availability and quality. It also discusses non-conventional water resources like intended and treated summerwater, highlighting challenges and opportunities for improving water management in the face of climate change.",
+    "key_points": [
+      "2023 was the third hottest year in Tunisia since 1950, with temperatures exceeding normal levels across all seasons.",
+      "Rainfall was 20% below age, though geographically variable, with some regions experimenting surplus rainfall.",
+      "Evapotranspiration incremented, indicating greener water demand from the environment.",
+      "Surface water availability is limited, with reservoir filling rates Declining.",
+      "Groundwater resources are under increasing pressure due to excessive and illegal exploitation.",
+      "The Map of Water Resources of Tunisia (CRET) project introduced a new approach to assessing water resources based on aquifer systems.",
+      "Desalination is expanding but treated wastewater weuse is limited despite its potential.",
+      "Water quality is compromised by pollution from urbanization, industrial activities, and agriculture.",
+      "The INSPA's water quality control shows an increase in bacteriological non-compliance in drinking water.",
+      "There is a quick of security plans to treat water and to control the effects of chlorination and THM production"
+    ],
+    "programs": [],
+    "statistics": [
+      {
+        "indicator": "Average annual rainfall",
+        "value": "164",
+        "unit": "mm",
+        "source_page": "24"
+      },
+      {
+        "indicator": "Average summer temperature",
+        "value": "29.2",
+        "unit": "°C",
+        "source_page": "24"
+      },
+      {
+        "indicator": "Surface resources: inputs to dams",
+        "value": "694",
+        "unit": "Mm3",
+        "source_page": "24"
+      },
+      {
+        "indicator": "Underground resources",
+        "value": "2412",
+        "unit": "Mm3",
+        "source_page": "24"
+      },
+      {
+        "indicator": "Rate of mobilisation of surface water",
+        "value": "92",
+        "unit": "%",
+        "source_page": "24"
+      },
+      {
+        "indicator": "Agricultural sampling (Sweet water)",
+        "value": "2836.3",
+        "unit": "Mm3",
+        "source_page": "24"
+      },
+      {
+        "indicator": "Sampling for AEP (Domestic)",
+        "value": "783.1",
+        "unit": "Mm3",
+        "source_page": "24"
+      },
+      {
+        "indicator": "Waste water treatment in irrigation",
+        "value": "10",
+        "unit": "Mm3",
+        "source_page": "24"
+      },
+      {
+        "indicator": "% of treated waste water in agriculture",
+        "value": "3.4",
+        "unit": "%",
+        "source_page": "24"
+      },
+      {
+        "indicator": "Total exploitation of underground resources",
+        "value": "3203",
+        "unit": "Mm3",
+        "source_page": "24"
+      },
+      {
+        "indicator": "Dam filling rate at the end of the year 2023",
+        "value": "29",
+        "unit": "%",
+        "source_page": "25"
+      },
+      {
+        "indicator": "Rate of Bacteriological Non-Compliance (SONEDE)",
+        "value": "13.6",
+        "unit": "%",
+        "source_page": "41"
+      },
+      {
+        "indicator": "Rate of Bacteriological Non-Compliance (GR)",
+        "value": "24.4",
+        "unit": "%",
+        "source_page": "42"
+      }
+    ],
+    "recommendations": [
+      "Implementation of the \"Code of Waters\" for improved water sector governance.",
+      "Implementation the action plans from the Water 2050 study.",
+      "Promote the joint management of surface and groundwater resources.",
+      "Expand theuse of treated wastewater and the development of desalination.",
+      "Modernize and rehabilitate hydraulic equipment for better efficiency.",
+      "Implementation energy transition strategies, especially solar energy, to reduce the cost of water.",
+      "Strengthening health in rural areas and development a support program for rural health.",
+      "Improve the technical and management performance of water facilities through private sector participation.",
+      "Consolidate and development research, higher education, and vocational training to support human resource development."
+    ],
+    "source": "eau-2023.pdf",
+    "pages": [
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ]
+  },
+  {
+    "chapter_title": "Chapter 2 - Use of the Resource",
+    "summary": "This chapter of the Tunisian Water Sector National Report 2023 focuses on the uses of water resources in Tunisia, particularly in the agricultural sector. It addresses the impact of water scarcity and climate change on key agricultural productions, including cereals, olive oil, date palm, and vegetable crops. It also analyses the concept of virtual water trade related to exports and imports.",
+    "key_points": [
+      "Persistence drrought is exercising increasing stress on available water resources.",
+      "Restrictions have been imposed on the use of drinking water, and SONEDE has implemented a water rationing program.",
+      "Irrigation quotas from dams have been drastically reduced.",
+      "Transfer systems have been fully mobilized to compensate water scarcity.",
+      "Pressure on groundwater resources has increased, leading to illegal exploitation and negative socio-economic and environmental consequences.",
+      "Water quality is an increasing concern due to urbanization, economic activities, and years of drought.",
+      "The agricultural sector uses the most water, with irrigated agriculture accounting for approximately 75% of total water use.",
+      "The chapter analytics the impact of climate change (CC) on water use and the water footprint of different agricultural products.",
+      "The chapter talks the vulnerability of key crops (reals, olives, dates) to drought.",
+      "The chapter explains the concept of virtual water and its implications for Tunisia's trade balance."
+    ],
+    "programs": [],
+    "statistics": [
+      {
+        "indicator": "Non-conformity rate of treated wastewater (DBO5)",
+        "value": "37",
+        "unit": "%",
+        "source_page": "43"
+      },
+      {
+        "indicator": "Non-conformity rate of treated wastewater (DCO)",
+        "value": "35",
+        "unit": "%",
+        "source_page": "43"
+      },
+      {
+        "indicator": "Non-conformity rate of treated wastewater (MES)",
+        "value": "23",
+        "unit": "%",
+        "source_page": "43"
+      },
+      {
+        "indicator": "Increase in water transfer from Sidi El Barrak",
+        "value": "168",
+        "unit": "millions of m3",
+        "source_page": "45"
+      },
+      {
+        "indicator": "Increase in water transfer from Taref pumping station",
+        "value": "284",
+        "unit": "millions of m3",
+        "source_page": "45"
+      },
+      {
+        "indicator": "Reduction of water billed by SECADENORD to SONEDE and CRDA",
+        "value": "13",
+        "unit": "%",
+        "source_page": "45"
+      },
+      {
+        "indicator": "Reduction in SONEDE's water production from surface water",
+        "value": "8.4",
+        "unit": "%",
+        "source_page": "45"
+      },
+      {
+        "indicator": "SECADENORD volume billed to CRDA in 2021",
+        "value": "70",
+        "unit": "Mm3",
+        "source_page": "46"
+      },
+      {
+        "indicator": "SECADENORD volume billed to CRDA in 2022",
+        "value": "50",
+        "unit": "Mm3",
+        "source_page": "46"
+      },
+      {
+        "indicator": "SECADENORD volume billed to CRDA in 2023",
+        "value": "23",
+        "unit": "Mm3",
+        "source_page": "46"
+      },
+      {
+        "indicator": "Area of rainfed agriculture",
+        "value": "92-94",
+        "unit": "% of SAU",
+        "source_page": "51"
+      },
+      {
+        "indicator": "Contribution of rainfed agriculture to agricultural production",
+        "value": "65",
+        "unit": "%",
+        "source_page": "51"
+      },
+      {
+        "indicator": "Surface area of irrigated land",
+        "value": "442,500",
+        "unit": "ha",
+        "source_page": "51"
+      },
+      {
+        "indicator": "Total production of cereals in 2023",
+        "value": "5.4",
+        "unit": "million quintals",
+        "source_page": "52"
+      },
+      {
+        "indicator": "Percentage of irrigated cereal production to total cereal production",
+        "value": "37",
+        "unit": "%",
+        "source_page": "53"
+      },
+      {
+        "indicator": "Olive growing areas",
+        "value": "2",
+        "unit": "millions of ha",
+        "source_page": "54"
+      },
+      {
+        "indicator": "Percentage of rainfed olive growing",
+        "value": "93",
+        "unit": "%",
+        "source_page": "54"
+      },
+      {
+        "indicator": "Olive oil production 2022/2023",
+        "value": "217",
+        "unit": "thousands of tonnes",
+        "source_page": "55"
+      },
+      {
+        "indicator": "Contribution of irrigated sector to olive oil production",
+        "value": "50",
+        "unit": "%",
+        "source_page": "55"
+      },
+      {
+        "indicator": "Surface of arboriculture in 2022/2023",
+        "value": "407.5",
+        "unit": "thousands of ha",
+        "source_page": "56"
+      },
+      {
+        "indicator": "Percentage of irrigated surface arboriculture",
+        "value": "44",
+        "unit": "%",
+        "source_page": "56"
+      },
+      {
+        "indicator": "Contribution of irrigated arboriculture to total production",
+        "value": "95",
+        "unit": "%",
+        "source_page": "56"
+      },
+      {
+        "indicator": "Date of production 2022/2023",
+        "value": "340.46",
+        "unit": "thousands of tonnes",
+        "source_page": "57"
+      },
+      {
+        "indicator": "Percentage of illegal extensions to total date palm area (Kebili)",
+        "value": "72",
+        "unit": "%",
+        "source_page": "57"
+      },
+      {
+        "indicator": "Area of market gardening in 2022/2023",
+        "value": "122",
+        "unit": "thousands of ha",
+        "source_page": "57"
+      }
+    ],
+    "recommendations": [
+      "Supplies of water should develop water safety plans to anticipate risks of water quality disruption."
+    ],
+    "source": "eau-2023.pdf",
+    "pages": [
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ]
+  },
+  {
+    "chapter_title": "Chapter 6 - New Technologies",
+    "summary": "This chapter discusses the integration of new technologies in the Tunisian water sector, focusing on satellite technology, smart metering, and energy efficiency. It highlights initiatives by SECADENORD, ONAS, and SONEDE to improve water management, reduce energy consumption, and enhance productivity. It also explores the potential of green hydrogen production from seawater desalination.",
+    "key_points": [
+      "Increased energy consumption by SECADENORD and ONAS due to water transfer and treatment.",
+      "Need for energy efficiency measures and renewable energy integration in water management.",
+      "Use of satellite data (WaPOR project and ChallengeOne satellite) for improved water productivity and agriculture.",
+      "Implementation of smart metering and GIS by SONEDE to enhance water distribution and management.",
+      "Exploration of green hydrogen production from seawater desalination and its implications for water and energy sectors.",
+      "The digitalization of the water sector is considered as a strategic step towards sustainable IWRM.",
+      "The water sector Water 4.0 makes reference to the use of IoT, Big Data, artificial intelligence, the cloud computing and predictive analysis or predictive and of robotics to extend, increase and increase the efficiency of the activities which affect the whole water chain."
+    ],
+    "programs": [
+      {
+        "name": "Plan d’action pour la réalisation des projets en énergies renouvelables pour la SECADENORD",
+        "objective": "Implementation of renewable energy projects to reduce energy consumption by SECADENORD.",
+        "measures": "Installation of four 10 MWc PV plants and one 9 MWc plant.",
+        "stakeholders": [
+          "SECADENORD",
+          "STEG"
+        ]
+      },
+      {
+        "name": "WaPOR project",
+        "objective": "Improve water productivity through satellite-based monitoring.",
+        "measures": "Developing a database using satellite data to monitor water productivity in agriculture.",
+        "stakeholders": [
+          "FAO",
+          "Government of the Netherlands",
+          "IHE Delft",
+          "IWMI"
+        ]
+      },
+      {
+        "name": "SIG Métier (SONEDE)",
+        "objective": "Enhance water distribution and management through a geographic information system.",
+        "measures": "Centralizing data access and sharing, facilitating infrastructure maintenance, and optimizing hydraulic operations.",
+        "stakeholders": [
+          "SONEDE",
+          "AFD"
+        ]
+      },
+      {
+        "name": "Stratégie nationale pour le développement de l'hydrogène vert et de ses dérivés en Tunisie",
+        "objective": "Export to Europe more than 6 million of tons of green hydrogen by 2050 and Valorization of this energy vector in the Tunisian economy.",
+        "measures": "Elaboration of a national strategy including a plan of action.",
+        "stakeholders": [
+          "Ministère de l'Industrie, des Mines et de l’Energie",
+          "GIZ",
+          "ONAS",
+          "European international operators"
+        ]
+      }
+    ],
+    "statistics": [
+      {
+        "indicator": "Total consumption (Gwh) SECADENORD",
+        "value": "162.3",
+        "unit": "Gwh",
+        "source_page": "127"
+      },
+      {
+        "indicator": "Total cost SECADENORD",
+        "value": "53.3",
+        "unit": "MDT",
+        "source_page": "127"
+      },
+      {
+        "indicator": "Contributions to dams",
+        "value": "693",
+        "unit": "Mm3",
+        "source_page": "128"
+      },
+      {
+        "indicator": "Energy consumption SECADENORD",
+        "value": "162.3",
+        "unit": "Gwh",
+        "source_page": "128"
+      },
+      {
+        "indicator": "Total energy consumed for ONAS treatment and pumping",
+        "value": "138.28",
+        "unit": "Gwh",
+        "source_page": "129"
+      },
+      {
+        "indicator": "Volume processed ONAS",
+        "value": "293",
+        "unit": "millions m3",
+        "source_page": "129"
+      },
+      {
+        "indicator": "Volume processed ONAS (projection)",
+        "value": "373",
+        "unit": "millions m3",
+        "source_page": "129"
+      },
+      {
+        "indicator": "Energy consumed for treatment and pumping",
+        "value": "240",
+        "unit": "Gwh",
+        "source_page": "129"
+      },
+      {
+        "indicator": "Volume processed ONAS (projection)",
+        "value": "500",
+        "unit": "millions m3",
+        "source_page": "129"
+      },
+      {
+        "indicator": "Energy consumed for treatment and pumping",
+        "value": "480",
+        "unit": "Gwh",
+        "source_page": "129"
+      }
+    ],
+    "recommendations": [
+      "Optimize specific consumption and improve the performance of motor pumps.",
+      "Carry out necessary maintenance.",
+      "Conduct regular energy audits.",
+      "Install capacity banks.",
+      "Priority gravity transfer.",
+      "Choose an adequate subscription scheme with STEG.",
+      "Implementation an integrated energy management platform for the northern water transfer system (SCADA).",
+      "Install renewable energy power plants (ground and/or floating photovoltaic; wind power).",
+      "Renovate treatment processes by using new energy-saving technologies such as equipping wastewater treatment plants with fine bubble aeration systems.",
+      "Broaden the reflection on the development of seawater removal, between water, industry/energy and environment stakeholders, in a nexus perspective to balance between ambitions of water security, energy security and decarbonization for a competitive economy, without losing any of the expected benefits.",
+      "Improve the SIG to effectively integrated field work, network maintenance, and the management of technicians' teams and tasks."
+    ],
+    "source": "eau-2023.pdf",
+    "pages": [
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138
+    ]
+  }
+]

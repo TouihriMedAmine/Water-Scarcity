@@ -1,0 +1,98 @@
+{
+  "chapter_title": "Chapitre 5 - Les eaux non conventionnelles et énergie",
+  "summary": "This chapter discusses the growing importance of non-conventional water resources and water transfer in Tunisia, particularly in the context of increasing energy consumption due to energy-intensive technologies and long-distance water transport. It highlights projects, measures, and strategies related to non-conventional water use, energy consumption, and energy efficiency for major water operators like SONEDE, SECADENORD, and ONAS.",
+  "key_points": [
+    "Tunisia is increasingly relying on non-conventional water resources and water transfer to ensure water security.",
+    "The use of non-conventional water and water transfer increases energy consumption due to the need for energy-intensive technologies and long-distance water transport.",
+    "The National Plan for Wastewater Reuse (Water Reuse 2050) aims to reuse 80% of treated wastewater by 2050.",
+    "Tunisia is expanding desalination capacity to reduce pressure on groundwater resources.",
+    "SONEDE's electricity consumption reached 562.9 GWh in 2023, costing 172.2 million DT, representing 28% of the potable water production cost.",
+    "SONEDE is implementing a sustainable environmental plan to improve energy efficiency, integrate renewable energy sources, and improve the water network's efficiency.",
+    "SECADENORD, responsible for transferring raw water, experienced a significant increase in electricity consumption in 2023."
+  ],
+  "programs": [
+    {
+      "name": "Plan Directeur National de Réutilisation des EUT en Tunisie «WATER REUSE 2050 »",
+      "objective": "To reach a desirable vision for the reuse of Treated Wastewater (EUT) by 2050, reaching 80% reuse, or nearly 450 million m3 per year.",
+      "measures": "Development of various REUT projects across the country, concentration of efforts on large-scale REUT projects, unification of REUT regulations, implementation of sufficient analysis methods, sharing information on water quality, regionalized water management, and revision of the EUT tariff system.",
+      "stakeholders": []
+    },
+    {
+      "name": "SONEDE's Sustainable Environmental Plan",
+      "objective": "To improve the energy performance of its installations, integrate renewable energy sources, improve the yield of its water network, and rationalize its management of potable water demand.",
+      "measures": "Improving energy efficiency of production and pumping installations by 15% by 2030, integrating renewable energy sources (micro-hydroelectricity, photovoltaic) up to 30% of total energy consumption by 2035, implementing an energy management system according to ISO 50001.",
+      "stakeholders": [
+        "SONEDE"
+      ]
+    }
+  ],
+  "statistics": [
+    {
+      "indicator": "Electricity consumption of SONEDE in 2023",
+      "value": "562.9",
+      "unit": "GWh",
+      "source_page": "122"
+    },
+    {
+      "indicator": "Cost of SONEDE's electricity consumption in 2023",
+      "value": "172.2",
+      "unit": "Million DT",
+      "source_page": "122"
+    },
+    {
+      "indicator": "Energy consumption per m3 produced by SONEDE in 2023",
+      "value": "0.728",
+      "unit": "Kwh/m3",
+      "source_page": "122"
+    },
+    {
+      "indicator": "Volume of water produced by SONEDE in 2023",
+      "value": "773.3",
+      "unit": "Mm3",
+      "source_page": "122"
+    },
+    {
+      "indicator": "Percentage of desalination in SONEDE's energy consumption",
+      "value": "11.4",
+      "unit": "%",
+      "source_page": "123"
+    },
+    {
+      "indicator": "Projected total energy consumption of SONEDE in 2030",
+      "value": "1000",
+      "unit": "Gwh",
+      "source_page": "123"
+    },
+    {
+      "indicator": "SECADENORD's electricity consumption in 2023",
+      "value": "162.3",
+      "unit": "GWh",
+      "source_page": "126"
+    }
+  ],
+  "recommendations": [
+    "SONEDE must consider the adoption of renewable energies.",
+    "To use best available technologies for desalination such as reverse osmosis membranes that consume less energy and energy recovery systems.",
+    "Rehabilitate and improve the energy efficiency of 400 pumping stations and energy-intensive water wells in the regions of Greater Tunis, North, Center and South of Tunisia.",
+    "Improve energy efficiency of administrative buildings and fleet of service vehicles."
+  ],
+  "source": "eau-2023.pdf",
+  "pages": [
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "chapter_title": "Chapter 6 - New Technologies",
+  "summary": "This chapter discusses the integration of new technologies in the Tunisian water sector, focusing on satellite technology, smart metering, and energy efficiency. It highlights initiatives by SECADENORD, ONAS, and SONEDE to improve water management, reduce energy consumption, and enhance productivity. It also explores the potential of green hydrogen production from seawater desalination.",
+  "key_points": [
+    "Increased energy consumption by SECADENORD and ONAS due to water transfer and treatment.",
+    "Need for energy efficiency measures and renewable energy integration in water management.",
+    "Use of satellite data (WaPOR project and ChallengeOne satellite) for improved water productivity and agriculture.",
+    "Implementation of smart metering and GIS by SONEDE to enhance water distribution and management.",
+    "Exploration of green hydrogen production from seawater desalination and its implications for water and energy sectors.",
+    "The digitalization of the water sector is considered as a strategic step towards sustainable IWRM.",
+    "The water sector Water 4.0 makes reference to the use of IoT, Big Data, artificial intelligence, the cloud computing and predictive analysis or predictive and of robotics to extend, increase and increase the efficiency of the activities which affect the whole water chain."
+  ],
+  "programs": [
+    {
+      "name": "Plan d’action pour la réalisation des projets en énergies renouvelables pour la SECADENORD",
+      "objective": "Implementation of renewable energy projects to reduce energy consumption by SECADENORD.",
+      "measures": "Installation of four 10 MWc PV plants and one 9 MWc plant.",
+      "stakeholders": [
+        "SECADENORD",
+        "STEG"
+      ]
+    },
+    {
+      "name": "WaPOR project",
+      "objective": "Improve water productivity through satellite-based monitoring.",
+      "measures": "Developing a database using satellite data to monitor water productivity in agriculture.",
+      "stakeholders": [
+        "FAO",
+        "Government of the Netherlands",
+        "IHE Delft",
+        "IWMI"
+      ]
+    },
+    {
+      "name": "SIG Métier (SONEDE)",
+      "objective": "Enhance water distribution and management through a geographic information system.",
+      "measures": "Centralizing data access and sharing, facilitating infrastructure maintenance, and optimizing hydraulic operations.",
+      "stakeholders": [
+        "SONEDE",
+        "AFD"
+      ]
+    },
+    {
+      "name": "Stratégie nationale pour le développement de l'hydrogène vert et de ses dérivés en Tunisie",
+      "objective": "Export to Europe more than 6 million of tons of green hydrogen by 2050 and Valorization of this energy vector in the Tunisian economy.",
+      "measures": "Elaboration of a national strategy including a plan of action.",
+      "stakeholders": [
+        "Ministère de l'Industrie, des Mines et de l’Energie",
+        "GIZ",
+        "ONAS",
+        "European international operators"
+      ]
+    }
+  ],
+  "statistics": [
+    {
+      "indicator": "Total consumption (Gwh) SECADENORD",
+      "value": "162.3",
+      "unit": "Gwh",
+      "source_page": "127"
+    },
+    {
+      "indicator": "Total cost SECADENORD",
+      "value": "53.3",
+      "unit": "MDT",
+      "source_page": "127"
+    },
+    {
+      "indicator": "Contributions to dams",
+      "value": "693",
+      "unit": "Mm3",
+      "source_page": "128"
+    },
+    {
+      "indicator": "Energy consumption SECADENORD",
+      "value": "162.3",
+      "unit": "Gwh",
+      "source_page": "128"
+    },
+    {
+      "indicator": "Total energy consumed for ONAS treatment and pumping",
+      "value": "138.28",
+      "unit": "Gwh",
+      "source_page": "129"
+    },
+    {
+      "indicator": "Volume processed ONAS",
+      "value": "293",
+      "unit": "millions m3",
+      "source_page": "129"
+    },
+    {
+      "indicator": "Volume processed ONAS (projection)",
+      "value": "373",
+      "unit": "millions m3",
+      "source_page": "129"
+    },
+    {
+      "indicator": "Energy consumed for treatment and pumping",
+      "value": "240",
+      "unit": "Gwh",
+      "source_page": "129"
+    },
+    {
+      "indicator": "Volume processed ONAS (projection)",
+      "value": "500",
+      "unit": "millions m3",
+      "source_page": "129"
+    },
+    {
+      "indicator": "Energy consumed for treatment and pumping",
+      "value": "480",
+      "unit": "Gwh",
+      "source_page": "129"
+    }
+  ],
+  "recommendations": [
+    "Optimize specific consumption and improve the performance of motor pumps.",
+    "Carry out necessary maintenance.",
+    "Conduct regular energy audits.",
+    "Install capacity banks.",
+    "Priority gravity transfer.",
+    "Choose an adequate subscription scheme with STEG.",
+    "Implementation an integrated energy management platform for the northern water transfer system (SCADA).",
+    "Install renewable energy power plants (ground and/or floating photovoltaic; wind power).",
+    "Renovate treatment processes by using new energy-saving technologies such as equipping wastewater treatment plants with fine bubble aeration systems.",
+    "Broaden the reflection on the development of seawater removal, between water, industry/energy and environment stakeholders, in a nexus perspective to balance between ambitions of water security, energy security and decarbonization for a competitive economy, without losing any of the expected benefits.",
+    "Improve the SIG to effectively integrated field work, network maintenance, and the management of technicians' teams and tasks."
+  ],
+  "source": "eau-2023.pdf",
+  "pages": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138
+  ]
+}

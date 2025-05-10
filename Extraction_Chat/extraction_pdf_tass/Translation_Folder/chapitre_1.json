@@ -1,0 +1,131 @@
+{
+  "chapter_title": "Chapter 1 - Climate Change and the State of the Resource",
+  "summary": "This chapter analyses the impact of climate change on water resources in Tunisia, focusing on the year 2023. It examines temperature increases, rainfall deficiencies, evapotranspiration, and their effects on surface and groundwater availability and quality. It also discusses non-conventional water resources like intended and treated summerwater, highlighting challenges and opportunities for improving water management in the face of climate change.",
+  "key_points": [
+    "2023 was the third hottest year in Tunisia since 1950, with temperatures exceeding normal levels across all seasons.",
+    "Rainfall was 20% below age, though geographically variable, with some regions experimenting surplus rainfall.",
+    "Evapotranspiration incremented, indicating greener water demand from the environment.",
+    "Surface water availability is limited, with reservoir filling rates Declining.",
+    "Groundwater resources are under increasing pressure due to excessive and illegal exploitation.",
+    "The Map of Water Resources of Tunisia (CRET) project introduced a new approach to assessing water resources based on aquifer systems.",
+    "Desalination is expanding but treated wastewater weuse is limited despite its potential.",
+    "Water quality is compromised by pollution from urbanization, industrial activities, and agriculture.",
+    "The INSPA's water quality control shows an increase in bacteriological non-compliance in drinking water.",
+    "There is a quick of security plans to treat water and to control the effects of chlorination and THM production"
+  ],
+  "programs": [],
+  "statistics": [
+    {
+      "indicator": "Average annual rainfall",
+      "value": "164",
+      "unit": "mm",
+      "source_page": "24"
+    },
+    {
+      "indicator": "Average summer temperature",
+      "value": "29.2",
+      "unit": "°C",
+      "source_page": "24"
+    },
+    {
+      "indicator": "Surface resources: inputs to dams",
+      "value": "694",
+      "unit": "Mm3",
+      "source_page": "24"
+    },
+    {
+      "indicator": "Underground resources",
+      "value": "2412",
+      "unit": "Mm3",
+      "source_page": "24"
+    },
+    {
+      "indicator": "Rate of mobilisation of surface water",
+      "value": "92",
+      "unit": "%",
+      "source_page": "24"
+    },
+    {
+      "indicator": "Agricultural sampling (Sweet water)",
+      "value": "2836.3",
+      "unit": "Mm3",
+      "source_page": "24"
+    },
+    {
+      "indicator": "Sampling for AEP (Domestic)",
+      "value": "783.1",
+      "unit": "Mm3",
+      "source_page": "24"
+    },
+    {
+      "indicator": "Waste water treatment in irrigation",
+      "value": "10",
+      "unit": "Mm3",
+      "source_page": "24"
+    },
+    {
+      "indicator": "% of treated waste water in agriculture",
+      "value": "3.4",
+      "unit": "%",
+      "source_page": "24"
+    },
+    {
+      "indicator": "Total exploitation of underground resources",
+      "value": "3203",
+      "unit": "Mm3",
+      "source_page": "24"
+    },
+    {
+      "indicator": "Dam filling rate at the end of the year 2023",
+      "value": "29",
+      "unit": "%",
+      "source_page": "25"
+    },
+    {
+      "indicator": "Rate of Bacteriological Non-Compliance (SONEDE)",
+      "value": "13.6",
+      "unit": "%",
+      "source_page": "41"
+    },
+    {
+      "indicator": "Rate of Bacteriological Non-Compliance (GR)",
+      "value": "24.4",
+      "unit": "%",
+      "source_page": "42"
+    }
+  ],
+  "recommendations": [
+    "Implementation of the \"Code of Waters\" for improved water sector governance.",
+    "Implementation the action plans from the Water 2050 study.",
+    "Promote the joint management of surface and groundwater resources.",
+    "Expand theuse of treated wastewater and the development of desalination.",
+    "Modernize and rehabilitate hydraulic equipment for better efficiency.",
+    "Implementation energy transition strategies, especially solar energy, to reduce the cost of water.",
+    "Strengthening health in rural areas and development a support program for rural health.",
+    "Improve the technical and management performance of water facilities through private sector participation.",
+    "Consolidate and development research, higher education, and vocational training to support human resource development."
+  ],
+  "source": "eau-2023.pdf",
+  "pages": [
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ]
+}

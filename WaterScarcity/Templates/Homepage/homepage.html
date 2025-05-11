@@ -30,7 +30,7 @@ https://www.tooplate.com/view/2121-wave-cafe
           <nav class="tm-site-nav">
             <ul class="tm-site-nav-ul" style="width: 700px;">
               <li class="tm-page-nav-item" style="width: 300px;">
-                <a href="#contact" class="tm-page-link active">
+                <a href="#drink" class="tm-page-link active">
                     <i class="fas fa-solid fa-cloud-showers-water tm-page-link-icon"></i>
                   <span>Percipitation Prediction</span>
                 </a>
@@ -76,117 +76,219 @@ https://www.tooplate.com/view/2121-wave-cafe
             <nav class="tm-black-bg tm-drinks-nav">
               <ul>
                 <li>
-                  <a href="#" class="tm-tab-link active" data-id="cold">Iced Coffee</a>
+                  <a href="#" class="tm-tab-link active" data-id="pred">Forecasts</a>
                 </li>
                 <li>
-                  <a href="#" class="tm-tab-link" data-id="hot">Hot Coffee</a>
+                  <a href="#" class="tm-tab-link" data-id="trans">ST-Transformer</a>
                 </li>
                 <li>
-                  <a href="#" class="tm-tab-link" data-id="juice">Fruit Juice</a>
+                  <a href="#" class="tm-tab-link" data-id="unet">Statistics</a>
                 </li>
               </ul>
             </nav>
 
-            <div id="cold" class="tm-tab-content">
-              <div class="tm-list">
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/iced-americano.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Americano<span class="tm-list-item-price">$10.25</span></h3>
-                    <p class="tm-list-item-description">Here is a short description for the first item. Wave Cafe Template is provided by Tooplate.</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/iced-cappuccino.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Cappuccino<span class="tm-list-item-price">$12.50</span></h3>
-                    <p class="tm-list-item-description">Here is a list of 4 items or add more. You can use this template for commercial purposes.</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/iced-espresso.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Espresso<span class="tm-list-item-price">$14.25</span></h3>
-                    <p class="tm-list-item-description">You are not permitted to redistribute this template ZIP file on any other template websites.</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/iced-latte.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Latte<span class="tm-list-item-price">$11.50</span></h3>
-                    <p class="tm-list-item-description">Contents are organized into 3 tabs. Please <a href="https://www.tooplate.com/contact" rel="nofollow" target="_parent">contact Tooplate</a> if you have anything to ask.</p>
-                  </div>
-                </div> 
-                                       
+            <div id="pred" class="tm-tab-content">
+              <div class="tm-black-bg tm-contact-text-container" style="margin-top: 20px;">
+                <h2 class="tm-text-primary">Percipitation forecasts</h2>
+                <p>Upload an image (satellite/radar) to get precipitation forecasts and heavy rain probabilities.</p>
               </div>
+              <div class="tm-black-bg tm-contact-text-container tm-align-center" style="width: 660px;">
+                <form action="{% url 'predict' %}" method="POST" id="contact-form" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <div class="tm-form-group">
+                      <label for="photo">Upload Image</label>
+                      <input type="file" name="photos" class="tm-form-control" placeholder="image" required="" multiple/>
+                      <br><br>
+                      <label for="state">you can Select a U.S. State for statistics :</label><br>
+                      <select id="state" name="state">
+                        <option value="" disabled selected>-- Select a state --</option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                      </select>
+
+                  </div>        
+                  <div>
+                      <button type="submit" class="tm-btn-primary tm-align-right">
+                          Submit
+                      </button>
+                  </div>
+              </form>
+              
+              <!-- Add this section to display results -->
+              {% if gif_path %}
+                <h2>Prediction Result</h2>
+                {% if photo_names %}
+                  <p>From: {{ photo_names.0 }} to {{ photo_names|last }}</p>
+              {% endif %}
+                <img src="{% static gif_path %}" alt="Prediction Result GIF">
+              {% endif %}
+              <br><br>
+              
+              {% if plot_path %}
+                <img src="{% static plot_path %}" alt="Prediction Result GIF" style="max-width: 100%;">
+              {% endif %}
+              
+              {% if error %}
+                <div class="error-message">
+                    <p style="color: red;">Error: {{ error }}</p>
+                </div>
+              {% endif %}
+              </div>
+  
             </div> 
 
-            <div id="hot" class="tm-tab-content">
-              <div class="tm-list">
-              
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/hot-americano.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Americano<span class="tm-list-item-price">$8.50</span></h3>
-                    <p class="tm-list-item-description">Here is a short description for the item along with a squared thumbnail.</p>              
+            <div id="trans" class="tm-tab-content">
+              <div class="tm-black-bg tm-contact-text-container" style="margin-top: 20px;">
+                <h2 class="tm-text-primary">Percipitation Prediction</h2>
+                <p>Upload an image (satellite/radar) to get precipitation forecasts and heavy rain probabilities.</p>
+              </div>
+              <div class="tm-black-bg tm-contact-text-container tm-align-center" style="width: 660px;">
+                <form action="{% url 'percipt' %}" method="POST" id="contact-form" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <div class="tm-form-group">
+                      <label for="photo">Upload Image</label>
+                    <input type="file" name="imagestrans" class="tm-form-control" placeholder="image" required="" multiple/>
+                    
                   </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/hot-cappuccino.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Cappuccino<span class="tm-list-item-price">$9.50</span></h3>
-                    <p class="tm-list-item-description">Here is a list of 4 items that can add more as you need. Only content area will be scrolling.</p>                    
+                  <div>
+                    <button type="submit" class="tm-btn-primary tm-align-right">
+                      Submit
+                    </button>
                   </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/hot-espresso.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Espresso<span class="tm-list-item-price">$7.50</span></h3>
-                    <p class="tm-list-item-description">Left side logo and main menu are fixed. The video background is fixed.</p>              
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/hot-latte.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Latte<span class="tm-list-item-price">$6.50</span></h3>
-                    <p class="tm-list-item-description">Page contents are organized into 3 tabs to show different lists of items.</p>              
-                  </div>
-                </div>
+                </form>
+              </div>
                          
               </div>
-            </div>
+            
 
-            <div id="juice" class="tm-tab-content">
-              <div class="tm-list">
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/smoothie-1.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Strawberry Smoothie<span class="tm-list-item-price">$12.50</span></h3>
-                    <p class="tm-list-item-description">Here is a short description for the item along with a squared thumbnail.</p>              
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/smoothie-2.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Red Berry Smoothie<span class="tm-list-item-price">$14.50</span></h3>
-                    <p class="tm-list-item-description">Here is a list of 4 items or add more. You can use this template for commercial purposes.</p>                    
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/smoothie-3.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Pineapple Smoothie<span class="tm-list-item-price">$16.50</span></h3>
-                    <p class="tm-list-item-description">Left side logo and main menu are fixed. The video background is fixed.</p>              
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="{% static 'img/smoothie-4.png' %}" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Spinach Smoothie<span class="tm-list-item-price">$18.50</span></h3>
-                    <p class="tm-list-item-description">You are not allowed to redistribute the template ZIP file on other template sites.</p>              
-                  </div>
-                </div>              
+            <div id="unet" class="tm-tab-content">
+              <div class="tm-black-bg tm-contact-text-container" style="margin-top: 20px;">
+                <h2 class="tm-text-primary">Percipitation Statistics</h2>
+                <p>Upload an image (satellite/radar) to get precipitation statistics.</p>
               </div>
+              <div class="tm-black-bg tm-contact-text-container tm-align-center" style="width: 660px;">
+                <form action="{% url 'trend' %}" method="POST" id="trendform" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  
+                  <div class="tm-form-group">
+                      <label for="photo">Upload Image</label>
+                    <input type="file" name="photosUnet" class="tm-form-control" placeholder="image" required="" multiple/>
+                    <br>
+                    <label for="state">Select a U.S. State:</label><br>
+                    <select id="state" name="state">
+                      <option value="Alabama">Alabama</option>
+                      <option value="Alaska">Alaska</option>
+                      <option value="Arizona">Arizona</option>
+                      <option value="Arkansas">Arkansas</option>
+                      <option value="California">California</option>
+                      <option value="Colorado">Colorado</option>
+                      <option value="Connecticut">Connecticut</option>
+                      <option value="Delaware">Delaware</option>
+                      <option value="Florida">Florida</option>
+                      <option value="Georgia">Georgia</option>
+                      <option value="Hawaii">Hawaii</option>
+                      <option value="Idaho">Idaho</option>
+                      <option value="Illinois">Illinois</option>
+                      <option value="Indiana">Indiana</option>
+                      <option value="Iowa">Iowa</option>
+                      <option value="Kansas">Kansas</option>
+                      <option value="Kentucky">Kentucky</option>
+                      <option value="Louisiana">Louisiana</option>
+                      <option value="Maine">Maine</option>
+                      <option value="Maryland">Maryland</option>
+                      <option value="Massachusetts">Massachusetts</option>
+                      <option value="Michigan">Michigan</option>
+                      <option value="Minnesota">Minnesota</option>
+                      <option value="Mississippi">Mississippi</option>
+                      <option value="Missouri">Missouri</option>
+                      <option value="Montana">Montana</option>
+                      <option value="Nebraska">Nebraska</option>
+                      <option value="Nevada">Nevada</option>
+                      <option value="New Hampshire">New Hampshire</option>
+                      <option value="New Jersey">New Jersey</option>
+                      <option value="New Mexico">New Mexico</option>
+                      <option value="New York">New York</option>
+                      <option value="North Carolina">North Carolina</option>
+                      <option value="North Dakota">North Dakota</option>
+                      <option value="Ohio">Ohio</option>
+                      <option value="Oklahoma">Oklahoma</option>
+                      <option value="Oregon">Oregon</option>
+                      <option value="Pennsylvania">Pennsylvania</option>
+                      <option value="Rhode Island">Rhode Island</option>
+                      <option value="South Carolina">South Carolina</option>
+                      <option value="South Dakota">South Dakota</option>
+                      <option value="Tennessee">Tennessee</option>
+                      <option value="Texas">Texas</option>
+                      <option value="Utah">Utah</option>
+                      <option value="Vermont">Vermont</option>
+                      <option value="Virginia">Virginia</option>
+                      <option value="Washington">Washington</option>
+                      <option value="West Virginia">West Virginia</option>
+                      <option value="Wisconsin">Wisconsin</option>
+                      <option value="Wyoming">Wyoming</option>
+                    </select>
+
+                  </div>        
+                  <div>
+                    <button type="submit" class="tm-btn-primary tm-align-right">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+               <br><br>
+               
+              <div id="result"></div>
+              </div>
+                          
+              
             </div>
             <!-- end Drink Menu Page -->
           </div>
@@ -266,7 +368,7 @@ https://www.tooplate.com/view/2121-wave-cafe
           <!-- end Special Items Page -->
 
           <!-- Contact Page -->
-<div id="contact" class="tm-page-content">
+          <div id="contact" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
               <h2 class="tm-text-primary">Percipitation Prediction</h2>
               <p>Upload an image (satellite/radar) to get precipitation forecasts and heavy rain probabilities.</p>
@@ -465,6 +567,7 @@ https://www.tooplate.com/view/2121-wave-cafe
   </div>
 
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>    
+  <script src="{% static 'js/script2.js' %}"></script>    
   <script>
 
     function setVideoSize() {

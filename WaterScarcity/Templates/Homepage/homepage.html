@@ -286,34 +286,31 @@ https://www.tooplate.com/view/2121-wave-cafe
               </form>
             </div>
           </div>
-          <div id="contact2" class="tm-page-content">
-            <div class="tm-black-bg tm-contact-text-container">
-              <h2 class="tm-text-primary">Irrigation Management</h2>
-              <p>Enter location (latitude, longitude) and a future date for personalized irrigation recommendations based on predicted weather conditions.</p>
-            </div>
-            <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form-irrigation">
-                {% csrf_token %}
-                <div class="tm-form-group">
-                  <label for="latitude">Latitude</label>
-                  <input type="number" step="any" name="latitude" id="latitude" class="tm-form-control" placeholder="Ex: 36.8065" required="" />
+          <!-- Irrigation Management Section (assuming it's #contact2 based on nav) -->
+          <div id="contact2" class="tm-page-content"> 
+            <div class="tm-black-bg tm-contact-form-container">
+              <h2 class="tm-text-primary tm-mb-40">Irrigation Management</h2>
+              <form action="{% url 'Irrig:irrigation_recommendation' %}" method="POST" id="irrigationForm">
+                {% csrf_token %} <!-- Important pour la sécurité Django -->
+                <div class="form-group tm-form-group"> <!-- Ajout de tm-form-group pour le style -->
+                  <input type="text" name="longitude" class="form-control tm-form-control" placeholder="Longitude (ex: -74)" required />
                 </div>
-                 <div class="tm-form-group">
-                   <label for="longitude">Longitude</label>
-                  <input type="number" step="any" name="longitude" id="longitude" class="tm-form-control" placeholder="Ex: 10.1815" required="" />
+                <div class="form-group tm-form-group">
+                  <input type="text" name="latitude" class="form-control tm-form-control" placeholder="Latitude (ex: 40)" required />
                 </div>
-                 <div class="tm-form-group">
-                   <label for="date_irrigation">Future Date</label>
-                  <input type="date" name="date_irrigation" id="date_irrigation" class="tm-form-control" required="" />
+                <div class="form-group tm-form-group">
+                  <input type="date" name="date" class="form-control tm-form-control" placeholder="Date" required />
                 </div>
-                <div>
-                  <button type="submit" class="tm-btn-primary tm-align-right">
-                    Get Recommendations
-                  </button>
-                </div>
+                <button type="submit" class="btn tm-btn-primary tm-align-right">Obtenir les recommandations</button>
               </form>
             </div>
+
+            <!-- Section pour afficher les résultats -->
+            <div id="recommendationResults" class="tm-black-bg tm-contact-text-container" style="margin-top: 30px; display: none;">
+              <!-- Le contenu sera injecté ici par JavaScript -->
+            </div>
           </div>
+          <!-- end Irrigation Management Section -->
           <div id="contact3" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
               <h2 class="tm-text-primary">Water Level Estimation</h2>
@@ -568,7 +565,78 @@ https://www.tooplate.com/view/2121-wave-cafe
     });
     
 
-    
+    document.addEventListener('DOMContentLoaded', function() {
+      // ... (peut-être du code JavaScript existant pour d'autres fonctionnalités)
+
+      const irrigationForm = document.getElementById('irrigationForm');
+      const recommendationResultsDiv = document.getElementById('recommendationResults');
+
+      if (irrigationForm && recommendationResultsDiv) {
+          irrigationForm.addEventListener('submit', function(event) {
+              event.preventDefault(); // Empêche la soumission standard du formulaire
+
+              // Afficher le message de chargement
+              recommendationResultsDiv.innerHTML = '<p style="color: white; text-align: left;">Prédiction en cours, veuillez patienter...</p>';
+              recommendationResultsDiv.style.display = 'block';
+
+              const formData = new FormData(irrigationForm);
+              const csrfToken = irrigationForm.querySelector('input[name="csrfmiddlewaretoken"]').value;
+
+              fetch(irrigationForm.action, {
+                  method: 'POST',
+                  body: formData,
+                  headers: {
+                      'X-CSRFToken': csrfToken,
+                      'X-Requested-With': 'XMLHttpRequest'
+                  }
+              })
+              .then(response => {
+                  const contentType = response.headers.get("content-type");
+                  if (!response.ok) {
+                      // Essaye d'obtenir plus de détails de l'erreur du serveur
+                      return response.text().then(text => {
+                           throw new Error(`Erreur du serveur: ${response.status} ${response.statusText}. Réponse: ${text.substring(0, 300)}...`); // Affiche les premiers 300 caractères de la réponse
+                      });
+                  }
+                  if (contentType && contentType.indexOf("application/json") !== -1) {
+                      return response.json(); // Attend une réponse JSON du serveur
+                  } else {
+                      return response.text().then(text => {
+                          throw new Error(`Réponse inattendue du serveur (pas JSON). Contenu: ${text.substring(0, 300)}...`);
+                      });
+                  }
+              })
+              .then(data => {
+                  recommendationResultsDiv.style.display = 'block'; // Assure que la section est visible
+                  if (data.recommendations) {
+                      recommendationResultsDiv.innerHTML = `
+                          <h3 class="tm-text-primary">Recommandations Agricoles :</h3>
+                          <pre style="white-space: pre-wrap; word-wrap: break-word; color: white;">${data.recommendations}</pre>
+                      `;
+                  } else if (data.error_message) {
+                      recommendationResultsDiv.innerHTML = `
+                          <h3 class="tm-text-primary" style="color: #FF6347;">Erreur :</h3>
+                          <p style="color: #FF6347;">${data.error_message}</p>
+                      `;
+                  } else {
+                      // Si data est bien du JSON mais ne contient ni recommendations ni error_message
+                      recommendationResultsDiv.innerHTML = `
+                          <p style="color: #FF6347;">Réponse JSON reçue, mais format inattendu.</p>
+                          <pre style="color: white; white-space: pre-wrap;">${JSON.stringify(data, null, 2)}</pre>
+                      `;
+                  }
+              })
+              .catch(error => {
+                  console.error('Erreur lors de la soumission du formulaire d\'irrigation:', error);
+                  recommendationResultsDiv.style.display = 'block'; // Rend la section visible pour afficher l'erreur
+                  recommendationResultsDiv.innerHTML = `
+                      <h3 class="tm-text-primary" style="color: #FF6347;">Erreur :</h3>
+                      <p style="color: #FF6347;">${error.message}</p>
+                  `;
+              });
+          });
+      }
+    });
     document.getElementById('estimateButton').addEventListener('click', function() {
     const form = document.getElementById('waterLevelForm');
     const imageInput = document.getElementById('waterImageInput');

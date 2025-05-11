@@ -48,6 +48,8 @@ This deep learning pipeline uses **ConvLSTM networks** to predict drought zones 
 
 The model predicts drought probabilities using a **2-layer ConvLSTM** followed by a **Conv2D** output layer. It includes **multi-GPU support**, **ROC-AUC evaluation**, and **overlay visualizations** of drought predictions on real soil moisture maps.
 
+---
+
 ### 5. Precipitation Prediction and Classification
 This module forecasts precipitation intensity and visualizes it through class segmentation and quantitative analysis. It includes:
 
@@ -69,6 +71,8 @@ A **U-Net** model segments each precipitation heatmap into four classes:
 The system calculates precipitation volume, class-wise area coverage, and temporal trends to assist in hydrological planning and disaster risk assessment.
 
 This module enhances rainfall-specific modeling by offering both visual and numerical insights into upcoming precipitation events.
+
+---
 
 ### 6. Deforestation Forecasting with U-Net (Forest‐Cover Change)
 

@@ -1,113 +1,439 @@
 [
   {
-    "chapter_title": "Chapter 1 - Climate Change and the State of the Resource",
-    "summary": "This chapter analyses the impact of climate change on water resources in Tunisia, focusing on the year 2023. It examines temperature increases, rainfall deficiencies, evapotranspiration, and their effects on surface and groundwater availability and quality. It also discusses non-conventional water resources like intended and treated summerwater, highlighting challenges and opportunities for improving water management in the face of climate change.",
-    "key_points": [
-      "2023 was the third hottest year in Tunisia since 1950, with temperatures exceeding normal levels across all seasons.",
-      "Rainfall was 20% below age, though geographically variable, with some regions experimenting surplus rainfall.",
-      "Evapotranspiration incremented, indicating greener water demand from the environment.",
-      "Surface water availability is limited, with reservoir filling rates Declining.",
-      "Groundwater resources are under increasing pressure due to excessive and illegal exploitation.",
-      "The Map of Water Resources of Tunisia (CRET) project introduced a new approach to assessing water resources based on aquifer systems.",
-      "Desalination is expanding but treated wastewater weuse is limited despite its potential.",
-      "Water quality is compromised by pollution from urbanization, industrial activities, and agriculture.",
-      "The INSPA's water quality control shows an increase in bacteriological non-compliance in drinking water.",
-      "There is a quick of security plans to treat water and to control the effects of chlorination and THM production"
+    "chapter_title": "Chapitre 2 - Diagnosis and Forecast of Global Climate Change",
+    "summary": "Chapter 2 diagnoses the current conditions of global warming and provides forecasts of future climate change. It emphasizes the role of both natural and artificial factors in climate change, particularly the increase in greenhouse gas concentrations. It highlights the IPCC's reports and their findings on the impacts of global warming, emphasizing the need for adaptation measures in agriculture due to its climate-dependent nature.",
+    "key_climate_change_impacts_on_agriculture": [
+      "Changes in average temperature and precipitation patterns",
+      "Increased frequency of floods, droughts, and heat waves",
+      "Increased intensity of typhoons and hurricanes",
+      "Northward movement of plant habitats",
+      "Changes in animal habitats"
     ],
-    "programs": [],
-    "statistics": [
+    "specific_impacts_on_attributes": [
       {
-        "indicator": "Average annual rainfall",
-        "value": "164",
-        "unit": "mm",
-        "source_page": "24"
+        "attribute": "Average Temperature",
+        "impact_description": "Increase in average global temperature leading to potential heat stress on crops and altered growing seasons."
       },
       {
-        "indicator": "Average summer temperature",
-        "value": "29.2",
-        "unit": "°C",
-        "source_page": "24"
+        "attribute": "Precipitation Patterns",
+        "impact_description": "Changes in precipitation patterns causing increased risks of droughts or floods impacting agricultural production."
       },
       {
-        "indicator": "Surface resources: inputs to dams",
-        "value": "694",
-        "unit": "Mm3",
-        "source_page": "24"
-      },
-      {
-        "indicator": "Underground resources",
-        "value": "2412",
-        "unit": "Mm3",
-        "source_page": "24"
-      },
-      {
-        "indicator": "Rate of mobilisation of surface water",
-        "value": "92",
-        "unit": "%",
-        "source_page": "24"
-      },
-      {
-        "indicator": "Agricultural sampling (Sweet water)",
-        "value": "2836.3",
-        "unit": "Mm3",
-        "source_page": "24"
-      },
-      {
-        "indicator": "Sampling for AEP (Domestic)",
-        "value": "783.1",
-        "unit": "Mm3",
-        "source_page": "24"
-      },
-      {
-        "indicator": "Waste water treatment in irrigation",
-        "value": "10",
-        "unit": "Mm3",
-        "source_page": "24"
-      },
-      {
-        "indicator": "% of treated waste water in agriculture",
-        "value": "3.4",
-        "unit": "%",
-        "source_page": "24"
-      },
-      {
-        "indicator": "Total exploitation of underground resources",
-        "value": "3203",
-        "unit": "Mm3",
-        "source_page": "24"
-      },
-      {
-        "indicator": "Dam filling rate at the end of the year 2023",
-        "value": "29",
-        "unit": "%",
-        "source_page": "25"
-      },
-      {
-        "indicator": "Rate of Bacteriological Non-Compliance (SONEDE)",
-        "value": "13.6",
-        "unit": "%",
-        "source_page": "41"
-      },
-      {
-        "indicator": "Rate of Bacteriological Non-Compliance (GR)",
-        "value": "24.4",
-        "unit": "%",
-        "source_page": "42"
+        "attribute": "Greenhouse Gas Concentration",
+        "impact_description": "Increased greenhouse gas concentrations leading to global warming."
       }
     ],
-    "recommendations": [
-      "Implementation of the \"Code of Waters\" for improved water sector governance.",
-      "Implementation the action plans from the Water 2050 study.",
-      "Promote the joint management of surface and groundwater resources.",
-      "Expand theuse of treated wastewater and the development of desalination.",
-      "Modernize and rehabilitate hydraulic equipment for better efficiency.",
-      "Implementation energy transition strategies, especially solar energy, to reduce the cost of water.",
-      "Strengthening health in rural areas and development a support program for rural health.",
-      "Improve the technical and management performance of water facilities through private sector participation.",
-      "Consolidate and development research, higher education, and vocational training to support human resource development."
+    "vulnerable_crops_or_regions": [],
+    "adaptation_recommendations": [
+      "Preparation of adaptation measures against climate change due to agriculture's climate-dependent nature",
+      "Developing proper countermeasures based on scientific diagnosis and assessment of the impacts of climate change",
+      "Establishing the vision and administrative policies of future agriculture"
     ],
-    "source": "eau-2023.pdf",
+    "mitigation_recommendations_for_agriculture": [
+      "Reduction and absorption of greenhouse gases"
+    ],
+    "relevant_statistics_or_data": [
+      {
+        "indicator": "Increase in average temperature of the earth",
+        "value": "0.74",
+        "unit": "℃",
+        "context_or_region": "Over the past 100 years (1906~2005)",
+        "source_page": "3"
+      },
+      {
+        "indicator": "Potential rise in average temperature of the earth by the end of the 21st century",
+        "value": "6.4",
+        "unit": "℃",
+        "context_or_region": "If mankind continues its present level of consumption of fossil fuels (e.g., oil and coal)",
+        "source_page": "3"
+      },
+      {
+        "indicator": "Potential rise in sea level by the end of the 21st century",
+        "value": "59",
+        "unit": "cm",
+        "context_or_region": "If mankind continues its present level of consumption of fossil fuels (e.g., oil and coal)",
+        "source_page": "3"
+      },
+      {
+        "indicator": "Global greenhouse gas concentration increase based on carbon dioxide",
+        "value": "280 to 379",
+        "unit": "ppm",
+        "context_or_region": "From before the Industrial Revolution (1750) to 2005",
+        "source_page": "5"
+      },
+      {
+        "indicator": "Average temperature of 1998 compared to the average temperatures of 1960~1990",
+        "value": "0.58",
+        "unit": "℃ higher",
+        "context_or_region": "Global Average",
+        "source_page": "5"
+      }
+    ],
+    "source": "5. The-Impact-of-Climate-Change-on-the-Agricultural-Sector.pdf",
     "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "chapter_title": "Chapitre 3 -Impacts of Climate Change on the Agricultural Sector",
+    "summary": "This chapter discusses the impacts of climate change on the agricultural sector, focusing on arable and livestock sectors and hydrology. It highlights both positive and negative impacts, emphasizing the need for adaptation strategies. It also presents specific examples from Korea, China, and India. The conceptual approach is to view agriculture as a climate-dependent bio-industry that is vulnerable to shifts in temperature, precipitation, and sunlight.",
+    "key_climate_change_impacts_on_agriculture": [
+      "Changes in flowering and harvesting seasons",
+      "Quality change in crops",
+      "Shift of areas suitable for cultivation",
+      "Increase of blights and pests",
+      "Changes in livestock production (fertilization, breeding, pasture production)",
+      "Alterations in hydrology (underground water level, river flow, water quality)",
+      "Changes in agricultural productivity, farm household revenues, and asset values",
+      "Impacts on agricultural infrastructure (water sources)",
+      "Reduced crop quantity and quality due to temperature rise",
+      "Increased soil erosion due to increased rainfall",
+      "Severe drought and heat injuries",
+      "Worsening of freezing injury in early spring",
+      "Decreased forage yield and quality"
+    ],
+    "specific_impacts_on_attributes": [
+      {
+        "attribute": "Temperature",
+        "impact_description": "Increased average temperatures leading to changes in crop suitability, flowering seasons, and overall agricultural production. Can cause heat stress, reduced crop quality, and shifts in suitable cultivation areas."
+      },
+      {
+        "attribute": "Precipitation",
+        "impact_description": "Altered rainfall patterns, including increased or decreased precipitation, affecting water availability for irrigation, increasing soil erosion, and leading to floods or droughts. Changes can affect river flow and water quality."
+      },
+      {
+        "attribute": "CO2 Concentration",
+        "impact_description": "Increased atmospheric CO2 concentration which can lead to fertilization effects, potentially increasing crop productivity at low levels of temperature rise, but also leading to other negative consequences."
+      },
+      {
+        "attribute": "Agricultural climate zones",
+        "impact_description": "Shifting agricultural climate zones due to temperature rise."
+      }
+    ],
+    "vulnerable_crops_or_regions": [
+      "Rice",
+      "Barley",
+      "Apples, peaches, grapes, and soybeans (affected by brown grasshoppers)",
+      "Hot-temperature fruits and vegetables (watermelons, peppers, tomatoes)",
+      "Cool-temperature vegetables (radish, Korean cabbage)",
+      "Wheat, rice, and corn in China",
+      "Frigid crops in Northern China",
+      "Forage in drought or semi-drought areas in China"
+    ],
+    "adaptation_recommendations": [
+      "Crop conversion",
+      "Adjustment of input factors",
+      "Developing climate-resilient crop varieties",
+      "Adjusting crop patterns and structure"
+    ],
+    "mitigation_recommendations_for_agriculture": [
+      "Enhanced agricultural production management methods (specifically for China)"
+    ],
+    "relevant_statistics_or_data": [
+      {
+        "indicator": "Estimated temperature rise in 2100",
+        "value": "1.1~6.4",
+        "unit": "℃",
+        "context_or_region": "Global",
+        "source_page": "8"
+      },
+      {
+        "indicator": "Sea level rise by 2100",
+        "value": "18~59",
+        "unit": "cm",
+        "context_or_region": "Global",
+        "source_page": "8"
+      },
+      {
+        "indicator": "Temperature rise rate",
+        "value": "0.2",
+        "unit": "℃ per 10 years",
+        "context_or_region": "All scenarios by 2030",
+        "source_page": "8"
+      },
+      {
+        "indicator": "Average temperature increase (1973-2007)",
+        "value": "0.95",
+        "unit": "℃",
+        "context_or_region": "Korean agricultural climate zones",
+        "source_page": "12"
+      },
+      {
+        "indicator": "Increase of precipitation (1973-2007)",
+        "value": "283",
+        "unit": "mm",
+        "context_or_region": "Korean agricultural climate zones",
+        "source_page": "12"
+      },
+      {
+        "indicator": "Farmland price fall due to 1℃ temperature rise",
+        "value": "14,550 - 19,240",
+        "unit": "thousand won/ha",
+        "context_or_region": "Korea",
+        "source_page": "17"
+      },
+      {
+        "indicator": "Farmland price rise due to 1 mm precipitation increase",
+        "value": "330-360",
+        "unit": "thousand won/ha",
+        "context_or_region": "Korea",
+        "source_page": "17"
+      },
+      {
+        "indicator": "Projected temperature rise in 2020",
+        "value": "1.2",
+        "unit": "℃",
+        "context_or_region": "Korea",
+        "source_page": "17"
+      },
+      {
+        "indicator": "Projected precipitation increase in 2020",
+        "value": "11",
+        "unit": "%",
+        "context_or_region": "Korea",
+        "source_page": "17"
+      },
+      {
+        "indicator": "Drop in Chinese agricultural productivity by 2030",
+        "value": "5-10",
+        "unit": "%",
+        "context_or_region": "China",
+        "source_page": "17"
+      },
+      {
+        "indicator": "Decrease in yield of three major crops in China in the late 21st century",
+        "value": "up to 37",
+        "unit": "%",
+        "context_or_region": "China",
+        "source_page": "17"
+      },
+      {
+        "indicator": "Loss of gross agricultural production in China due to blights and pests",
+        "value": "20-25",
+        "unit": "%",
+        "context_or_region": "China",
+        "source_page": "18"
+      },
+      {
+        "indicator": "Potential drop in total grain production due to climate change (2030-2050)",
+        "value": "10",
+        "unit": "%",
+        "context_or_region": "China",
+        "source_page": "19"
+      },
+      {
+        "indicator": "Summer monsoon contribution to annual rainfall",
+        "value": "78",
+        "unit": "%",
+        "context_or_region": "India",
+        "source_page": "20"
+      },
+      {
+        "indicator": "Cereal productivity increase",
+        "value": "500 to 1800",
+        "unit": "kg/ha",
+        "context_or_region": "India",
+        "source_page": "20"
+      }
+    ],
+    "source": "5. The-Impact-of-Climate-Change-on-the-Agricultural-Sector.pdf",
+    "pages": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  {
+    "chapter_title": "Chapitre 4 -Mitigation and Adaptation Strategies for the Agriculture",
+    "summary": "This chapter discusses mitigation and adaptation strategies for the agricultural sector in the face of climate change. It highlights the importance of both reducing greenhouse gas emissions and adapting to the inevitable impacts of climate change. The chapter also presents specific countermeasures for climate change, including economic, regulatory, and voluntary approaches. It focuses on the adaptation plans and provides a roadmap for implementing adaptation measures in the agricultural sector. Additionally, the chapter examines the countermeasures taken by the Chinese government, particularly in the Ningxia Region, to address climate change impacts on agriculture.",
+    "key_climate_change_impacts_on_agriculture": [
+      "Disruption of the energy balance for the global climatic system",
+      "Increased greenhouse gas emissions",
+      "Changes in land covering and solar radiation",
+      "Potential risks and challenges of global warming"
+    ],
+    "specific_impacts_on_attributes": [],
+    "vulnerable_crops_or_regions": [
+      "Rain-fed crops",
+      "Ningxia Region (China)",
+      "Corn, spring wheat, rice, and potato crops in the Ningxia Region",
+      "Grasslands (degraded, desertified, alkali)",
+      "Agricultural areas affected by extreme meteorological disasters."
+    ],
+    "adaptation_recommendations": [
+      "Planned adaptation measures",
+      "Cultivation of heat-resistant crops",
+      "Preparation against floods",
+      "Utilization of the investment in provision against risks and Early Warning System",
+      "Resource preservation",
+      "Water and soil preservation",
+      "Improvement of soil quality",
+      "Efficiency of water use",
+      "Governmental and customary policies",
+      "R&D of new technologies",
+      "Construction of infrastructure",
+      "Education and public acknowledgement",
+      "Land and water resource management",
+      "Farmhouse adaptation",
+      "Develop breeds that are in great demand and resistant to heat",
+      "Popularize new cultivation technologies for fertilization and sowing",
+      "Prepare the maps for suitable places for cultivation and crop distribution",
+      "Develop forecast models to prevent blights, pest and weeds",
+      "Develop and utilize early warning systems",
+      "Develop water resource management systems to prevent natural disasters including drought and flood",
+      "Build up the adaptation system to global warming",
+      "Convert to the agricultural production system that makes the most of global warming",
+      "Build up the crop transformation evaluation system",
+      "Build up the early warning system",
+      "Popularize the farming simulator",
+      "Promote the water resource management system in prevention against natural disasters such as drought and flood",
+      "Establish the standard for water-saving irrigation",
+      "Modernize the agricultural infrastructure",
+      "Popularize the energy-saving technology for the protected horticulture",
+      "Expand the insurance system for agricultural disasters and for damages by flood and storm",
+      "Operate the farm household income stabilization program",
+      "Establish the global warming adaptation committee",
+      "Introduce the system for calculating the crop damage",
+      "Formulate the long-term development plan for rural villages",
+      "Operate the special task force team for main areas of production",
+      "Train the agricultural people specialized in risk management",
+      "Train the consultants specialized in risk management",
+      "Expand the education of farm households in the insurance for crop disasters and the risk management",
+      "Introduce the impact assessment model for productivity forecast and biological changes",
+      "Build up the agricultural ecosystem monitoring system",
+      "Control the crop growth rate, greenhouse cultivation, agricultural chemicals, and weeds",
+      "Cultivate the crops adapted to climate change",
+      "Fertilize the soil by improving the alkali soil",
+      "Install the water management for individual farm households",
+      "Utilize the risk avoidance crop insurance",
+      "Prepare the irrigation schedule to enhance the efficiency of water use",
+      "Participate in the income stabilization program",
+      "Diversify the farm household revenues through crop diversification",
+      "Change the places of cultivation to proper climate"
+    ],
+    "mitigation_recommendations_for_agriculture": [
+      "Improvement of cultivation methods through improved irrigation and fertilization control",
+      "Improvement of animal excretion treatment technologies in the livestock sector",
+      "Carbon fixing for the farmland soil",
+      "Economical means (charges, carbon tax, emission trading scheme, subsidy)",
+      "Regulatory means (emission standard, chemical fertilizer spraying standard, manure and liquid fertilizer spraying standard and breeding density regulations)",
+      "Voluntary agreement (Good Farming Practices (GFP) and the voluntary development of resource-recycling villages by residents)",
+      "R&D and popularization for GHGs reduction and capture technologies",
+      "Information provision and public awareness enhancement for greenhouse gas monitoring.",
+      "Continue popularizing the low-emitting multi-harvesting rice varieties and half-drought type cultivation techniques",
+      "Adopt scientific irrigation methods and soil-verified fertilization techniques",
+      "Research and develop high-quality ruminant breeding technology and stockbreeding management technologies of scale",
+      "Strengthen the management of animal excrement, wastewater and solid wastes",
+      "Enhance the efficiency of methane utilization",
+      "Control the methane emission",
+      "Reduce carbon emission from rice fields and dry fields",
+      "Popularize the no-tillage farming methods."
+    ],
+    "relevant_statistics_or_data": [
+      {
+        "indicator": "India's Summer monsoon contribution to rainfall",
+        "value": "78",
+        "unit": "%",
+        "context_or_region": "India",
+        "source_page": "21"
+      },
+      {
+        "indicator": "India's population projection by 2050",
+        "value": "1.6",
+        "unit": "billion",
+        "context_or_region": "India",
+        "source_page": "21"
+      },
+      {
+        "indicator": "Demand for rice by 2020",
+        "value": "122",
+        "unit": "MT",
+        "context_or_region": "India",
+        "source_page": "21"
+      },
+      {
+        "indicator": "Demand for wheat by 2020",
+        "value": "103",
+        "unit": "MT",
+        "context_or_region": "India",
+        "source_page": "21"
+      },
+      {
+        "indicator": "Increase in average yields of rice needed by 2020",
+        "value": "56",
+        "unit": "%",
+        "context_or_region": "India",
+        "source_page": "21"
+      },
+      {
+        "indicator": "Increase in average yields of wheat needed by 2020",
+        "value": "62",
+        "unit": "%",
+        "context_or_region": "India",
+        "source_page": "21"
+      },
+      {
+        "indicator": "Increase in average yields of coarse grains needed by 2020",
+        "value": "36",
+        "unit": "%",
+        "context_or_region": "India",
+        "source_page": "21"
+      },
+      {
+        "indicator": "Increase in average yields of pulses needed by 2020",
+        "value": "116",
+        "unit": "%",
+        "context_or_region": "India",
+        "source_page": "21"
+      },
+      {
+        "indicator": "Area affected by soil salinity due to canal irrigation in Haryana",
+        "value": "0.5",
+        "unit": "Mha",
+        "context_or_region": "Haryana, India",
+        "source_page": "21"
+      },
+      {
+        "indicator": "Average temperature rise in Ningxia Region in the past 10 years",
+        "value": "0.6~1.2",
+        "unit": "℃",
+        "context_or_region": "Ningxia Region, China",
+        "source_page": "33"
+      },
+      {
+        "indicator": "Increase in yield for potatoes with film covering",
+        "value": "30",
+        "unit": "%",
+        "context_or_region": "Huinong, Ningxia Region, China",
+        "source_page": "34"
+      },
+      {
+        "indicator": "Non-farming income rate in Ningxia Region",
+        "value": "50",
+        "unit": "%",
+        "context_or_region": "Ningxia Region, China",
+        "source_page": "34"
+      }
+    ],
+    "source": "5. The-Impact-of-Climate-Change-on-the-Agricultural-Sector.pdf",
+    "pages": [
+      21,
+      22,
       23,
       24,
       25,
@@ -119,6 +445,52 @@
       31,
       32,
       33,
+      34
+    ]
+  },
+  {
+    "chapter_title": "Chapitre 5 -Low carbon Green Growth Strategy/Roadmap for the Agricultural Sector",
+    "summary": "This chapter discusses the concept of green growth and its application to the agricultural sector. It emphasizes the need for a shift towards sustainable agricultural practices that minimize environmental impact and greenhouse gas emissions while ensuring food security and economic viability. The chapter outlines strategies for implementing low-carbon green growth in agriculture, including establishing resource-cycling systems, integrating agricultural and environmental policies, promoting climate-smart agriculture, developing and disseminating green technology, and utilizing carbon information.",
+    "key_climate_change_impacts_on_agriculture": [
+      "Increased vulnerability of farming communities to climate-related disasters like floods and droughts",
+      "Need for agriculture to adapt to a warmer, more heavily populated world"
+    ],
+    "specific_impacts_on_attributes": [],
+    "vulnerable_crops_or_regions": [],
+    "adaptation_recommendations": [
+      "Develop crop species that can adapt to global warming",
+      "Establish an eco-monitoring system",
+      "Establish early-warning systems for climate-related disasters",
+      "Improve agricultural water and soil management"
+    ],
+    "mitigation_recommendations_for_agriculture": [
+      "Shift to low-carbon agriculture via greenhouse gas reduction and higher absorption capacity",
+      "Promote energy efficiency and savings in agricultural practices",
+      "Reduced use of methane and nitrous oxide in farmlands",
+      "Improve intestinal fermentation of ruminant animals and animal manure treatment facility",
+      "Biomass utilization and fossil fuel reduction",
+      "Promotion of environmentally friendly machinery",
+      "Use of organic fertilizer and by-product fertilizer",
+      "Develop bioenergy projects using agricultural byproducts"
+    ],
+    "relevant_statistics_or_data": [
+      {
+        "indicator": "Increase in potato yield due to film covering",
+        "value": "30",
+        "unit": "%",
+        "context_or_region": "Huinong, Ningxia Region",
+        "source_page": "34"
+      },
+      {
+        "indicator": "Non-farming income rate",
+        "value": "50",
+        "unit": "%",
+        "context_or_region": "Ningxia Region",
+        "source_page": "34"
+      }
+    ],
+    "source": "5. The-Impact-of-Climate-Change-on-the-Agricultural-Sector.pdf",
+    "pages": [
       34,
       35,
       36,
@@ -127,345 +499,9 @@
       39,
       40,
       41,
-      42
-    ]
-  },
-  {
-    "chapter_title": "Chapter 2 - Use of the Resource",
-    "summary": "This chapter of the Tunisian Water Sector National Report 2023 focuses on the uses of water resources in Tunisia, particularly in the agricultural sector. It addresses the impact of water scarcity and climate change on key agricultural productions, including cereals, olive oil, date palm, and vegetable crops. It also analyses the concept of virtual water trade related to exports and imports.",
-    "key_points": [
-      "Persistence drrought is exercising increasing stress on available water resources.",
-      "Restrictions have been imposed on the use of drinking water, and SONEDE has implemented a water rationing program.",
-      "Irrigation quotas from dams have been drastically reduced.",
-      "Transfer systems have been fully mobilized to compensate water scarcity.",
-      "Pressure on groundwater resources has increased, leading to illegal exploitation and negative socio-economic and environmental consequences.",
-      "Water quality is an increasing concern due to urbanization, economic activities, and years of drought.",
-      "The agricultural sector uses the most water, with irrigated agriculture accounting for approximately 75% of total water use.",
-      "The chapter analytics the impact of climate change (CC) on water use and the water footprint of different agricultural products.",
-      "The chapter talks the vulnerability of key crops (reals, olives, dates) to drought.",
-      "The chapter explains the concept of virtual water and its implications for Tunisia's trade balance."
-    ],
-    "programs": [],
-    "statistics": [
-      {
-        "indicator": "Non-conformity rate of treated wastewater (DBO5)",
-        "value": "37",
-        "unit": "%",
-        "source_page": "43"
-      },
-      {
-        "indicator": "Non-conformity rate of treated wastewater (DCO)",
-        "value": "35",
-        "unit": "%",
-        "source_page": "43"
-      },
-      {
-        "indicator": "Non-conformity rate of treated wastewater (MES)",
-        "value": "23",
-        "unit": "%",
-        "source_page": "43"
-      },
-      {
-        "indicator": "Increase in water transfer from Sidi El Barrak",
-        "value": "168",
-        "unit": "millions of m3",
-        "source_page": "45"
-      },
-      {
-        "indicator": "Increase in water transfer from Taref pumping station",
-        "value": "284",
-        "unit": "millions of m3",
-        "source_page": "45"
-      },
-      {
-        "indicator": "Reduction of water billed by SECADENORD to SONEDE and CRDA",
-        "value": "13",
-        "unit": "%",
-        "source_page": "45"
-      },
-      {
-        "indicator": "Reduction in SONEDE's water production from surface water",
-        "value": "8.4",
-        "unit": "%",
-        "source_page": "45"
-      },
-      {
-        "indicator": "SECADENORD volume billed to CRDA in 2021",
-        "value": "70",
-        "unit": "Mm3",
-        "source_page": "46"
-      },
-      {
-        "indicator": "SECADENORD volume billed to CRDA in 2022",
-        "value": "50",
-        "unit": "Mm3",
-        "source_page": "46"
-      },
-      {
-        "indicator": "SECADENORD volume billed to CRDA in 2023",
-        "value": "23",
-        "unit": "Mm3",
-        "source_page": "46"
-      },
-      {
-        "indicator": "Area of rainfed agriculture",
-        "value": "92-94",
-        "unit": "% of SAU",
-        "source_page": "51"
-      },
-      {
-        "indicator": "Contribution of rainfed agriculture to agricultural production",
-        "value": "65",
-        "unit": "%",
-        "source_page": "51"
-      },
-      {
-        "indicator": "Surface area of irrigated land",
-        "value": "442,500",
-        "unit": "ha",
-        "source_page": "51"
-      },
-      {
-        "indicator": "Total production of cereals in 2023",
-        "value": "5.4",
-        "unit": "million quintals",
-        "source_page": "52"
-      },
-      {
-        "indicator": "Percentage of irrigated cereal production to total cereal production",
-        "value": "37",
-        "unit": "%",
-        "source_page": "53"
-      },
-      {
-        "indicator": "Olive growing areas",
-        "value": "2",
-        "unit": "millions of ha",
-        "source_page": "54"
-      },
-      {
-        "indicator": "Percentage of rainfed olive growing",
-        "value": "93",
-        "unit": "%",
-        "source_page": "54"
-      },
-      {
-        "indicator": "Olive oil production 2022/2023",
-        "value": "217",
-        "unit": "thousands of tonnes",
-        "source_page": "55"
-      },
-      {
-        "indicator": "Contribution of irrigated sector to olive oil production",
-        "value": "50",
-        "unit": "%",
-        "source_page": "55"
-      },
-      {
-        "indicator": "Surface of arboriculture in 2022/2023",
-        "value": "407.5",
-        "unit": "thousands of ha",
-        "source_page": "56"
-      },
-      {
-        "indicator": "Percentage of irrigated surface arboriculture",
-        "value": "44",
-        "unit": "%",
-        "source_page": "56"
-      },
-      {
-        "indicator": "Contribution of irrigated arboriculture to total production",
-        "value": "95",
-        "unit": "%",
-        "source_page": "56"
-      },
-      {
-        "indicator": "Date of production 2022/2023",
-        "value": "340.46",
-        "unit": "thousands of tonnes",
-        "source_page": "57"
-      },
-      {
-        "indicator": "Percentage of illegal extensions to total date palm area (Kebili)",
-        "value": "72",
-        "unit": "%",
-        "source_page": "57"
-      },
-      {
-        "indicator": "Area of market gardening in 2022/2023",
-        "value": "122",
-        "unit": "thousands of ha",
-        "source_page": "57"
-      }
-    ],
-    "recommendations": [
-      "Supplies of water should develop water safety plans to anticipate risks of water quality disruption."
-    ],
-    "source": "eau-2023.pdf",
-    "pages": [
+      42,
       43,
-      44,
-      45,
-      46,
-      47,
-      48,
-      49,
-      50,
-      51,
-      52,
-      53,
-      54,
-      55,
-      56,
-      57,
-      58,
-      59,
-      60
-    ]
-  },
-  {
-    "chapter_title": "Chapter 6 - New Technologies",
-    "summary": "This chapter discusses the integration of new technologies in the Tunisian water sector, focusing on satellite technology, smart metering, and energy efficiency. It highlights initiatives by SECADENORD, ONAS, and SONEDE to improve water management, reduce energy consumption, and enhance productivity. It also explores the potential of green hydrogen production from seawater desalination.",
-    "key_points": [
-      "Increased energy consumption by SECADENORD and ONAS due to water transfer and treatment.",
-      "Need for energy efficiency measures and renewable energy integration in water management.",
-      "Use of satellite data (WaPOR project and ChallengeOne satellite) for improved water productivity and agriculture.",
-      "Implementation of smart metering and GIS by SONEDE to enhance water distribution and management.",
-      "Exploration of green hydrogen production from seawater desalination and its implications for water and energy sectors.",
-      "The digitalization of the water sector is considered as a strategic step towards sustainable IWRM.",
-      "The water sector Water 4.0 makes reference to the use of IoT, Big Data, artificial intelligence, the cloud computing and predictive analysis or predictive and of robotics to extend, increase and increase the efficiency of the activities which affect the whole water chain."
-    ],
-    "programs": [
-      {
-        "name": "Plan d’action pour la réalisation des projets en énergies renouvelables pour la SECADENORD",
-        "objective": "Implementation of renewable energy projects to reduce energy consumption by SECADENORD.",
-        "measures": "Installation of four 10 MWc PV plants and one 9 MWc plant.",
-        "stakeholders": [
-          "SECADENORD",
-          "STEG"
-        ]
-      },
-      {
-        "name": "WaPOR project",
-        "objective": "Improve water productivity through satellite-based monitoring.",
-        "measures": "Developing a database using satellite data to monitor water productivity in agriculture.",
-        "stakeholders": [
-          "FAO",
-          "Government of the Netherlands",
-          "IHE Delft",
-          "IWMI"
-        ]
-      },
-      {
-        "name": "SIG Métier (SONEDE)",
-        "objective": "Enhance water distribution and management through a geographic information system.",
-        "measures": "Centralizing data access and sharing, facilitating infrastructure maintenance, and optimizing hydraulic operations.",
-        "stakeholders": [
-          "SONEDE",
-          "AFD"
-        ]
-      },
-      {
-        "name": "Stratégie nationale pour le développement de l'hydrogène vert et de ses dérivés en Tunisie",
-        "objective": "Export to Europe more than 6 million of tons of green hydrogen by 2050 and Valorization of this energy vector in the Tunisian economy.",
-        "measures": "Elaboration of a national strategy including a plan of action.",
-        "stakeholders": [
-          "Ministère de l'Industrie, des Mines et de l’Energie",
-          "GIZ",
-          "ONAS",
-          "European international operators"
-        ]
-      }
-    ],
-    "statistics": [
-      {
-        "indicator": "Total consumption (Gwh) SECADENORD",
-        "value": "162.3",
-        "unit": "Gwh",
-        "source_page": "127"
-      },
-      {
-        "indicator": "Total cost SECADENORD",
-        "value": "53.3",
-        "unit": "MDT",
-        "source_page": "127"
-      },
-      {
-        "indicator": "Contributions to dams",
-        "value": "693",
-        "unit": "Mm3",
-        "source_page": "128"
-      },
-      {
-        "indicator": "Energy consumption SECADENORD",
-        "value": "162.3",
-        "unit": "Gwh",
-        "source_page": "128"
-      },
-      {
-        "indicator": "Total energy consumed for ONAS treatment and pumping",
-        "value": "138.28",
-        "unit": "Gwh",
-        "source_page": "129"
-      },
-      {
-        "indicator": "Volume processed ONAS",
-        "value": "293",
-        "unit": "millions m3",
-        "source_page": "129"
-      },
-      {
-        "indicator": "Volume processed ONAS (projection)",
-        "value": "373",
-        "unit": "millions m3",
-        "source_page": "129"
-      },
-      {
-        "indicator": "Energy consumed for treatment and pumping",
-        "value": "240",
-        "unit": "Gwh",
-        "source_page": "129"
-      },
-      {
-        "indicator": "Volume processed ONAS (projection)",
-        "value": "500",
-        "unit": "millions m3",
-        "source_page": "129"
-      },
-      {
-        "indicator": "Energy consumed for treatment and pumping",
-        "value": "480",
-        "unit": "Gwh",
-        "source_page": "129"
-      }
-    ],
-    "recommendations": [
-      "Optimize specific consumption and improve the performance of motor pumps.",
-      "Carry out necessary maintenance.",
-      "Conduct regular energy audits.",
-      "Install capacity banks.",
-      "Priority gravity transfer.",
-      "Choose an adequate subscription scheme with STEG.",
-      "Implementation an integrated energy management platform for the northern water transfer system (SCADA).",
-      "Install renewable energy power plants (ground and/or floating photovoltaic; wind power).",
-      "Renovate treatment processes by using new energy-saving technologies such as equipping wastewater treatment plants with fine bubble aeration systems.",
-      "Broaden the reflection on the development of seawater removal, between water, industry/energy and environment stakeholders, in a nexus perspective to balance between ambitions of water security, energy security and decarbonization for a competitive economy, without losing any of the expected benefits.",
-      "Improve the SIG to effectively integrated field work, network maintenance, and the management of technicians' teams and tasks."
-    ],
-    "source": "eau-2023.pdf",
-    "pages": [
-      127,
-      128,
-      129,
-      130,
-      131,
-      132,
-      133,
-      134,
-      135,
-      136,
-      137,
-      138
+      44
     ]
   }
 ]

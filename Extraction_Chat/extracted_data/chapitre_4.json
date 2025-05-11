@@ -1,0 +1,190 @@
+{
+  "chapter_title": "Chapitre 4 -Mitigation and Adaptation Strategies for the Agriculture",
+  "summary": "This chapter discusses mitigation and adaptation strategies for the agricultural sector in the face of climate change. It highlights the importance of both reducing greenhouse gas emissions and adapting to the inevitable impacts of climate change. The chapter also presents specific countermeasures for climate change, including economic, regulatory, and voluntary approaches. It focuses on the adaptation plans and provides a roadmap for implementing adaptation measures in the agricultural sector. Additionally, the chapter examines the countermeasures taken by the Chinese government, particularly in the Ningxia Region, to address climate change impacts on agriculture.",
+  "key_climate_change_impacts_on_agriculture": [
+    "Disruption of the energy balance for the global climatic system",
+    "Increased greenhouse gas emissions",
+    "Changes in land covering and solar radiation",
+    "Potential risks and challenges of global warming"
+  ],
+  "specific_impacts_on_attributes": [],
+  "vulnerable_crops_or_regions": [
+    "Rain-fed crops",
+    "Ningxia Region (China)",
+    "Corn, spring wheat, rice, and potato crops in the Ningxia Region",
+    "Grasslands (degraded, desertified, alkali)",
+    "Agricultural areas affected by extreme meteorological disasters."
+  ],
+  "adaptation_recommendations": [
+    "Planned adaptation measures",
+    "Cultivation of heat-resistant crops",
+    "Preparation against floods",
+    "Utilization of the investment in provision against risks and Early Warning System",
+    "Resource preservation",
+    "Water and soil preservation",
+    "Improvement of soil quality",
+    "Efficiency of water use",
+    "Governmental and customary policies",
+    "R&D of new technologies",
+    "Construction of infrastructure",
+    "Education and public acknowledgement",
+    "Land and water resource management",
+    "Farmhouse adaptation",
+    "Develop breeds that are in great demand and resistant to heat",
+    "Popularize new cultivation technologies for fertilization and sowing",
+    "Prepare the maps for suitable places for cultivation and crop distribution",
+    "Develop forecast models to prevent blights, pest and weeds",
+    "Develop and utilize early warning systems",
+    "Develop water resource management systems to prevent natural disasters including drought and flood",
+    "Build up the adaptation system to global warming",
+    "Convert to the agricultural production system that makes the most of global warming",
+    "Build up the crop transformation evaluation system",
+    "Build up the early warning system",
+    "Popularize the farming simulator",
+    "Promote the water resource management system in prevention against natural disasters such as drought and flood",
+    "Establish the standard for water-saving irrigation",
+    "Modernize the agricultural infrastructure",
+    "Popularize the energy-saving technology for the protected horticulture",
+    "Expand the insurance system for agricultural disasters and for damages by flood and storm",
+    "Operate the farm household income stabilization program",
+    "Establish the global warming adaptation committee",
+    "Introduce the system for calculating the crop damage",
+    "Formulate the long-term development plan for rural villages",
+    "Operate the special task force team for main areas of production",
+    "Train the agricultural people specialized in risk management",
+    "Train the consultants specialized in risk management",
+    "Expand the education of farm households in the insurance for crop disasters and the risk management",
+    "Introduce the impact assessment model for productivity forecast and biological changes",
+    "Build up the agricultural ecosystem monitoring system",
+    "Control the crop growth rate, greenhouse cultivation, agricultural chemicals, and weeds",
+    "Cultivate the crops adapted to climate change",
+    "Fertilize the soil by improving the alkali soil",
+    "Install the water management for individual farm households",
+    "Utilize the risk avoidance crop insurance",
+    "Prepare the irrigation schedule to enhance the efficiency of water use",
+    "Participate in the income stabilization program",
+    "Diversify the farm household revenues through crop diversification",
+    "Change the places of cultivation to proper climate"
+  ],
+  "mitigation_recommendations_for_agriculture": [
+    "Improvement of cultivation methods through improved irrigation and fertilization control",
+    "Improvement of animal excretion treatment technologies in the livestock sector",
+    "Carbon fixing for the farmland soil",
+    "Economical means (charges, carbon tax, emission trading scheme, subsidy)",
+    "Regulatory means (emission standard, chemical fertilizer spraying standard, manure and liquid fertilizer spraying standard and breeding density regulations)",
+    "Voluntary agreement (Good Farming Practices (GFP) and the voluntary development of resource-recycling villages by residents)",
+    "R&D and popularization for GHGs reduction and capture technologies",
+    "Information provision and public awareness enhancement for greenhouse gas monitoring.",
+    "Continue popularizing the low-emitting multi-harvesting rice varieties and half-drought type cultivation techniques",
+    "Adopt scientific irrigation methods and soil-verified fertilization techniques",
+    "Research and develop high-quality ruminant breeding technology and stockbreeding management technologies of scale",
+    "Strengthen the management of animal excrement, wastewater and solid wastes",
+    "Enhance the efficiency of methane utilization",
+    "Control the methane emission",
+    "Reduce carbon emission from rice fields and dry fields",
+    "Popularize the no-tillage farming methods."
+  ],
+  "relevant_statistics_or_data": [
+    {
+      "indicator": "India's Summer monsoon contribution to rainfall",
+      "value": "78",
+      "unit": "%",
+      "context_or_region": "India",
+      "source_page": "21"
+    },
+    {
+      "indicator": "India's population projection by 2050",
+      "value": "1.6",
+      "unit": "billion",
+      "context_or_region": "India",
+      "source_page": "21"
+    },
+    {
+      "indicator": "Demand for rice by 2020",
+      "value": "122",
+      "unit": "MT",
+      "context_or_region": "India",
+      "source_page": "21"
+    },
+    {
+      "indicator": "Demand for wheat by 2020",
+      "value": "103",
+      "unit": "MT",
+      "context_or_region": "India",
+      "source_page": "21"
+    },
+    {
+      "indicator": "Increase in average yields of rice needed by 2020",
+      "value": "56",
+      "unit": "%",
+      "context_or_region": "India",
+      "source_page": "21"
+    },
+    {
+      "indicator": "Increase in average yields of wheat needed by 2020",
+      "value": "62",
+      "unit": "%",
+      "context_or_region": "India",
+      "source_page": "21"
+    },
+    {
+      "indicator": "Increase in average yields of coarse grains needed by 2020",
+      "value": "36",
+      "unit": "%",
+      "context_or_region": "India",
+      "source_page": "21"
+    },
+    {
+      "indicator": "Increase in average yields of pulses needed by 2020",
+      "value": "116",
+      "unit": "%",
+      "context_or_region": "India",
+      "source_page": "21"
+    },
+    {
+      "indicator": "Area affected by soil salinity due to canal irrigation in Haryana",
+      "value": "0.5",
+      "unit": "Mha",
+      "context_or_region": "Haryana, India",
+      "source_page": "21"
+    },
+    {
+      "indicator": "Average temperature rise in Ningxia Region in the past 10 years",
+      "value": "0.6~1.2",
+      "unit": "℃",
+      "context_or_region": "Ningxia Region, China",
+      "source_page": "33"
+    },
+    {
+      "indicator": "Increase in yield for potatoes with film covering",
+      "value": "30",
+      "unit": "%",
+      "context_or_region": "Huinong, Ningxia Region, China",
+      "source_page": "34"
+    },
+    {
+      "indicator": "Non-farming income rate in Ningxia Region",
+      "value": "50",
+      "unit": "%",
+      "context_or_region": "Ningxia Region, China",
+      "source_page": "34"
+    }
+  ],
+  "source": "5. The-Impact-of-Climate-Change-on-the-Agricultural-Sector.pdf",
+  "pages": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ]
+}

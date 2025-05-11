@@ -1,0 +1,56 @@
+{
+  "chapter_title": "Chapitre 5 -Low carbon Green Growth Strategy/Roadmap for the Agricultural Sector",
+  "summary": "This chapter discusses the concept of green growth and its application to the agricultural sector. It emphasizes the need for a shift towards sustainable agricultural practices that minimize environmental impact and greenhouse gas emissions while ensuring food security and economic viability. The chapter outlines strategies for implementing low-carbon green growth in agriculture, including establishing resource-cycling systems, integrating agricultural and environmental policies, promoting climate-smart agriculture, developing and disseminating green technology, and utilizing carbon information.",
+  "key_climate_change_impacts_on_agriculture": [
+    "Increased vulnerability of farming communities to climate-related disasters like floods and droughts",
+    "Need for agriculture to adapt to a warmer, more heavily populated world"
+  ],
+  "specific_impacts_on_attributes": [],
+  "vulnerable_crops_or_regions": [],
+  "adaptation_recommendations": [
+    "Develop crop species that can adapt to global warming",
+    "Establish an eco-monitoring system",
+    "Establish early-warning systems for climate-related disasters",
+    "Improve agricultural water and soil management"
+  ],
+  "mitigation_recommendations_for_agriculture": [
+    "Shift to low-carbon agriculture via greenhouse gas reduction and higher absorption capacity",
+    "Promote energy efficiency and savings in agricultural practices",
+    "Reduced use of methane and nitrous oxide in farmlands",
+    "Improve intestinal fermentation of ruminant animals and animal manure treatment facility",
+    "Biomass utilization and fossil fuel reduction",
+    "Promotion of environmentally friendly machinery",
+    "Use of organic fertilizer and by-product fertilizer",
+    "Develop bioenergy projects using agricultural byproducts"
+  ],
+  "relevant_statistics_or_data": [
+    {
+      "indicator": "Increase in potato yield due to film covering",
+      "value": "30",
+      "unit": "%",
+      "context_or_region": "Huinong, Ningxia Region",
+      "source_page": "34"
+    },
+    {
+      "indicator": "Non-farming income rate",
+      "value": "50",
+      "unit": "%",
+      "context_or_region": "Ningxia Region",
+      "source_page": "34"
+    }
+  ],
+  "source": "5. The-Impact-of-Climate-Change-on-the-Agricultural-Sector.pdf",
+  "pages": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ]
+}

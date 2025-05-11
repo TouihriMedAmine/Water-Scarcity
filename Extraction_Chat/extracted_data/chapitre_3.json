@@ -1,0 +1,180 @@
+{
+  "chapter_title": "Chapitre 3 -Impacts of Climate Change on the Agricultural Sector",
+  "summary": "This chapter discusses the impacts of climate change on the agricultural sector, focusing on arable and livestock sectors and hydrology. It highlights both positive and negative impacts, emphasizing the need for adaptation strategies. It also presents specific examples from Korea, China, and India. The conceptual approach is to view agriculture as a climate-dependent bio-industry that is vulnerable to shifts in temperature, precipitation, and sunlight.",
+  "key_climate_change_impacts_on_agriculture": [
+    "Changes in flowering and harvesting seasons",
+    "Quality change in crops",
+    "Shift of areas suitable for cultivation",
+    "Increase of blights and pests",
+    "Changes in livestock production (fertilization, breeding, pasture production)",
+    "Alterations in hydrology (underground water level, river flow, water quality)",
+    "Changes in agricultural productivity, farm household revenues, and asset values",
+    "Impacts on agricultural infrastructure (water sources)",
+    "Reduced crop quantity and quality due to temperature rise",
+    "Increased soil erosion due to increased rainfall",
+    "Severe drought and heat injuries",
+    "Worsening of freezing injury in early spring",
+    "Decreased forage yield and quality"
+  ],
+  "specific_impacts_on_attributes": [
+    {
+      "attribute": "Temperature",
+      "impact_description": "Increased average temperatures leading to changes in crop suitability, flowering seasons, and overall agricultural production. Can cause heat stress, reduced crop quality, and shifts in suitable cultivation areas."
+    },
+    {
+      "attribute": "Precipitation",
+      "impact_description": "Altered rainfall patterns, including increased or decreased precipitation, affecting water availability for irrigation, increasing soil erosion, and leading to floods or droughts. Changes can affect river flow and water quality."
+    },
+    {
+      "attribute": "CO2 Concentration",
+      "impact_description": "Increased atmospheric CO2 concentration which can lead to fertilization effects, potentially increasing crop productivity at low levels of temperature rise, but also leading to other negative consequences."
+    },
+    {
+      "attribute": "Agricultural climate zones",
+      "impact_description": "Shifting agricultural climate zones due to temperature rise."
+    }
+  ],
+  "vulnerable_crops_or_regions": [
+    "Rice",
+    "Barley",
+    "Apples, peaches, grapes, and soybeans (affected by brown grasshoppers)",
+    "Hot-temperature fruits and vegetables (watermelons, peppers, tomatoes)",
+    "Cool-temperature vegetables (radish, Korean cabbage)",
+    "Wheat, rice, and corn in China",
+    "Frigid crops in Northern China",
+    "Forage in drought or semi-drought areas in China"
+  ],
+  "adaptation_recommendations": [
+    "Crop conversion",
+    "Adjustment of input factors",
+    "Developing climate-resilient crop varieties",
+    "Adjusting crop patterns and structure"
+  ],
+  "mitigation_recommendations_for_agriculture": [
+    "Enhanced agricultural production management methods (specifically for China)"
+  ],
+  "relevant_statistics_or_data": [
+    {
+      "indicator": "Estimated temperature rise in 2100",
+      "value": "1.1~6.4",
+      "unit": "℃",
+      "context_or_region": "Global",
+      "source_page": "8"
+    },
+    {
+      "indicator": "Sea level rise by 2100",
+      "value": "18~59",
+      "unit": "cm",
+      "context_or_region": "Global",
+      "source_page": "8"
+    },
+    {
+      "indicator": "Temperature rise rate",
+      "value": "0.2",
+      "unit": "℃ per 10 years",
+      "context_or_region": "All scenarios by 2030",
+      "source_page": "8"
+    },
+    {
+      "indicator": "Average temperature increase (1973-2007)",
+      "value": "0.95",
+      "unit": "℃",
+      "context_or_region": "Korean agricultural climate zones",
+      "source_page": "12"
+    },
+    {
+      "indicator": "Increase of precipitation (1973-2007)",
+      "value": "283",
+      "unit": "mm",
+      "context_or_region": "Korean agricultural climate zones",
+      "source_page": "12"
+    },
+    {
+      "indicator": "Farmland price fall due to 1℃ temperature rise",
+      "value": "14,550 - 19,240",
+      "unit": "thousand won/ha",
+      "context_or_region": "Korea",
+      "source_page": "17"
+    },
+    {
+      "indicator": "Farmland price rise due to 1 mm precipitation increase",
+      "value": "330-360",
+      "unit": "thousand won/ha",
+      "context_or_region": "Korea",
+      "source_page": "17"
+    },
+    {
+      "indicator": "Projected temperature rise in 2020",
+      "value": "1.2",
+      "unit": "℃",
+      "context_or_region": "Korea",
+      "source_page": "17"
+    },
+    {
+      "indicator": "Projected precipitation increase in 2020",
+      "value": "11",
+      "unit": "%",
+      "context_or_region": "Korea",
+      "source_page": "17"
+    },
+    {
+      "indicator": "Drop in Chinese agricultural productivity by 2030",
+      "value": "5-10",
+      "unit": "%",
+      "context_or_region": "China",
+      "source_page": "17"
+    },
+    {
+      "indicator": "Decrease in yield of three major crops in China in the late 21st century",
+      "value": "up to 37",
+      "unit": "%",
+      "context_or_region": "China",
+      "source_page": "17"
+    },
+    {
+      "indicator": "Loss of gross agricultural production in China due to blights and pests",
+      "value": "20-25",
+      "unit": "%",
+      "context_or_region": "China",
+      "source_page": "18"
+    },
+    {
+      "indicator": "Potential drop in total grain production due to climate change (2030-2050)",
+      "value": "10",
+      "unit": "%",
+      "context_or_region": "China",
+      "source_page": "19"
+    },
+    {
+      "indicator": "Summer monsoon contribution to annual rainfall",
+      "value": "78",
+      "unit": "%",
+      "context_or_region": "India",
+      "source_page": "20"
+    },
+    {
+      "indicator": "Cereal productivity increase",
+      "value": "500 to 1800",
+      "unit": "kg/ha",
+      "context_or_region": "India",
+      "source_page": "20"
+    }
+  ],
+  "source": "5. The-Impact-of-Climate-Change-on-the-Agricultural-Sector.pdf",
+  "pages": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ]
+}

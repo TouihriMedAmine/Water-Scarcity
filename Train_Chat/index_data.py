@@ -4,7 +4,7 @@ from langchain_community.embeddings import OllamaEmbeddings
 
 # Load your JSON dataset with correct jq_schema according to the provided JSON file structure
 loader = JSONLoader(
-    file_path='./dataset/merged_dataset.json',
+    file_path='Train_Chat\dataset\merged_dataset.json',
     jq_schema='.[].content',  # Extract only the 'content' field for embeddings
     text_content=True
 )

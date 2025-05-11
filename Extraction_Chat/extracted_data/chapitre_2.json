@@ -1,0 +1,79 @@
+{
+  "chapter_title": "Chapitre 2 - Diagnosis and Forecast of Global Climate Change",
+  "summary": "Chapter 2 diagnoses the current conditions of global warming and provides forecasts of future climate change. It emphasizes the role of both natural and artificial factors in climate change, particularly the increase in greenhouse gas concentrations. It highlights the IPCC's reports and their findings on the impacts of global warming, emphasizing the need for adaptation measures in agriculture due to its climate-dependent nature.",
+  "key_climate_change_impacts_on_agriculture": [
+    "Changes in average temperature and precipitation patterns",
+    "Increased frequency of floods, droughts, and heat waves",
+    "Increased intensity of typhoons and hurricanes",
+    "Northward movement of plant habitats",
+    "Changes in animal habitats"
+  ],
+  "specific_impacts_on_attributes": [
+    {
+      "attribute": "Average Temperature",
+      "impact_description": "Increase in average global temperature leading to potential heat stress on crops and altered growing seasons."
+    },
+    {
+      "attribute": "Precipitation Patterns",
+      "impact_description": "Changes in precipitation patterns causing increased risks of droughts or floods impacting agricultural production."
+    },
+    {
+      "attribute": "Greenhouse Gas Concentration",
+      "impact_description": "Increased greenhouse gas concentrations leading to global warming."
+    }
+  ],
+  "vulnerable_crops_or_regions": [],
+  "adaptation_recommendations": [
+    "Preparation of adaptation measures against climate change due to agriculture's climate-dependent nature",
+    "Developing proper countermeasures based on scientific diagnosis and assessment of the impacts of climate change",
+    "Establishing the vision and administrative policies of future agriculture"
+  ],
+  "mitigation_recommendations_for_agriculture": [
+    "Reduction and absorption of greenhouse gases"
+  ],
+  "relevant_statistics_or_data": [
+    {
+      "indicator": "Increase in average temperature of the earth",
+      "value": "0.74",
+      "unit": "℃",
+      "context_or_region": "Over the past 100 years (1906~2005)",
+      "source_page": "3"
+    },
+    {
+      "indicator": "Potential rise in average temperature of the earth by the end of the 21st century",
+      "value": "6.4",
+      "unit": "℃",
+      "context_or_region": "If mankind continues its present level of consumption of fossil fuels (e.g., oil and coal)",
+      "source_page": "3"
+    },
+    {
+      "indicator": "Potential rise in sea level by the end of the 21st century",
+      "value": "59",
+      "unit": "cm",
+      "context_or_region": "If mankind continues its present level of consumption of fossil fuels (e.g., oil and coal)",
+      "source_page": "3"
+    },
+    {
+      "indicator": "Global greenhouse gas concentration increase based on carbon dioxide",
+      "value": "280 to 379",
+      "unit": "ppm",
+      "context_or_region": "From before the Industrial Revolution (1750) to 2005",
+      "source_page": "5"
+    },
+    {
+      "indicator": "Average temperature of 1998 compared to the average temperatures of 1960~1990",
+      "value": "0.58",
+      "unit": "℃ higher",
+      "context_or_region": "Global Average",
+      "source_page": "5"
+    }
+  ],
+  "source": "5. The-Impact-of-Climate-Change-on-the-Agricultural-Sector.pdf",
+  "pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}

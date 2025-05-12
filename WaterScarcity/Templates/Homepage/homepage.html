@@ -56,7 +56,7 @@ https://www.tooplate.com/view/2121-wave-cafe
               <li class="tm-page-nav-item" style="width: 300px;">
                 <a href="#contact6" class="tm-page-link">
                     <i class="fas fa-solid fa-faucet-drip tm-page-link-icon"></i>
-                  <span>Watershed Management</span>
+                  <span>Defrostation Prediction</span>
                 </a>
               </li>
               <li class="tm-page-nav-item" style="width: 300px;">
@@ -464,18 +464,18 @@ https://www.tooplate.com/view/2121-wave-cafe
                 <button type="submit" class="tm-btn-primary tm-align-right">Predict Zones</button>
               </form>
 
-
+              <div id="droughtResult" style="display: none; margin-top: 20px; text-align: center;">
+                <h3 class="tm-text-primary">Drought Prediction Result</h3>
+                <img id="droughtImage" src="" alt="Drought Result" style="max-width: 100%; border: 2px solid white;" />
+                <div id="droughtStats" style="color: white; margin-top: 10px;"></div>
+              </div>
 
             </div>
           </div>
-           <div id="droughtResult" style="display: none; margin-top: 20px; text-align: center;">
-  <h3 class="tm-text-primary">Drought Prediction Result</h3>
-  <img id="droughtImage" src="" alt="Drought Result" style="max-width: 100%; border: 2px solid white;" />
-  <div id="droughtStats" style="color: white; margin-top: 10px;"></div>
-</div>
+           
 
-           <script>
-document.getElementById('contact-form-drought').addEventListener('submit', function(event) {
+          <script>
+            document.getElementById('contact-form-drought').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const form = event.target;
@@ -490,19 +490,25 @@ document.getElementById('contact-form-drought').addEventListener('submit', funct
     })
     .then(response => response.json())
     .then(data => {
-        const container = document.getElementById('result-image-container');
-        if (data.image) {
-            container.innerHTML = `<img src="${data.image}" alt="Prediction Result" style="max-width:100%; margin-top:20px;">`;
-        } else if (data.error_message) {
-            container.innerHTML = `<p style="color:red;">${data.error_message}</p>`;
-        }
-    })
+    console.log('Response data:', data);  // Log the response
+    const container = document.getElementById('droughtResult');
+    if (data.error_message) {
+        container.innerHTML = `<p style="color:red;">${data.error_message}</p>`;
+        container.style.display = 'block';
+    } else if (data.image) {
+        document.getElementById('droughtImage').src = data.image;
+        document.getElementById('droughtStats').innerHTML = "Prediction successful!";
+        container.style.display = 'block';
+    }
+})
+
     .catch(error => {
         console.error(error);
-        alert('Prediction failed.');
+        alert('Prediction failed due to an unexpected error.');
     });
 });
-</script>
+
+          </script>
 
 
           <div id="contact5" class="tm-page-content">
@@ -585,8 +591,8 @@ document.getElementById('contact-form-drought').addEventListener('submit', funct
           </div>
            <div id="contact6" class="tm-page-content">
   <div class="tm-black-bg tm-contact-text-container">
-    <h2 class="tm-text-primary">Watershed Management</h2>
-    <p>Upload an image of the watershed to identify restoration areas and monitor its evolution.</p>
+    <h2 class="tm-text-primary">Defrostation Prediction</h2>
+    <p>Upload an npy file.</p>
   </div>
 
   <div class="tm-black-bg tm-contact-form-container tm-align-right">
@@ -594,20 +600,21 @@ document.getElementById('contact-form-drought').addEventListener('submit', funct
 
       {% csrf_token %}
       <div class="tm-form-group">
-        <label for="photo_watershed">Upload Watershed Image</label>
+        <label for="photo_watershed">Upload npy file</label>
         <input type="file" name="photo_watershed" id="photo_watershed" class="tm-form-control" accept=".npy" required />
       </div>
       <div>
-        <button type="submit" class="tm-btn-primary tm-align-right">Analyze Watershed</button>
+        <button type="submit" class="tm-btn-primary tm-align-right">Predict Defrostation</button>
       </div>
     </form>
-  </div>
-
-  <div id="watershedResult" style="display: none; margin-top: 20px; text-align: center;">
+    <div id="watershedResult" style="display: none; margin-top: 20px; text-align: center;">
     <h3 class="tm-text-primary">Result</h3>
     <img id="ndviImage" src="" alt="NDVI Result" style="max-width: 100%; border: 2px solid white;" />
     <div id="ndviStats" style="color: white; margin-top: 10px;"></div>
   </div>
+  </div>
+
+  
 </div>
 
 <script>

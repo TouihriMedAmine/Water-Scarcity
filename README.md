@@ -50,7 +50,49 @@ The model predicts drought probabilities using a **2-layer ConvLSTM** followed b
 
 ---
 
-### 5. Droplets — Domain-Specific Chatbot
+### 5. Precipitation Prediction and Classification
+This module forecasts precipitation intensity and visualizes it through class segmentation and quantitative analysis. It includes:
+
+**Temporal Prediction:**
+A **PredRNN++ (PredRNNv2)** model trained on historical precipitation heatmaps to generate future precipitation sequences.
+
+Spatial Segmentation:
+A **U-Net** model segments each precipitation heatmap into four classes:
+
+🚫**No Rain**
+
+🌦 **Light Rain**
+
+🌧 **Moderate Rain**
+
+🌩 **Heavy Rain**
+
+**Statistical Output:**
+The system calculates precipitation volume, class-wise area coverage, and temporal trends to assist in hydrological planning and disaster risk assessment.
+
+This module enhances rainfall-specific modeling by offering both visual and numerical insights into upcoming precipitation events.
+
+---
+
+### 6. Deforestation Forecasting with U-Net (Forest‐Cover Change)
+
+This deep learning pipeline employs a 2D **U-Net** to forecast one-year-ahead **NDVI** and flag likely deforestation from current Sentinel-2 imagery. It processes 256×256px multispectral patches (normalized reflectance) and outputs high-resolution change masks:
+
+🌲 **Sentinel-2 Bands:** Red (B4), Green (B3), Blue (B2), NIR (B8)
+
+🌱 **NDVI Regression:** model learns to predict next-year NDVI from four-band inputs
+
+🔗 **U-Net Architecture:** three down-sample
+
+🛠 Post-Processing: compute **ΔNDVI = NDVIₚᵣₑₐd − NDVIₙ**, threshold (Δ < −0.1) to generate a binary deforestation mask
+
+📊 **Evaluation**: MSE on held-out AOIs, visual overlay of predicted loss on true imagery
+
+This module integrates seamlessly with the overall forecasting system, providing actionable maps of emerging forest loss ready for GIS export and alerting.
+
+---
+
+### 7. Droplets — Domain-Specific Chatbot
 A climate/water-focused AI chatbot powered by a fine-tuned local LLM. It answers questions about:
 
 Climate change impact
@@ -65,7 +107,7 @@ Its knowledge is based on the ONAGRI 2023 report.
 
 ---
 
-### 6. Unified Web Interface
+### 8. Unified Web Interface
 
 A user-friendly web page allows:
 
@@ -82,7 +124,7 @@ Interaction with the chatbot
 ## ⚙️ Tech Stack
 Deep Learning: PyTorch, TensorFlow, Keras
 
-Models: ConvLSTM, U-Net, ResNet, LSTM, LLM
+Models: ConvLSTM, U-Net, ResNet, LSTM, LLM,PredRNNv2
 
 Frontend: HTML/CSS/JS, Vue.js or React
 

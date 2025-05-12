@@ -7,7 +7,11 @@ urlpatterns = [
     path('waterlevel/', include('Waterlevel.urls', namespace='waterlevel')),
     path('', views.homepage, name='homepage'),
     path('chat_api/', include('chat.urls')),
-     path('irrig/', include('Irrig.urls')),  # '' means the root URL
+     path('irrig/', include('Irrig.urls')), 
+    path('watershed/' , include('Watershed.urls', namespace='watershed')),
+    path('drought/', include('Drought.urls', namespace='drought')),
+
+      # '' means the root URL
 ]
 
 # Servir les fichiers statiques et médias en développement

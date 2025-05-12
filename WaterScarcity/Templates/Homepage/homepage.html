@@ -443,20 +443,84 @@ https://www.tooplate.com/view/2121-wave-cafe
               <p>Upload an image to generate drought risk maps for the area.</p>
             </div>
             <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form-drought" enctype="multipart/form-data">
+              <form action="{% url 'drought:predict_drought' %}" method="POST" id="contact-form-drought" enctype="multipart/form-data">
                 {% csrf_token %}
-                <div class="tm-form-group">
-                    <label for="photo_drought">Upload Image</label>
-                  <input type="file" name="photo_drought" id="photo_drought" class="tm-form-control" accept="image/*" required="" />
-                </div>
-                <div>
-                  <button type="submit" class="tm-btn-primary tm-align-right">
-                    Predict Zones
-                  </button>
-                </div>
+                
+                <label>Evap:</label>
+                <input type="file" name="Evap" class="tm-form-control" accept=".png" required><br><br>
+
+                <label>Rainf:</label>
+                <input type="file" name="Rainf" class="tm-form-control" accept=".png" required><br><br>
+
+                <label>RootMoist:</label>
+                <input type="file" name="RootMoist" class="tm-form-control" accept=".png" required><br><br>
+
+                <label>SoilM_0_10cm:</label>
+                <input type="file" name="SoilM_0_10cm" class="tm-form-control" accept=".png" required><br><br>
+
+                <label>TVeg:</label>
+                <input type="file" name="TVeg" class="tm-form-control" accept=".png" required><br><br>
+
+                <button type="submit" class="tm-btn-primary tm-align-right">Predict Zones</button>
               </form>
+
+
+
             </div>
           </div>
+           <div id="droughtResult" class="tm-black-bg tm-contact-text-container" style="margin-top: 30px; display: none;">
+  <h3 class="tm-text-primary">Drought Prediction Result</h3>
+  <img id="droughtImage" src="" alt="Drought Result" style="max-width: 100%; border: 2px solid white;" />
+  <div id="droughtStats" style="color: white; margin-top: 10px;"></div>
+</div>
+
+           
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contact-form-drought');
+  const resultDiv = document.getElementById('droughtResult');
+  const imageEl = document.getElementById('droughtImage');
+  const statsEl = document.getElementById('droughtStats');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    resultDiv.style.display = 'block';
+    statsEl.innerHTML = '<p style="color: white;">Processing...</p>';
+    imageEl.src = '';
+
+    const formData = new FormData(form);
+    const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'X-CSRFToken': csrfToken,
+        'X-Requested-With': 'XMLHttpRequest'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.error_message) {
+          statsEl.innerHTML = `<p style="color: red;">${data.error_message}</p>`;
+        } else {
+          imageEl.src = data.image;
+          statsEl.innerHTML = `<p>Drought prediction completed successfully.</p>`;
+        }
+      })
+      .catch(error => {
+        statsEl.innerHTML = `<p style="color: red;">An error occurred: ${error.message}</p>`;
+      });
+  });
+});
+</script>
+
+
+
+
+            
+
           <div id="contact5" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
               <h2 class="tm-text-primary">Water Runoff Prediction</h2>
@@ -478,25 +542,77 @@ https://www.tooplate.com/view/2121-wave-cafe
             </div>
           </div>
            <div id="contact6" class="tm-page-content">
-            <div class="tm-black-bg tm-contact-text-container">
-              <h2 class="tm-text-primary">Watershed Management</h2>
-              <p>Upload an image of the watershed to identify restoration areas and monitor its evolution.</p>
-            </div>
-            <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form-watershed" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="tm-form-group">
-                    <label for="photo_watershed">Upload Watershed Image</label>
-                  <input type="file" name="photo_watershed" id="photo_watershed" class="tm-form-control" accept="image/*" required="" />
-                </div>
-                <div>
-                  <button type="submit" class="tm-btn-primary tm-align-right">
-                    Analyze Watershed
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
+  <div class="tm-black-bg tm-contact-text-container">
+    <h2 class="tm-text-primary">Watershed Management</h2>
+    <p>Upload an image of the watershed to identify restoration areas and monitor its evolution.</p>
+  </div>
+
+  <div class="tm-black-bg tm-contact-form-container tm-align-right">
+    <form action="{% url 'watershed:predict_watershed' %}" method="POST" id="contact-form-watershed" enctype="multipart/form-data">
+
+      {% csrf_token %}
+      <div class="tm-form-group">
+        <label for="photo_watershed">Upload Watershed Image</label>
+        <input type="file" name="photo_watershed" id="photo_watershed" class="tm-form-control" accept=".npy" required />
+      </div>
+      <div>
+        <button type="submit" class="tm-btn-primary tm-align-right">Analyze Watershed</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="watershedResult" style="display: none; margin-top: 20px; text-align: center;">
+    <h3 class="tm-text-primary">Result</h3>
+    <img id="ndviImage" src="" alt="NDVI Result" style="max-width: 100%; border: 2px solid white;" />
+    <div id="ndviStats" style="color: white; margin-top: 10px;"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contact-form-watershed');
+  const resultDiv = document.getElementById('watershedResult');
+  const imageEl = document.getElementById('ndviImage');
+  const statsEl = document.getElementById('ndviStats');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    resultDiv.style.display = 'block';
+    statsEl.innerHTML = '<p style="color: white;">Processing...</p>';
+    imageEl.src = '';
+
+    const formData = new FormData(form);
+    const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'X-CSRFToken': csrfToken,
+        'X-Requested-With': 'XMLHttpRequest'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.error) {
+          statsEl.innerHTML = `<p style="color: red;">${data.error}</p>`;
+        } else {
+          imageEl.src = data.image_url;
+          statsEl.innerHTML = `
+            <p>NDVI Min: ${data.ndvi_min}</p>
+            <p>NDVI Max: ${data.ndvi_max}</p>
+            <p>NDVI Mean: ${data.ndvi_mean}</p>
+            <p>Deforestation Pixels: ${data.deforestation_pixels}</p>
+          `;
+        }
+      })
+      .catch(error => {
+        statsEl.innerHTML = `<p style="color: red;">An error occurred: ${error.message}</p>`;
+      });
+  });
+});
+</script>
+
           <!-- end Contact Page -->
         </main>
       </div>    

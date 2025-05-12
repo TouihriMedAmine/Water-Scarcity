@@ -39,11 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Drought',
     'Irrig',
-    'Percipitation',
+    # 'Percipitation',
     'Waterlevel',
     'Watershed',
     'myapp',
-    'chat',
+    # 'chat',
 ]
 
 MIDDLEWARE = [

@@ -10,6 +10,7 @@ urlpatterns = [
      path('irrig/', include('Irrig.urls')), 
     path('watershed/' , include('Watershed.urls', namespace='watershed')),
     path('drought/', include('Drought.urls', namespace='drought')),
+    path('runoff/', include('runoff.urls', namespace='runoff')),
 
       # '' means the root URL
 ]

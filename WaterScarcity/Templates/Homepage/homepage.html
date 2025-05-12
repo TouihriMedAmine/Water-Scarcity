@@ -468,58 +468,42 @@ https://www.tooplate.com/view/2121-wave-cafe
 
             </div>
           </div>
-           <div id="droughtResult" class="tm-black-bg tm-contact-text-container" style="margin-top: 30px; display: none;">
+           <div id="droughtResult" style="display: none; margin-top: 20px; text-align: center;">
   <h3 class="tm-text-primary">Drought Prediction Result</h3>
   <img id="droughtImage" src="" alt="Drought Result" style="max-width: 100%; border: 2px solid white;" />
   <div id="droughtStats" style="color: white; margin-top: 10px;"></div>
 </div>
 
-           
+           <script>
+document.getElementById('contact-form-drought').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-  <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contact-form-drought');
-  const resultDiv = document.getElementById('droughtResult');
-  const imageEl = document.getElementById('droughtImage');
-  const statsEl = document.getElementById('droughtStats');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    resultDiv.style.display = 'block';
-    statsEl.innerHTML = '<p style="color: white;">Processing...</p>';
-    imageEl.src = '';
-
+    const form = event.target;
     const formData = new FormData(form);
-    const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
 
     fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'X-CSRFToken': csrfToken,
-        'X-Requested-With': 'XMLHttpRequest'
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (data.error_message) {
-          statsEl.innerHTML = `<p style="color: red;">${data.error_message}</p>`;
-        } else {
-          imageEl.src = data.image;
-          statsEl.innerHTML = `<p>Drought prediction completed successfully.</p>`;
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': form.querySelector('[name=csrfmiddlewaretoken]').value
         }
-      })
-      .catch(error => {
-        statsEl.innerHTML = `<p style="color: red;">An error occurred: ${error.message}</p>`;
-      });
-  });
+    })
+    .then(response => response.json())
+    .then(data => {
+        const container = document.getElementById('result-image-container');
+        if (data.image) {
+            container.innerHTML = `<img src="${data.image}" alt="Prediction Result" style="max-width:100%; margin-top:20px;">`;
+        } else if (data.error_message) {
+            container.innerHTML = `<p style="color:red;">${data.error_message}</p>`;
+        }
+    })
+    .catch(error => {
+        console.error(error);
+        alert('Prediction failed.');
+    });
 });
 </script>
 
-
-
-
-            
 
           <div id="contact5" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
@@ -527,18 +511,76 @@ document.addEventListener('DOMContentLoaded', function () {
               <p>Upload a 6-day data file (Rainfall, Surface/Subsurface Runoff, Soil Moisture) to predict surface runoff for the next day.</p>
             </div>
             <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form-runoff" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="tm-form-group">
-                    <label for="data_runoff">Upload 6-day Data File</label>
-                  <input type="file" name="data_runoff" id="data_runoff" class="tm-form-control" required="" /> <!-- Accept different file types if needed -->
-                </div>
-                <div>
-                  <button type="submit" class="tm-btn-primary tm-align-right">
-                    Predict Runoff
-                  </button>
-                </div>
-              </form>
+        <form action="{% url 'runoff:predict_runoff' %}" method="POST" id="contact-form-runoff" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            {% for i in "012345"|make_list %}
+              <div class="tm-form-group">
+                <label for="image_day{{ i }}">Upload Image Day {{ i }}</label>
+                <input type="file" name="image_day{{ i }}" id="image_day{{ i }}" class="tm-form-control" accept=".png,.jpg,.jpeg" required />
+              </div>
+            {% endfor %}
+            <div>
+              <button type="submit" class="tm-btn-primary tm-align-right">Predict Runoff</button>
+            </div>
+        </form>
+
+<div id="runoffResult" style="display: none; margin-top: 20px; text-align: center;">
+  <h3 class="tm-text-primary">Result</h3>
+  <img id="runoffImage" src="" alt="Runoff Result" style="max-width: 100%; border: 2px solid white;" />
+  <div id="runoffStats" style="color: white; margin-top: 10px;"></div>
+</div>
+
+<!-- Place this before closing </body> tag -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form-runoff');
+    if (!form) return;  // safeguard
+
+    const resultDiv = document.getElementById('runoffResult');
+    const imageEl = document.getElementById('runoffImage');
+    const statsEl = document.getElementById('runoffStats');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();  // Prevent default submission
+      resultDiv.style.display = 'block';
+      statsEl.innerHTML = '<p style="color: white;">Processing...</p>';
+      imageEl.src = '';
+
+      const formData = new FormData(form);
+      const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'X-CSRFToken': csrfToken,
+          'X-Requested-With': 'XMLHttpRequest'
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.error) {
+            statsEl.innerHTML = `<p style="color: red;">${data.error}</p>`;
+          } else {
+            imageEl.src = data.image_url;
+            statsEl.innerHTML = `
+              <p>Runoff Min: ${data.runoff_min}</p>
+              <p>Runoff Max: ${data.runoff_max}</p>
+              <p>Runoff Mean: ${data.runoff_mean}</p>
+            `;
+          }
+        })
+        .catch(error => {
+          statsEl.innerHTML = `<p style="color: red;">An error occurred: ${error.message}</p>`;
+        });
+    });
+  });
+</script>
+
+
+
+
             </div>
           </div>
            <div id="contact6" class="tm-page-content">

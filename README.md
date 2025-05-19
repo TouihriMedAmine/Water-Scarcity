@@ -75,8 +75,6 @@ An integrated intelligent platform for climate forecasting, water level estimati
 
 
 ## Acknowledgments
-- **NASA**: For providing open-access satellite and climate data (NLDAS, remote sensing imagery) essential for model training and evaluation.
-- **ONAGRI (Observatoire National de l'Agriculture, Tunisia)**: For their comprehensive climate and water management reports, which informed the chatbot's knowledge base and project context.
-- **RESISC45 Dataset**: For high-quality remote sensing images used in water body classification and water level estimation modules.
-- **Open Source Community**: For the development and maintenance of key libraries and frameworks, including TensorFlow, PyTorch, Keras, Flask, FastAPI, React, Vue.js, and LangChain.
-- **Academic Publications**: For research on ConvLSTM, U-Net, PredRNNv2, and other deep learning architectures that inspired the project's models.
+This project was completed under the guidance of **Mme. Nardine Hanfi** and **Mme. Sarra Zouari** at Esprit School of Engineering.
+
+It was also presented at the Esprit School of Engineering Tech Fair 2025.

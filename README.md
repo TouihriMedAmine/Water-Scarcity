@@ -1,4 +1,4 @@
-# 🌍 Water Scarcity Forecasting Platform
+# DROPLETS
 
 ## Overview
 An integrated intelligent platform for climate forecasting, water level estimation, drought prediction, environmental awareness, and interactive data visualization. Built with Python, TensorFlow, Keras, PyTorch, React, and Flask, this project empowers users to anticipate environmental changes, explore satellite-based predictions, and interact with a domain-specific chatbot.
@@ -53,7 +53,7 @@ An integrated intelligent platform for climate forecasting, water level estimati
 - Django
 - TensorFlow, Keras, PyTorch
 - LangChain, FAISS, Ollama (LLM),Mistral (LLM)
-- U-Net, PredRNNv2, ConvLSTM, Resnet, CNN,
+- U-Net, PredRNNv2, ConvLSTM, Resnet, CNN
 
 
 ### Other Tools
